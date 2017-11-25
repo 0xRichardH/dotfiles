@@ -1,0 +1,8 @@
+" NerdTree
+Plug 'scrooloose/nerdtree'
+  map <C-e> :NERDTreeToggle<CR>
+  let g:NERDSpaceDelims = 1
+  let NERDTreeShowHidden = 1
+
+" Theme
+Plug 'chriskempson/vim-tomorrow-theme'

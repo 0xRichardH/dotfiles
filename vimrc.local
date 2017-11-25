@@ -1,0 +1,35 @@
+" Theme
+set t_Co=256
+set background=dark
+color Tomorrow-Night
+
+" Enable relative number
+set relativenumber
+
+"clipboard
+if has('clipboard')
+  if has('unnamedplus')  " When possible use + register for copy-paste
+      set clipboard=unnamed,unnamedplus
+  else         " On mac and Windows, use * register for copy-paste
+      set clipboard=unnamed
+  endif
+endif
+
+" Strip trailing whitespace
+" function! <SID>StripTrailingWhitespaces()
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Leader
+let mapleader = ","
