@@ -3,6 +3,9 @@ set t_Co=256
 set background=dark
 color Tomorrow-Night
 
+" HighLight current line
+set cursorline
+
 " Enable relative number
 set relativenumber
 
@@ -30,6 +33,3 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-" Leader
-let mapleader = ","

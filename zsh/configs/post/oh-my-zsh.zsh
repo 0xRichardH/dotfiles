@@ -10,7 +10,12 @@ plugins=(
   docker
   git-flow
   osx
+  vi-mode
+  yarn
+  chucknorris
 )
+
+DISABLE_AUTO_UPDATE="true"
 
 source $ZSH/oh-my-zsh.sh
 

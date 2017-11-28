@@ -6,3 +6,6 @@ Plug 'scrooloose/nerdtree'
 
 " Theme
 Plug 'chriskempson/vim-tomorrow-theme'
+
+" Tools
+Plug 'editorconfig/editorconfig-vim'
