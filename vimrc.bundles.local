@@ -9,3 +9,5 @@ Plug 'chriskempson/vim-tomorrow-theme'
 
 " Tools
 Plug 'editorconfig/editorconfig-vim'
+
+Plug 'easymotion/vim-easymotion'
