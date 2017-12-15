@@ -13,6 +13,7 @@ plugins=(
   vi-mode
   yarn
   chucknorris
+  extract
 )
 
 DISABLE_AUTO_UPDATE="true"
