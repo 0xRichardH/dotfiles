@@ -3,6 +3,10 @@ set t_Co=256
 set background=dark
 color Tomorrow-Night
 
+set guifont=Monaco:h13
+
+set visualbell
+
 " HighLight current line
 set cursorline
 
