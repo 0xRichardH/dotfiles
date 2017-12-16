@@ -17,7 +17,7 @@ Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 
 Plug 'mattn/emmet-vim'
-let g:user_emmet_leader_key='<C-Y>'
+let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
     \      'extends' : 'jsx',
@@ -34,8 +34,6 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 Plug 'skywind3000/asyncrun.vim'
 autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 " yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
-
-Plug 'SirVer/ultisnips'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
