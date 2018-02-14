@@ -1,6 +1,7 @@
 export ZSH=/Users/haoxilu/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_COLOR_SCHEME='light'
 
 plugins=(
   git
@@ -14,6 +15,7 @@ plugins=(
   yarn
   chucknorris
   extract
+  zsh-autosuggestions
 )
 
 DISABLE_AUTO_UPDATE="true"

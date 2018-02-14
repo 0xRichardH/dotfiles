@@ -1,7 +1,7 @@
 " Theme
-set t_Co=256
-set background=dark
-color Tomorrow-Night
+syntax enable
+set background=light
+colorscheme solarized
 
 set guifont=Monaco:h13
 

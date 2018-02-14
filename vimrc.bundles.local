@@ -5,7 +5,7 @@ Plug 'scrooloose/nerdtree'
   let NERDTreeShowHidden = 1
 
 " Theme
-Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'altercation/vim-colors-solarized'
 
 " Tools
 Plug 'editorconfig/editorconfig-vim'
