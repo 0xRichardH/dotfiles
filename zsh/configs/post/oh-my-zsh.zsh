@@ -1,7 +1,9 @@
 export ZSH=/Users/haoxilu/.oh-my-zsh
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_COLOR_SCHEME='light'
+POWERLEVEL9K_COLOR_SCHEME="light"
+
+DEFAULT_USER="haoxilu"
 
 plugins=(
   git
