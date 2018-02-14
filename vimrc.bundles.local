@@ -12,6 +12,10 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'easymotion/vim-easymotion'
 
+" https://github.com/AndrewRadev/splitjoin.vim
+" gS to split a one-liner into multiple lines
+" gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
+Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
