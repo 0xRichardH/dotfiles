@@ -3,7 +3,7 @@ syntax enable
 set background=light
 colorscheme solarized
 
-set guifont=Monaco:h13
+set guifont=Monaco:h14
 
 set visualbell
 
