@@ -1,2 +1,6 @@
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# asdf
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
