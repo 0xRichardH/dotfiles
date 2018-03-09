@@ -21,7 +21,6 @@ Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 
 Plug 'mattn/emmet-vim'
-let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
     \      'extends' : 'jsx',
@@ -31,6 +30,10 @@ let g:user_emmet_settings = {
 Plug 'w0rp/ale'
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
+" Write this in your vimrc file
+let g:ale_lint_on_text_changed = 'never'
+" You can disable this option too
+" if you don't want linters to run on opening a file
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 " yarn add --dev eslint babel-eslint eslint-plugin-react
 " eslint --init
