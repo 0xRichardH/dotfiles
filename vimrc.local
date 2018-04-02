@@ -22,6 +22,11 @@ if has('clipboard')
   endif
 endif
 
+" ALE
+" To disable ALE when vim is starting
+" If you want to use ALE, you can run ALEToggle
+autocmd VimEnter * ALEDisable
+
 " Strip trailing whitespace
 " function! <SID>StripTrailingWhitespaces()
 " Strip trailing whitespace
