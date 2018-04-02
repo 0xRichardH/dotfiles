@@ -1,6 +1,6 @@
 " Theme
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 set guifont=Monaco:h14
