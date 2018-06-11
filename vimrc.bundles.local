@@ -6,6 +6,7 @@ Plug 'scrooloose/nerdtree'
 
 " Theme
 Plug 'altercation/vim-colors-solarized'
+Plug 'kaicataldo/material.vim'
 
 " Tools
 Plug 'editorconfig/editorconfig-vim'

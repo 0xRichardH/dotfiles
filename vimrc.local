@@ -3,11 +3,18 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-set guifont=Monaco:h13
+if has('gui_running')
+  colorscheme material
+  let g:airline_theme = 'material'
+  set guifont=Menlo:h13
+  set guifont=Monaco:h13
+  set guifont=Monaco:h13
+  set guioptions=Monospace:h13
+endif
 
 set visualbell
 
-# Search Highlight
+" Search Highlight
 " Move to the first match (ggn), last (GN), next (n) or previous (N) as usual.
 set hlsearch
 " nnoremap <silent> <Leader>f :TestFile<CR>
@@ -31,6 +38,7 @@ endif
 " To disable ALE when vim is starting
 " If you want to use ALE, you can run ALEToggle
 autocmd VimEnter * ALEDisable
+nnoremap <silent> <Leader>c :ALEToggle<CR>
 
 " Strip trailing whitespace
 " function! <SID>StripTrailingWhitespaces()
