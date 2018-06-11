@@ -3,9 +3,14 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-set guifont=Monaco:h14
+set guifont=Monaco:h13
 
 set visualbell
+
+# Search Highlight
+" Move to the first match (ggn), last (GN), next (n) or previous (N) as usual.
+set hlsearch
+" nnoremap <silent> <Leader>f :TestFile<CR>
 
 " HighLight current line
 set cursorline
