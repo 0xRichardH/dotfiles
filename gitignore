@@ -13,3 +13,5 @@ tmp/**/*
 *.pyc
 .vscode
 .idea
+.tool-versions-e
+.tool-versions
