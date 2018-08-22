@@ -1,0 +1,26 @@
+# Git pre-commit hook to check all staged Ruby (*.rb/haml/coffee) files
+# for Pry binding references
+# Based on
+#
+#   http://codeinthehole.com/writing/tips-for-using-a-git-pre-commit-hook/
+#   http://mark-story.com/posts/view/using-git-commit-hooks-to-prevent-stupid-mistakes
+#   https://gist.github.com/3266940
+#
+FILES_PATTERN='\.rb$'
+FORBIDDEN='binding.pry\|require .pry.\|require .debugger.'
+
+# xargs below returns true if grep sends empty string
+# avoid this by pre-searching on ruby files
+# turn on nullglob to match on 0
+shopt -s nullglob
+set -- *.rb
+if [ "$#" -eq 0 ]; then exit 0; fi
+shopt -u nullglob
+
+git diff --cached --name-only | \
+    grep -E $FILES_PATTERN | \
+    GREP_COLOR='4;5;37;41' xargs grep --color --with-filename -n \
+    "$FORBIDDEN" && echo 'Please remove debugger bindings\nCOMMIT REJECTED' && \
+    exit 1
+
+exit 0
