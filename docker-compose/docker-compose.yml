@@ -1,0 +1,104 @@
+postgresql:
+  image: postgres:9.5
+  ports:
+    - '5432:5432'
+  volumes:
+    - ~/data/postgresql:/var/lib/postgresql/data
+  restart: unless-stopped
+
+postgis:
+  image: mdillon/postgis:latest
+  ports:
+    - '5432:5432'
+  volumes:
+    - ~/data/postgis:/var/lib/postgis/data
+  restart: unless-stopped
+
+mysql:
+  image: mysql:5.7
+  ports:
+    - '127.0.0.1:3306:3306'
+  volumes:
+    - ~/data/mysql:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+  restart: unless-stopped
+
+elasticsearch:
+  image: docker.elastic.co/elasticsearch/elasticsearch:6.4.0
+  environment:
+    - cluster.name=docker-cluster
+    - bootstrap.memory_lock=true
+    - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  ulimits:
+    memlock:
+      soft: -1
+      hard: -1
+  volumes:
+    - ~/data/elasticsearch:/usr/share/elasticsearch/data
+  ports:
+    - '9200:9200'
+    - '9300:9300'
+  restart: unless-stopped
+
+metabase:
+  image: metabase/metabase:latest
+  ports:
+    - "9090:3000"
+  volumes:
+    - ~/data/metabase:/tmp/metabase.db
+  links:
+    - mysql
+  restart: unless-stopped
+
+redis_with_password:
+  image: redis:3.0.5
+  ports:
+    - '127.0.0.1:6379:6379'
+  volumes:
+    - ~/data/redis:/data
+  command: redis-server --requirepass redis
+  restart: unless-stopped
+
+redis:
+  image: redis:3.0.5
+  ports:
+    - '127.0.0.1:6379:6379'
+  volumes:
+    - ~/data/redis:/data
+  restart: unless-stopped
+
+memcached:
+  image: memcached:1.4.31
+  ports:
+    - '127.0.0.1:11211:11211'
+  restart: unless-stopped
+
+zookeeper:
+  image: wurstmeister/zookeeper
+  ports:
+    - "2181:2181"
+  restart: unless-stopped
+
+kafka:
+  image: wurstmeister/kafka
+  links:
+    - zookeeper
+  ports:
+    - "9092:9092"
+  environment:
+    KAFKA_ADVERTISED_HOST_NAME: 192.168.1.79
+    KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+  volumes:
+    - ~/data/kafka/docker.sock:/var/run/docker.sock
+  restart: unless-stopped
+
+      #web:
+      #  build: .
+      #  dockerfile: Dockerfile
+      #  ports: []
+      #  volumes:
+      #    - ./:/workspace
+      #  links:
+      #    - mysql
+      #    - redis
