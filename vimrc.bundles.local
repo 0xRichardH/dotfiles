@@ -39,3 +39,6 @@ Plug 'honza/vim-snippets'
 
 " Vue
 Plug 'posva/vim-vue'
+
+" Cucumber
+Plug 'tpope/vim-cucumber'
