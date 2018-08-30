@@ -1,7 +1,14 @@
 " Theme
+
+" ===== altercation/vim-colors-solarized =====
+" syntax enable
+" set background=dark
+" colorscheme solarized
+" ===== altercation/vim-colors-solarized =====
+
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme monokai
 
 if has('gui_running')
   colorscheme material

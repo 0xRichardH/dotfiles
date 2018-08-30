@@ -1,11 +1,13 @@
 " NerdTree
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
   map <C-e> :NERDTreeToggle<CR>
   let g:NERDSpaceDelims = 1
   let NERDTreeShowHidden = 1
 
 " Theme
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
+Plug 'sickill/vim-monokai'
 Plug 'kaicataldo/material.vim'
 
 " Tools
