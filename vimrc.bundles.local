@@ -44,3 +44,6 @@ Plug 'posva/vim-vue'
 
 " Cucumber
 Plug 'tpope/vim-cucumber'
+
+"This is a simple plugin that helps to end certain structures automatically.
+Plug 'tpope/vim-endwise'
