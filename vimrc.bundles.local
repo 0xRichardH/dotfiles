@@ -1,7 +1,7 @@
 " NerdTree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-  map <C-e> :NERDTreeToggle<CR>
+  map <C-n> :NERDTreeToggle<CR>
   let g:NERDSpaceDelims = 1
   let NERDTreeShowHidden = 1
 
