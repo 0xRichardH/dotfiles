@@ -45,6 +45,8 @@ bind | split-window -h
 unbind '"'
 bind - split-window -v
 
+# This will let you manipulate the remote session with Ctrl-A
+bind-key -n C-a send-prefix
 ###########################
 # Status Bar
 ###########################
