@@ -5,7 +5,7 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 
 # https://github.com/seebi/tmux-colors-solarized
 set -g @plugin 'seebi/tmux-colors-solarized'
-set -g @colors-solarized 'light'
+set -g @colors-solarized '256'
 
 # Automatic tpm Installation
 
@@ -17,6 +17,9 @@ if "test ! -d ~/.tmux/plugins/tpm" \
 run '~/.tmux/plugins/tpm/tpm'
 
 ############################################################################
+
+# decrease command delay (increases vim responsiveness)
+set -sg escape-time 1
 
 # highlight window when it has new activity
 setw -g monitor-activity on
