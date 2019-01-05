@@ -50,3 +50,6 @@ Plug 'tpope/vim-endwise'
 
 " A Vim plugin which shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
+
+" Python
+Plug 'python-mode/python-mode'
