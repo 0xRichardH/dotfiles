@@ -94,6 +94,16 @@ kafka:
     - ~/data/kafka/docker.sock:/var/run/docker.sock
   restart: unless-stopped
 
+zeronet:
+  image: nofish/zeronet
+  ports:
+    - "127.0.0.1:26552:26552"
+    - "127.0.0.1:43110:43110"
+  environment:
+    ENABLE_TOR: 'true'
+  volumes:
+    - ~/data/zeronet:/root/data
+
       #web:
       #  build: .
       #  dockerfile: Dockerfile
