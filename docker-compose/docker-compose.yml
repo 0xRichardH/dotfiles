@@ -87,7 +87,8 @@ kafka:
   ports:
     - "9092:9092"
   environment:
-    KAFKA_ADVERTISED_HOST_NAME: 192.168.1.79
+    # KAFKA_ADVERTISED_HOST_NAME: 192.168.12.25
+    KAFKA_ADVERTISED_HOST_NAME: 127.0.0.1
     KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
   volumes:
     - ~/data/kafka/docker.sock:/var/run/docker.sock
