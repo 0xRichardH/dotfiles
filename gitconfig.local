@@ -5,3 +5,5 @@
 [user]
   name = Richard Hao
   email = ithaoxilu@gmail.com
+[core]
+  editor = 'nvim'
