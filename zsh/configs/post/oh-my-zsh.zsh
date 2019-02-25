@@ -18,6 +18,7 @@ plugins=(
   chucknorris
   extract
   zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 DISABLE_AUTO_UPDATE="true"
