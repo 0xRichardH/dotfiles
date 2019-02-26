@@ -62,5 +62,23 @@ endif
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'fszymanski/deoplete-emoji'
-let g:deoplete#enable_at_startup = 1
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+let g:deoplete#enable_at_startup = 1
+let g:neosnippet#enable_complete_done = 1
+
+Plug 'Shougo/echodoc.vim'
+set cmdheight=2
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'signature'
+" Always draw the signcolumn.
+set signcolumn=yes
+
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['solargraph', 'stdio']
+    \ }
