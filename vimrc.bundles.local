@@ -79,6 +79,17 @@ let g:echodoc#type = 'signature'
 " Always draw the signcolumn.
 set signcolumn=yes
 
+" vue: `yarn global add vue-language-server`
 let g:LanguageClient_serverCommands = {
-    \ 'ruby': ['solargraph', 'stdio']
+    \ 'ruby': ['solargraph', 'stdio'],
+    \ 'vue': ['vls']
     \ }
+
+" pip install jedi
+Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
+"Add extra filetypes
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx'
+                \ ]
