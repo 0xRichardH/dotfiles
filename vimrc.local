@@ -62,3 +62,41 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDSpaceDelims = 1
+let NERDTreeShowHidden = 1
+
+" vim-jsx
+let g:jsx_ext_required = 0
+
+" emmet-vim
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+
+" asyncrun.vim
+" yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+
+" Deoplete
+set cmdheight=2
+" Always draw the signcolumn.
+set signcolumn=yes
+let g:deoplete#enable_at_startup = 1
+let g:neosnippet#enable_complete_done = 1
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'signature'
+" vue: `yarn global add vue-language-server`
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['solargraph', 'stdio'],
+    \ 'vue': ['vls']
+    \ }
+"Add extra filetypes
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx'
+                \ ]
