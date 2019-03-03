@@ -1,12 +1,19 @@
 " NerdTree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Theme
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'sickill/vim-monokai'
 " Plug 'kaicataldo/material.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
+
+" Outfits
+Plug 'mhinz/vim-startify'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 
 " Tools
 Plug 'editorconfig/editorconfig-vim'
@@ -22,10 +29,6 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 
 Plug 'skywind3000/asyncrun.vim'
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
 
 " Vue
 Plug 'posva/vim-vue'
