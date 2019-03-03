@@ -7,6 +7,7 @@
 " ===== altercation/vim-colors-solarized =====
 
 syntax enable
+set mouse=a
 set background=dark
 colorscheme monokai
 
