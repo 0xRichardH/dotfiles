@@ -4,8 +4,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Theme
 " Plug 'altercation/vim-colors-solarized'
-Plug 'sickill/vim-monokai'
-Plug 'kaicataldo/material.vim'
+" Plug 'sickill/vim-monokai'
+" Plug 'kaicataldo/material.vim'
+Plug 'kristijanhusak/vim-hybrid-material'
 
 " Tools
 Plug 'editorconfig/editorconfig-vim'
@@ -24,6 +25,7 @@ Plug 'skywind3000/asyncrun.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 
 " Vue
 Plug 'posva/vim-vue'
