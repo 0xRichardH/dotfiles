@@ -1,13 +1,12 @@
 " NerdTree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Theme
-" Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 " Plug 'sickill/vim-monokai'
 " Plug 'kaicataldo/material.vim'
-Plug 'kristijanhusak/vim-hybrid-material'
+" Plug 'kristijanhusak/vim-hybrid-material'
 
 " Outfits
 Plug 'mhinz/vim-startify'
