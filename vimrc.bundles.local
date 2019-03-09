@@ -1,18 +1,21 @@
 " NerdTree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-  map <C-n> :NERDTreeToggle<CR>
-  let g:NERDSpaceDelims = 1
-  let NERDTreeShowHidden = 1
 
 " Theme
-" Plug 'altercation/vim-colors-solarized'
-Plug 'sickill/vim-monokai'
-Plug 'kaicataldo/material.vim'
+Plug 'altercation/vim-colors-solarized'
+" Plug 'sickill/vim-monokai'
+" Plug 'kaicataldo/material.vim'
+" Plug 'kristijanhusak/vim-hybrid-material'
+
+" Outfits
+Plug 'mhinz/vim-startify'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 
 " Tools
 Plug 'editorconfig/editorconfig-vim'
-
 Plug 'easymotion/vim-easymotion'
 
 " https://github.com/AndrewRadev/splitjoin.vim
@@ -21,23 +24,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'mxw/vim-jsx'
-let g:jsx_ext_required = 0
 
 Plug 'mattn/emmet-vim'
-let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-  \}
 
 Plug 'skywind3000/asyncrun.vim'
-autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
-" yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-Plug 'honza/vim-snippets'
 
 " Vue
 Plug 'posva/vim-vue'
@@ -45,11 +35,31 @@ Plug 'posva/vim-vue'
 " Cucumber
 Plug 'tpope/vim-cucumber'
 
-"This is a simple plugin that helps to end certain structures automatically.
-Plug 'tpope/vim-endwise'
-
 " A Vim plugin which shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
 
 " Python
 Plug 'python-mode/python-mode'
+
+" Deoplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'fszymanski/deoplete-emoji'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'Shougo/echodoc.vim'
+" pip install jedi
+Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
+
