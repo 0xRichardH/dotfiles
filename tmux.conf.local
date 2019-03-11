@@ -29,7 +29,7 @@ bind - split-window -v
 bind-key -n C-a send-prefix
 
 # prefix + h to clear screen and history buffer
-bind h send-keys "clear && tmux clear-history" \; send-keys "Enter"
+bind r send-keys "clear && tmux clear-history" \; send-keys "Enter"
 
 ###########################
 # Status Bar
