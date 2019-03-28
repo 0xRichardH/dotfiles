@@ -1,6 +1,6 @@
 " Theme
 
-set mouse=a
+" set mouse=a
 set visualbell
 syntax enable
 
@@ -116,3 +116,12 @@ let g:deoplete#sources#ternjs#filetypes = [
                 \ 'jsx',
                 \ 'javascript.jsx'
                 \ ]
+
+" Copy filename to clipboard
+
+" name of file ('tail')
+nnoremap <silent> <Leader>cfn :let @*=expand('%:t')<CR>
+" directory/name of file (relative to the current working directory of
+nnoremap <silent> <Leader>crp :let @*=expand("%")<CR>
+" full path
+nnoremap <silent> <Leader>cfp :let @*=expand("%:p")<CR>
