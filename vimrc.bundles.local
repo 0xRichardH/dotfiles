@@ -4,9 +4,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Theme
 Plug 'altercation/vim-colors-solarized'
-" Plug 'sickill/vim-monokai'
-" Plug 'kaicataldo/material.vim'
-" Plug 'kristijanhusak/vim-hybrid-material'
 
 " Outfits
 Plug 'mhinz/vim-startify'
@@ -47,16 +44,6 @@ endif
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'fszymanski/deoplete-emoji'
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ }
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'junegunn/fzf.vim'
-" Plug 'Shougo/echodoc.vim'
-" " pip install jedi
-" Plug 'zchee/deoplete-jedi'
-" Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 
 " https://github.com/tbodt/deoplete-tabnine
 Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
