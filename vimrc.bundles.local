@@ -4,9 +4,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Theme
 Plug 'altercation/vim-colors-solarized'
-" Plug 'sickill/vim-monokai'
-" Plug 'kaicataldo/material.vim'
-" Plug 'kristijanhusak/vim-hybrid-material'
 
 " Outfits
 Plug 'mhinz/vim-startify'
@@ -17,15 +14,10 @@ Plug 'ryanoasis/vim-devicons'
 " Tools
 Plug 'editorconfig/editorconfig-vim'
 Plug 'easymotion/vim-easymotion'
-
-" https://github.com/AndrewRadev/splitjoin.vim
-" gS to split a one-liner into multiple lines
-" gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
-Plug 'AndrewRadev/splitjoin.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 Plug 'mxw/vim-jsx'
-
-Plug 'mattn/emmet-vim'
 
 Plug 'skywind3000/asyncrun.vim'
 
@@ -52,14 +44,6 @@ endif
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'fszymanski/deoplete-emoji'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'Shougo/echodoc.vim'
-" pip install jedi
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 
+" https://github.com/tbodt/deoplete-tabnine
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
