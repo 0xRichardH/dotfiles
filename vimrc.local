@@ -86,23 +86,3 @@ nnoremap <silent> <Leader>cfn :let @*=expand('%:t')<CR>
 nnoremap <silent> <Leader>crp :let @*=expand("%")<CR>
 " full path
 nnoremap <silent> <Leader>cfp :let @*=expand("%:p")<CR>
-
-" Goyo and Limelight
-nnoremap <silent> <Leader>g :Goyo<CR>
-
-
-" The limelight configs for solarized-light
-" https://github.com/junegunn/limelight.vim/issues/27#issuecomment-160692583
-let g:limelight_conceal_ctermfg = 245  " Solarized Base1
-let g:limelight_conceal_guifg = '#8a8a8a'  " Solarized Base1
-
-function! s:goyo_enter()
-  Limelight
-endfunction
-
-function! s:goyo_leave()
-  Limelight!
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
