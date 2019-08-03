@@ -17,6 +17,8 @@ Plug 'ryanoasis/vim-devicons'
 " Tools
 Plug 'editorconfig/editorconfig-vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 Plug 'mxw/vim-jsx'
 
