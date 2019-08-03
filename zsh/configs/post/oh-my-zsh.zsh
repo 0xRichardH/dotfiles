@@ -1,7 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_COLOR_SCHEME="dark"
 
 DEFAULT_USER="haoxilu"
 
