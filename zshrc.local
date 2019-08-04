@@ -6,9 +6,6 @@ export GIT_TEMPLATE_DIR="$(overcommit --template-dir)"
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 
-# chuck_cow
-chuck_cow
-
 # Always work in a tmux session if tmux is installed
 if which tmux 2>&1 >/dev/null; then
   if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then

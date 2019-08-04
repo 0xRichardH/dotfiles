@@ -14,7 +14,6 @@ plugins=(
   osx
   vi-mode
   yarn
-  chucknorris
   extract
   zsh-autosuggestions
   zsh-syntax-highlighting
