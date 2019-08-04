@@ -18,6 +18,7 @@ plugins=(
   extract
   zsh-autosuggestions
   zsh-syntax-highlighting
+  git-open
 )
 
 DISABLE_AUTO_UPDATE="true"
