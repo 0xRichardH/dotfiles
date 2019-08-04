@@ -2,3 +2,4 @@ bundler
 pry
 solargraph
 rubocop
+overcommit

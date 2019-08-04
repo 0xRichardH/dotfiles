@@ -18,3 +18,22 @@ git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open
 ## Tmux
 
 ### Tmux Plugin [https://github.com/tmux-plugins/tpm](https://github.com/tmux-plugins/tpm)
+
+## Git hook manager
+
+### Overcommit
+
+- https://github.com/sds/overcommit#configuration
+
+- Installation
+
+```
+gem install overcommit
+```
+
+- Copy default custom configuration to top-level directory of the repository
+
+```
+cp ~/.overcommit.yml ./
+```
+
