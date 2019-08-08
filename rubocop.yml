@@ -7,8 +7,5 @@ inherit_gem:
 AllCops:
   TargetRubyVersion: 2.6
 
-# You can customize rubocop settings.
-# For example.
-# Style/FrozenStringLiteralComment:
-#   Enabled: true
-#   EnforcedStyle: always
+Style/FrozenStringLiteralComment:
+  Enabled: true
