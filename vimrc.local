@@ -86,3 +86,18 @@ nnoremap <silent> <Leader>cfn :let @*=expand('%:t')<CR>
 nnoremap <silent> <Leader>crp :let @*=expand("%")<CR>
 " full path
 nnoremap <silent> <Leader>cfp :let @*=expand("%:p")<CR>
+
+" Tab Completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<Tab>"
+    else
+        return "\<C-n>"
+    endif
+endfunction
+inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
+inoremap <S-Tab> <C-p>
