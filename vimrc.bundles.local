@@ -7,8 +7,6 @@ Plug 'altercation/vim-colors-solarized'
 
 " Outfits
 Plug 'mhinz/vim-startify'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 " Tools

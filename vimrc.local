@@ -18,14 +18,9 @@ set relativenumber
 " ===== altercation/vim-colors-solarized =====
 set background=light
 colorscheme solarized
-let g:airline_theme = "solarized"
-" ===== altercation/vim-colors-solarized =====
-
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
+" ===== altercation/vim-colors-solarized =====
 
 "clipboard
 if has('clipboard')
