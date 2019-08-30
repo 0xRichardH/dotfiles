@@ -24,6 +24,35 @@ mysql:
     - MYSQL_ROOT_PASSWORD=root
   restart: unless-stopped
 
+elasticsearch-6-5:
+  image: docker.elastic.co/elasticsearch/elasticsearch:6.5.0
+  environment:
+    - cluster.name=docker-cluster
+    - bootstrap.memory_lock=true
+    - discovery.type=single-node
+    - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  ulimits:
+    memlock:
+      soft: -1
+      hard: -1
+  volumes:
+    - ~/data/elasticsearch-6-5:/usr/share/elasticsearch/data
+  ports:
+    - '9200:9200'
+    - '9300:9300'
+  restart: unless-stopped
+
+kibana-6-5:
+  image: docker.elastic.co/kibana/kibana:6.5.0
+  environment:
+    SERVER_NAME: 127.0.0.1
+    ELASTICSEARCH_HOSTS: http://elasticsearch-6-5:9200
+  ports:
+    - '5601:5601'
+  links:
+    - elasticsearch-6-5
+  restart: unless-stopped
+
 elasticsearch:
   image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
   environment:
