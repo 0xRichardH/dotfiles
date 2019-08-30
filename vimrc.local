@@ -70,8 +70,6 @@ autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --
 set cmdheight=2
 " Always draw the signcolumn.
 set signcolumn=yes
-let g:deoplete#enable_at_startup = 1
-let g:neosnippet#enable_complete_done = 1
 
 " Copy filename to clipboard
 

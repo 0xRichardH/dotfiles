@@ -6,7 +6,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'altercation/vim-colors-solarized'
 
 " Outfits
-Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 
 " Tools
@@ -29,17 +28,5 @@ Plug 'airblade/vim-gitgutter'
 " Python
 Plug 'python-mode/python-mode'
 
-" Deoplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'fszymanski/deoplete-emoji'
+Plug 'zxqfl/tabnine-vim'
 
-" https://github.com/tbodt/deoplete-tabnine
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
