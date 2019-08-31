@@ -5,12 +5,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Theme
 Plug 'altercation/vim-colors-solarized'
 
-" Outfits
-Plug 'ryanoasis/vim-devicons'
-
 " Tools
 Plug 'editorconfig/editorconfig-vim'
-Plug 'easymotion/vim-easymotion'
 
 Plug 'mxw/vim-jsx'
 
@@ -25,8 +21,6 @@ Plug 'tpope/vim-cucumber'
 " A Vim plugin which shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
 
-" Python
-Plug 'python-mode/python-mode'
 
 Plug 'zxqfl/tabnine-vim'
 
