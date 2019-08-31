@@ -16,3 +16,4 @@ tmp/**/*
 .tool-versions-e
 .tool-versions
 .overcommit.yml
+.rubocop.yml

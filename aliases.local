@@ -1,5 +1,5 @@
 alias mux='tmuxinator'
 alias x='extract'
 alias git='hub'
-alias vi=nvim
-alias vim=nvim
+alias vi=vim
+alias vim=vim
