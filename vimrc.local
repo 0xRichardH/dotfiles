@@ -32,26 +32,23 @@ if has('clipboard')
 endif
 
 " ALE
-" To disable ALE when vim is starting
-" If you want to use ALE, you can run ALEToggle
-autocmd VimEnter * ALEDisable
-nnoremap <silent> <Leader>c :ALEToggle<CR>
+let g:ale_cache_executable_check_failures = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
+" Run linters when files are saved
+let g:ale_lint_on_save = 1
+" Write this in your vimrc file
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
 
-" Strip trailing whitespace
-" function! <SID>StripTrailingWhitespaces()
-" Strip trailing whitespace
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd! ale
+autocmd VimEnter * ALEEnable
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
@@ -64,7 +61,7 @@ let g:jsx_ext_required = 0
 
 " asyncrun.vim
 " yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
-autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+" autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 
 " Copy filename to clipboard
 

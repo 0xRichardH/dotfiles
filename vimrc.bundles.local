@@ -5,12 +5,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Theme
 Plug 'altercation/vim-colors-solarized'
 
-" Tools
-Plug 'editorconfig/editorconfig-vim'
-
 Plug 'mxw/vim-jsx'
 
-Plug 'skywind3000/asyncrun.vim'
+" Plug 'skywind3000/asyncrun.vim'
 
 " Vue
 Plug 'posva/vim-vue'
@@ -23,4 +20,3 @@ Plug 'airblade/vim-gitgutter'
 
 
 Plug 'zxqfl/tabnine-vim'
-
