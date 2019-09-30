@@ -1,11 +1,8 @@
-# To use the MeowCop gem.
+require:
+ - rubocop-rails
+ - rubocop/cop/github
+
 inherit_gem:
-  meowcop:
-    - config/rubocop.yml
-
-# Modify the version if you don't use MRI 2.6.
-AllCops:
-  TargetRubyVersion: 2.6
-
-Style/FrozenStringLiteralComment:
-  Enabled: true
+  rubocop-github:
+    - config/default.yml
+    - config/rails.yml

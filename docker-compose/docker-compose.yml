@@ -102,6 +102,14 @@ metabase:
     - mysql
   restart: unless-stopped
 
+redis:
+  image: redis:5.0.6
+  ports:
+    - '127.0.0.1:6379:6379'
+  volumes:
+    - ~/data/redis-5:/data
+  restart: unless-stopped
+
 redis_with_password:
   image: redis:3.0.5
   ports:
@@ -111,7 +119,7 @@ redis_with_password:
   command: redis-server --requirepass redis
   restart: unless-stopped
 
-redis:
+redis-3-0-5:
   image: redis:3.0.5
   ports:
     - '127.0.0.1:6379:6379'

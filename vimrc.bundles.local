@@ -7,8 +7,6 @@ Plug 'altercation/vim-colors-solarized'
 
 Plug 'mxw/vim-jsx'
 
-" Plug 'skywind3000/asyncrun.vim'
-
 " Vue
 Plug 'posva/vim-vue'
 
@@ -17,6 +15,5 @@ Plug 'tpope/vim-cucumber'
 
 " A Vim plugin which shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
-
 
 Plug 'zxqfl/tabnine-vim'

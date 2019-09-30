@@ -2,5 +2,6 @@ bundler
 pry
 solargraph
 rubocop
-meowcop
+rubocop-github
+rubocop-rails
 overcommit

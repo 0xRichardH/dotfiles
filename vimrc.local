@@ -48,7 +48,9 @@ let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
 
 autocmd! ale
-autocmd VimEnter * ALEEnable
+autocmd VimEnter *
+      \ set updatetime=1000 |
+      \ ALEEnable
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
@@ -58,10 +60,6 @@ let NERDTreeShowHidden = 1
 
 " vim-jsx
 let g:jsx_ext_required = 0
-
-" asyncrun.vim
-" yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
-" autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 
 " Copy filename to clipboard
 
