@@ -1,5 +1,13 @@
 # dotfiles
 
+## Vim
+
+- Clipboard
+
+```
+sudo apt-get install xclip
+```
+
 ## Iterm2
 
 ### Configuration
@@ -36,4 +44,3 @@ gem install overcommit
 ```
 cp ~/.overcommit.yml ./
 ```
-

@@ -23,13 +23,7 @@ let g:enable_italic_font = 1
 " ===== altercation/vim-colors-solarized =====
 
 "clipboard
-if has('clipboard')
-  if has('unnamedplus')  " When possible use + register for copy-paste
-      set clipboard=unnamed,unnamedplus
-  else         " On mac and Windows, use * register for copy-paste
-      set clipboard=unnamed
-  endif
-endif
+set clipboard=unnamedplus
 
 " ALE
 let g:ale_cache_executable_check_failures = 1
