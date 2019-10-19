@@ -23,7 +23,15 @@ let g:enable_italic_font = 1
 " ===== altercation/vim-colors-solarized =====
 
 "clipboard
-set clipboard=unnamedplus
+if has("clipboard")
+  if has("unnamedplus")
+    " When possible use + register for copy-paste
+    set clipboard=unnamed,unnamedplus
+  else
+    " On mac and Windows, use * register for copy-paste
+    set clipboard=unnamed
+  endif
+endif
 
 " ALE
 let g:ale_cache_executable_check_failures = 1
@@ -51,6 +59,8 @@ map <C-n> :NERDTreeToggle<CR>
 map <Leader>f :NERDTreeFind<CR>
 let g:NERDSpaceDelims = 1
 let NERDTreeShowHidden = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " vim-jsx
 let g:jsx_ext_required = 0
