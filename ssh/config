@@ -1,0 +1,9 @@
+# This is ~/.ssh/config
+# # For all hosts
+ServerAliveInterval 10
+# # For a selection of hosts
+# Host keepsdroppingme.com alsokeepsdroppingme.com
+#   ServerAliveInterval 10
+
+Host *
+    ForwardAgent yes
