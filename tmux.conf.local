@@ -5,13 +5,9 @@ set -sg escape-time 1
 setw -g monitor-activity on
 set -g visual-activity on
 
-# enable pbcopy and pbpaste
-# https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard/blob/master/README.md
-set-option -g default-command "reattach-to-user-namespace -l zsh"
-
 # select text with 'v' and copy with 'y'
 bind-key -Tcopy-mode-vi 'v' send -X begin-selection
-bind-key -Tcopy-mode-vi 'y' send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+bind-key -Tcopy-mode-vi 'y' send -X copy-pipe-and-cancel
 bind-key -Tcopy-mode-vi Escape send -X cancel
 bind-key -Tcopy-mode-vi V send -X rectangle-toggle
 
