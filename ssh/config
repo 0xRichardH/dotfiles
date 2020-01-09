@@ -7,3 +7,7 @@ ServerAliveInterval 10
 
 Host *
     ForwardAgent yes
+Host richard.feedmob.info
+    HostName richard.feedmob.info
+    User ubuntu
+    ForwardAgent yes
