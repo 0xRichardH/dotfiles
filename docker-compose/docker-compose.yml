@@ -95,12 +95,20 @@ kibana:
 metabase:
   image: metabase/metabase:latest
   ports:
-    - "9090:3000"
+    - "8080:3000"
   volumes:
     - ~/data/metabase:/tmp/metabase.db
-  links:
-    - mysql
   restart: unless-stopped
+
+jenkins:
+  image: jenkins/jenkins:lts
+  environment:
+    JAVA_OPTS: "-Djava.awt.headless=true"
+  ports:
+    - "50000:50000"
+    - "8080:8080"
+  volumes:
+    - ~/data/jenkins_home
 
 redis:
   image: redis:5.0.6
