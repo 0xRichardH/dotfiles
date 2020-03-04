@@ -13,4 +13,5 @@ if which tmux 2>&1 >/dev/null; then
   fi
 fi
 
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
