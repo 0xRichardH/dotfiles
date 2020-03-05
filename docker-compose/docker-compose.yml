@@ -184,6 +184,18 @@ zeronet:
   volumes:
     - ~/data/zeronet:/root/data
 
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  container_name: phpmyadmin
+  environment:
+    - PMA_ARBITRARY=1
+  restart: unless-stopped
+  ports:
+    - 8080:80
+  volumes:
+    - ~/data/phpmyadmin
+
+
       #web:
       #  build: .
       #  dockerfile: Dockerfile
