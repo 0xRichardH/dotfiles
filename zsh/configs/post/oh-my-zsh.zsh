@@ -18,6 +18,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   git-open
+  autojump
 )
 
 DISABLE_AUTO_UPDATE="true"
