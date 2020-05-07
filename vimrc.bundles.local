@@ -17,3 +17,7 @@ Plug 'tpope/vim-cucumber'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'zxqfl/tabnine-vim'
+
+" Vim syntax file for solidity
+" https://github.com/tomlion/vim-solidity/
+Plug 'tomlion/vim-solidity'
