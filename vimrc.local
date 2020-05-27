@@ -67,6 +67,10 @@ let NERDTreeDirArrows = 1
 " vim-jsx
 let g:jsx_ext_required = 0
 
+
+" rust.vim
+let g:rustfmt_autosave = 1
+
 " Copy filename to clipboard
 
 " name of file ('tail')
