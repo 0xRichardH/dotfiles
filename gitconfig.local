@@ -4,6 +4,6 @@
   colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
 [user]
   name = Richard Hao
-  email = ithaoxilu@gmail.com
+  email = xilu@hey.com
 [core]
   editor = 'vim'
