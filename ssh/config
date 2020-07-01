@@ -5,11 +5,11 @@ ServerAliveInterval 10
 # Host keepsdroppingme.com alsokeepsdroppingme.com
 #   ServerAliveInterval 10
 
-Host *
-    ForwardAgent yes
+# Host *
+#     ForwardAgent yes
+# IdentityFile ~/.ssh/richard.pem
 
 Host feedmob
     HostName feedmob.haoxilu.com
     User ubuntu
-    ForwardAgent yes
     ProxyCommand nc -X 5 -x 127.0.0.1:7891 %h %p
