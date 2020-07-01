@@ -17,3 +17,6 @@ Plug 'tpope/vim-cucumber'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'zxqfl/tabnine-vim'
+
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'tmux-plugins/vim-tmux-focus-events'

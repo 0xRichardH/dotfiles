@@ -26,7 +26,7 @@ let g:enable_italic_font = 1
 if has("clipboard")
   if has("unnamedplus")
     " When possible use + register for copy-paste
-    set clipboard=unnamed,unnamedplus
+    set clipboard=unnamedplus
   else
     " On mac and Windows, use * register for copy-paste
     set clipboard=unnamed

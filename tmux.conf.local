@@ -1,3 +1,5 @@
+set -g focus-events on
+
 # decrease command delay (increases vim responsiveness)
 set -sg escape-time 1
 
@@ -6,10 +8,33 @@ setw -g monitor-activity on
 set -g visual-activity on
 
 # select text with 'v' and copy with 'y'
-bind-key -Tcopy-mode-vi 'v' send -X begin-selection
-bind-key -Tcopy-mode-vi 'y' send -X copy-pipe-and-cancel
-bind-key -Tcopy-mode-vi Escape send -X cancel
-bind-key -Tcopy-mode-vi V send -X rectangle-toggle
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send -X copy-pipe-and-cancel
+bind-key -T copy-mode-vi Escape send -X cancel
+bind-key -T copy-mode-vi V send -X rectangle-toggle
+
+# Use vim keybindings in copy mode
+setw -g mode-keys vi
+
+# Update default binding of `Enter` and `Space to also use copy-pipe
+unbind -T copy-mode-vi Enter
+unbind -T copy-mode-vi Space
+
+bind-key -T edit-mode-vi Up send-keys -X history-up
+bind-key -T edit-mode-vi Down send-keys -X history-down
+
+# setup 'v' to begin selection as in Vim
+bind-key -T copy-mode-vi 'v' send-keys -X begin-selection
+
+# copy text with `y` in copy mode
+# bind-key -T copy-mode-vi 'y' send -X copy-selection-and-cancel\; run "tmux
+# save -|pbcopy >/dev/null 2>&1"
+bind-key -T copy-mode-vi 'y' send -X copy-selection-and-cancel
+
+# copy text with mouse selection without pressing any key
+bind-key -T copy-mode-vi MouseDragEnd1Pane send -X copy-selection-and-cancel\;
+run "tmux save -|pbcopy >/dev/null 2>&1"
+# bind-key -T copy-mode-vi MouseDragEnd1Pane send -X copy-selection-and-cancel
 
 # paste
 unbind C-p
