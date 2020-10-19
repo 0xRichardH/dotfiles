@@ -1,6 +1,8 @@
 " Theme
 
 " set mouse=a
+set nowrap
+set textwidth=0
 set visualbell
 syntax enable
 
