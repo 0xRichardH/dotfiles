@@ -16,7 +16,7 @@ Plug 'tpope/vim-cucumber'
 " A Vim plugin which shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
 
-Plug 'zxqfl/tabnine-vim'
+" Plug 'zxqfl/tabnine-vim'
 
 " Vim syntax file for solidity
 " https://github.com/tomlion/vim-solidity/
