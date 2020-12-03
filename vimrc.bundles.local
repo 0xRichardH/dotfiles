@@ -16,7 +16,18 @@ Plug 'tpope/vim-cucumber'
 " A Vim plugin which shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
 
-Plug 'zxqfl/tabnine-vim'
-
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+
+" Tabnine is not working betting in Apple Silicon
+" Plug 'zxqfl/tabnine-vim'
+
+" coc.nvim
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+
+" Vim syntax file for solidity
+" https://github.com/tomlion/vim-solidity/
+Plug 'tomlion/vim-solidity'
+
+" https://github.com/rust-lang/rust.vim
+Plug 'rust-lang/rust.vim'
