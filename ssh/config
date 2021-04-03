@@ -10,3 +10,14 @@ Host feedmob
   User ubuntu
   IdentityFile ~/.ssh/richard.pem
   # ProxyCommand nc -X 5 -x 127.0.0.1:7891 %h %p
+
+Host digitalstar
+  HostName ssh.digitalstar.tech
+  User root
+  IdentityFile ~/.ssh/richard.pem
+
+Host digitalstar.git
+  HostName ssh.digitalstar.tech
+  User dokku
+  IdentityFile ~/.ssh/richard.pem
+
