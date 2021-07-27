@@ -1,10 +1,16 @@
 export PATH="$PATH:`yarn global bin`"
-export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export GIT_TEMPLATE_DIR="$(overcommit --template-dir)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # asdf
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
+# dependency: `brew install asdf`
+source $(brew --prefix asdf)/asdf.sh
+source $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 # Always work in a tmux session if tmux is installed
 if which tmux 2>&1 >/dev/null; then
@@ -15,3 +21,5 @@ fi
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(dip console)"

@@ -16,7 +16,11 @@ Plug 'tpope/vim-cucumber'
 " A Vim plugin which shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
 
-Plug 'zxqfl/tabnine-vim'
+" https://github.com/codota/tabnine-vim
+" Plug 'zxqfl/tabnine-vim'
+
+" coc.nvim
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 " Vim syntax file for solidity
 " https://github.com/tomlion/vim-solidity/
@@ -24,3 +28,7 @@ Plug 'tomlion/vim-solidity'
 
 " https://github.com/rust-lang/rust.vim
 Plug 'rust-lang/rust.vim'
+
+" https://github.com/prettier/vim-prettier
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
