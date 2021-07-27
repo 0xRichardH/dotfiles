@@ -19,7 +19,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
-" Tabnine is not working betting in Apple Silicon
+" https://github.com/codota/tabnine-vim
 " Plug 'zxqfl/tabnine-vim'
 
 " coc.nvim
