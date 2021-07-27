@@ -1,5 +1,6 @@
 export PATH="$PATH:`yarn global bin`"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export GIT_TEMPLATE_DIR="$(overcommit --template-dir)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
 
@@ -20,3 +21,5 @@ fi
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(dip console)"

@@ -16,7 +16,7 @@ Plug 'tpope/vim-cucumber'
 " A Vim plugin which shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
 
-" Tabnine is not working betting in Apple Silicon
+" https://github.com/codota/tabnine-vim
 " Plug 'zxqfl/tabnine-vim'
 
 " coc.nvim
