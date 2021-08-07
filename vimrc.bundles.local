@@ -3,7 +3,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Theme
-Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'mxw/vim-jsx'
 
