@@ -1,10 +1,14 @@
+# linux brew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 export PATH="$PATH:`yarn global bin`"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 export GIT_TEMPLATE_DIR="$(overcommit --template-dir)"
 
 # asdf
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
+# dependency: `brew install asdf`
+source $(brew --prefix asdf)/asdf.sh
+source $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 # Always work in a tmux session if tmux is installed
 if which tmux 2>&1 >/dev/null; then
@@ -16,10 +20,7 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # brew install brew
-[ -f /home/linuxbrew/.linuxbrew/etc/profile.d/autojump.sh ] && . /home/linuxbrew/.linuxbrew/etc/profile.d/autojump.sh
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# linux brew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
