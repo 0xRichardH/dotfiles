@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
 
 # Binaries
+brew 'tmux'
 brew 'hub'
 brew 'asdf'
 brew 'autojump', args: ["build-from-source"]
