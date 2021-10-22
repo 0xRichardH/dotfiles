@@ -11,7 +11,7 @@ sudo apt-get install xclip
 ## Iterm2
 
 ### Configuration
-[iterm2-solarized.md](https://gist.github.com/haoxilu/1de601dd26e86d5a42e54bf23d66550f)
+[iterm2-solarized.md](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Builtin%20Solarized%20Light.itermcolors)
 
 ### powerlevel10k
 - https://github.com/romkatv/powerlevel10k#oh-my-zsh
