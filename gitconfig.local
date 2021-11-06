@@ -6,4 +6,4 @@
   name = Richard Hao
   email = xilu@hey.com
 [core]
-  editor = 'vim'
+  editor = 'nvim'
