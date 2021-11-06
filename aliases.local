@@ -4,3 +4,5 @@ alias git='hub'
 alias a="arch -x86_64"
 alias ibrew="arch -x86_64 brew"
 alias dokku="ssh -t digitalstar dokku"
+alias vim="nvim"
+alias vi="nvim"
