@@ -1,8 +1,0 @@
-require:
- - rubocop-rails
- - rubocop/cop/github
-
-inherit_gem:
-  rubocop-github:
-    - config/default.yml
-    - config/rails.yml

@@ -5,12 +5,6 @@ ServerAliveInterval 10
 Host *
   IdentityFile ~/.ssh/richard.pem
 
-Host feedmob
-  HostName feedmob.haoxilu.com
-  User ubuntu
-  IdentityFile ~/.ssh/richard.pem
-  # ProxyCommand nc -X 5 -x 127.0.0.1:7891 %h %p
-
 Host digitalstar
   HostName ssh.digitalstar.tech
   User root
@@ -20,4 +14,3 @@ Host digitalstar.git
   HostName ssh.digitalstar.tech
   User dokku
   IdentityFile ~/.ssh/richard.pem
-
