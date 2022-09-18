@@ -6,4 +6,4 @@
   name = Richard Hao
   email = xilu@hey.com
 [core]
-  editor = emacsclient -c -a ''
+  editor = code --wait
