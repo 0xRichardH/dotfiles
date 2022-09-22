@@ -15,4 +15,3 @@ tmp/**/*
 .idea
 .tool-versions-e
 .tool-versions
-.rubocop.yml
