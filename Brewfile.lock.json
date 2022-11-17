@@ -588,6 +588,12 @@
         "options": {
           "full_name": "font-jetbrains-mono"
         }
+      },
+      "font-jetbrains-mono-nerd-font": {
+        "version": "2.2.2",
+        "options": {
+          "full_name": "font-jetbrains-mono-nerd-font"
+        }
       }
     }
   },
@@ -604,7 +610,7 @@
       "ventura": {
         "HOMEBREW_VERSION": "3.6.11",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "ad781e1d76bcdb9dc1fa5af7025a749eb0db7f29",
+        "Homebrew/homebrew-core": "3bdffa53064c5698906c5f2f81b222d33909d4b5",
         "CLT": "14.1.0.0.1.1666437224",
         "Xcode": "14.1",
         "macOS": "13.0.1"

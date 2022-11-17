@@ -22,3 +22,4 @@ brew 'kdash' # A simple terminal dashboard for Kubernetes built with Rust
 
 # Fonts
 cask 'font-jetbrains-mono'
+cask 'font-jetbrains-mono-nerd-font'
