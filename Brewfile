@@ -16,6 +16,7 @@ brew 'bat'
 brew 'bottom'
 brew 'exa'
 brew 'zoxide'
+brew 'ripgrep' # cmd: rg
 
 # Fonts
 cask 'font-jetbrains-mono'
