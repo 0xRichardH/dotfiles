@@ -15,6 +15,7 @@ brew 'starship'
 brew 'bat'
 brew 'bottom'
 brew 'exa'
+brew 'zoxide'
 
 # Fonts
 cask 'font-jetbrains-mono'

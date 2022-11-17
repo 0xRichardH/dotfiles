@@ -7,3 +7,4 @@ alias vim="nvim"
 alias vi="nvim"
 alias e="code"
 alias ls='exa --git --icons --color=always --group-directories-first'
+alias cd='z'

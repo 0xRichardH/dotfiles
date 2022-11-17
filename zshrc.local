@@ -24,3 +24,4 @@ fi
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
