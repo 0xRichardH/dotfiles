@@ -1,7 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
 DEFAULT_USER="haoxilu"
 
 plugins=(
@@ -11,14 +9,12 @@ plugins=(
   bundler
   docker
   git-flow
-  osx
   vi-mode
   yarn
   extract
   zsh-autosuggestions
   zsh-syntax-highlighting
   git-open
-  autojump
 )
 
 DISABLE_AUTO_UPDATE="true"

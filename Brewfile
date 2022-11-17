@@ -2,6 +2,7 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
+tap 'kdash-rs/kdash'
 
 # Binaries
 brew 'tmux'
@@ -11,6 +12,13 @@ brew 'reattach-to-user-namespace' #https://github.com/haoxilu/dotfiles-local/iss
 brew 'autojump', args: ['build-from-source']
 brew 'nvim', args: ['HEAD']
 brew 'node'
+brew 'starship'
+brew 'bat'
+brew 'bottom'
+brew 'exa'
+brew 'zoxide'
+brew 'ripgrep' # cmd: rg
+brew 'kdash' # A simple terminal dashboard for Kubernetes built with Rust
 
 # Fonts
 cask 'font-jetbrains-mono'
