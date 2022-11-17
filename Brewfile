@@ -2,6 +2,7 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
+tap 'kdash-rs/kdash'
 
 # Binaries
 brew 'tmux'
@@ -17,6 +18,7 @@ brew 'bottom'
 brew 'exa'
 brew 'zoxide'
 brew 'ripgrep' # cmd: rg
+brew 'kdash' # A simple terminal dashboard for Kubernetes built with Rust
 
 # Fonts
 cask 'font-jetbrains-mono'

@@ -9,6 +9,9 @@
       },
       "homebrew/bundle": {
         "revision": "5216bbdd9d47b1cb01c0d2cb656de32540ada95d"
+      },
+      "kdash-rs/kdash": {
+        "revision": "c746b66f231d39f6dc546d8f7424556390b1797a"
       }
     },
     "brew": {
@@ -573,6 +576,10 @@
             }
           }
         }
+      },
+      "kdash": {
+        "version": "v0.3.5",
+        "bottle": false
       }
     },
     "cask": {
@@ -597,7 +604,7 @@
       "ventura": {
         "HOMEBREW_VERSION": "3.6.11",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "fd25f38a0ed039f3f69f0fea28290a6f3dcdeb25",
+        "Homebrew/homebrew-core": "ad781e1d76bcdb9dc1fa5af7025a749eb0db7f29",
         "CLT": "14.1.0.0.1.1666437224",
         "Xcode": "14.1",
         "macOS": "13.0.1"
