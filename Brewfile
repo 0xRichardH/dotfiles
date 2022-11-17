@@ -11,6 +11,9 @@ brew 'reattach-to-user-namespace' #https://github.com/haoxilu/dotfiles-local/iss
 brew 'autojump', args: ['build-from-source']
 brew 'nvim', args: ['HEAD']
 brew 'node'
+brew 'starship'
+brew 'bat'
+brew 'bottom'
 
 # Fonts
 cask 'font-jetbrains-mono'

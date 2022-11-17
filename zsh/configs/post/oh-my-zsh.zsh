@@ -11,7 +11,6 @@ plugins=(
   bundler
   docker
   git-flow
-  osx
   vi-mode
   yarn
   extract
