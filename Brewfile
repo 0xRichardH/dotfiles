@@ -14,6 +14,7 @@ brew 'node'
 brew 'starship'
 brew 'bat'
 brew 'bottom'
+brew 'exa'
 
 # Fonts
 cask 'font-jetbrains-mono'

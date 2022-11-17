@@ -6,3 +6,4 @@ alias ibrew="arch -x86_64 brew"
 alias vim="nvim"
 alias vi="nvim"
 alias e="code"
+alias ls='exa --git --icons --color=always --group-directories-first'
