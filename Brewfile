@@ -19,6 +19,7 @@ brew 'exa'
 brew 'zoxide'
 brew 'ripgrep' # cmd: rg
 brew 'kdash' # A simple terminal dashboard for Kubernetes built with Rust
+brew 'git-delta'
 
 # Fonts
 cask 'font-jetbrains-mono'
