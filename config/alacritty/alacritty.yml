@@ -59,5 +59,9 @@ font:
     x: 0
     y: 0
 
+# copy on selection
+selection:
+  save_to_clipboard: true
+
 # Live config reload (changes require restart)
 live_config_reload: true
