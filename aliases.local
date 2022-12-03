@@ -1,3 +1,7 @@
+# remove all of alias was defined in thoughtbot/dotfiles
+# unalias -m '*'
+unalias migrate
+
 alias mux='tmuxinator'
 alias x='extract'
 alias git='hub'
