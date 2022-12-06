@@ -21,6 +21,7 @@ brew 'kdash' # A simple terminal dashboard for Kubernetes built with Rust
 brew 'git-delta'
 brew 'tealdeer'
 brew 'pgcli'
+brew 'gnupg'
 
 # Fonts
 cask 'font-jetbrains-mono'

@@ -14,6 +14,7 @@ plugins=(
   extract
   zsh-autosuggestions
   zsh-syntax-highlighting
+  history-sync
 )
 
 DISABLE_AUTO_UPDATE="true"
