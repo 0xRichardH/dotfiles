@@ -9,7 +9,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # asdf
 # dependency: `brew install asdf`
-source $(brew --prefix asdf)/asdf.sh
+source $(brew --prefix asdf)/libexec/asdf.sh
 source $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 # Always work in a tmux session if tmux is installed
@@ -24,3 +24,7 @@ fi
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent

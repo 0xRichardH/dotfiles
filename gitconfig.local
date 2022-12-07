@@ -4,7 +4,8 @@
   colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
 [user]
   name = Richard Hao
-  email = richard@digitalstar.tech
+  email = richard.hao@crypto.com
+  signingkey = DF032802CF81DAF8
 [core]
   editor = code --wait
   pager = delta
