@@ -1,8 +1,3 @@
-# Don't add duplicate commands to the zsh_history file
-HIST_NO_DUPS_FILE=true
-# Make the zsh_history file unlimited in size
-HISTSIZE=0
-
 # your zsh_history file location
 ZSH_HISTORY_FILE="${HOME}/.zsh_history" # your git project for housing your zsh_history file
 ZSH_HISTORY_PROJ="${HOME}/.zsh_history_proj" # your encrypted zsh_history file location
