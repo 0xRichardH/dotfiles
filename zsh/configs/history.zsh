@@ -1,5 +1,6 @@
 setopt hist_ignore_all_dups inc_append_history
 setopt HIST_VERIFY
+setopt HIST_IGNORE_SPACE
 HISTFILE=~/.zsh_history
 HISTSIZE=-1
 SAVEHIST=-1
