@@ -18,7 +18,7 @@ setopt share_history
 # Always work in a tmux session if tmux is installed
 if which tmux 2>&1 >/dev/null; then
   if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
-    tmux attach -t R || tmux new -s R; exit
+    tmux attach -t 0x || tmux new -s 0x; exit
   fi
 fi
 
