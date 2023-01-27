@@ -11,6 +11,7 @@ brew 'asdf'
 brew 'reattach-to-user-namespace' #https://github.com/haoxilu/dotfiles-local/issues/9
 brew 'nvim', args: ['HEAD']
 brew 'node'
+brew 'pnpm' # https://pnpm.io/
 brew 'starship'
 brew 'bat'
 brew 'bottom'
