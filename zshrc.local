@@ -9,7 +9,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # asdf
 # dependency: `brew install asdf`
-source $(brew --prefix asdf)/asdf.sh
+source $(brew --prefix asdf)/libexec/asdf.sh
 source $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 # This option tells zsh to share its history with other applications, including tmux
