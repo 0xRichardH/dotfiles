@@ -6,7 +6,7 @@
   name = Richard Hao
   email = richard@digitalstar.tech
 [core]
-  editor = code --wait
+  editor = lvim
   pager = delta
 [interactive]
   diffFilter = delta --color-only
