@@ -3,6 +3,7 @@
 ## Vim
 
 - Clipboard
+- LunarVim https://www.lunarvim.org/
 
 ```
 sudo apt-get install xclip
