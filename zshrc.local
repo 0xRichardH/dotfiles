@@ -2,6 +2,7 @@ export PATH="$PATH:`yarn global bin`"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
 
 # Add Visual Studio Code (code)

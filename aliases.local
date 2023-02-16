@@ -7,8 +7,9 @@ alias x='extract'
 alias git='hub'
 alias a="arch -x86_64"
 alias ibrew="arch -x86_64 brew"
-alias vim="nvim"
-alias vi="nvim"
+alias nvim="lvim"
+alias vim="lvim"
+alias vi="lvim"
 alias e="code"
 alias ls='exa --git --icons --color=always --group-directories-first'
 alias cd='z'
