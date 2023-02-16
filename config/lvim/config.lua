@@ -203,7 +203,13 @@ lvim.plugins = {
             filetypes={
               ["*"]=true
             },
-            suggestion = { enabled = false,  auto_trigger = true },
+            suggestion = {
+              enabled = true,
+              auto_trigger = true,
+              keymap={
+                accept = "<tab>",
+              },
+            },
             panel = { enabled = false },
         }
       end, 100)
