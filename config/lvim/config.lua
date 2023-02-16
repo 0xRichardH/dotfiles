@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-lvim.colorscheme = "lunar"
+lvim.colorscheme = "onedark"
 vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -186,12 +186,25 @@ lvim.builtin.treesitter.highlight.enable = true
 -- })
 
 lvim.plugins = {
+    {"navarasu/onedark.nvim", config=function ()
+        require('onedark').setup {
+        style = 'darker'
+      }
+      require('onedark').load()
+    end
+  },
+
   { "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
+    event = { "InsertEnter" },
     config = function()
       vim.defer_fn(function()
         require("copilot").setup {
             plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+            filetypes={
+              ["*"]=true
+            },
+            suggestion = { enabled = false,  auto_trigger = true },
+            panel = { enabled = false },
         }
       end, 100)
     end,
@@ -199,10 +212,10 @@ lvim.plugins = {
 
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
+    config = function ()
+      require("copilot_cmp").setup {
+        method = "getCompletionsCycling",
+      }
+    end
   },
-  ...
 }
-
--- Can not be placed into the config method of the plugins.
-lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
-table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })

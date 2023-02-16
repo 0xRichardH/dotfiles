@@ -7,7 +7,7 @@
   email = richard.hao@crypto.com
   signingkey = DF032802CF81DAF8
 [core]
-  editor = code --wait
+  editor = lvim
   pager = delta
 [interactive]
   diffFilter = delta --color-only
