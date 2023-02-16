@@ -15,6 +15,8 @@ if exists('g:vscode')
       set clipboard=unnamed
     endif
   endif
+elseif exists("g:neovide")
+  set guifont= "JetBrainsMono Nerd Font:h13"
 else
   " ordinary Neovim
   set runtimepath^=~/.vim runtimepath+=~/.vim/after
