@@ -208,6 +208,9 @@ lvim.plugins = {
               auto_trigger = true,
               keymap={
                 accept = "<tab>",
+                dismiss = "<C-]>",
+                next = "<M-]>",
+                prev = "<M-[>",
               },
             },
             panel = { enabled = false },
