@@ -7,6 +7,11 @@ if vim.g.neovide then
   vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true})
   vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true})
   vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+else
+  vim.opt.runtimepath:prepend('~/.vim')
+  vim.opt.runtimepath:append('~/.vim/after')
+  vim.g.python3_host_prog = '/usr/local/bin/python3'
+  vim.cmd('source ~/.vimrc')
 end
 
 --
