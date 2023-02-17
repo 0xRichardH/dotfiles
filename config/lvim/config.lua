@@ -13,6 +13,13 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "onedark"
 vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
+-- Shorter ASCII art logo, so not too much space is taken up.
+lvim.builtin.alpha.dashboard.section.header.val = {
+    "▌              ▌ ▌▗",
+    "▌  ▌ ▌▛▀▖▝▀▖▙▀▖▚▗▘▄ ▛▚▀▖",
+    "▌  ▌ ▌▌ ▌▞▀▌▌  ▝▞ ▐ ▌▐ ▌",
+    "▀▀▘▝▀▘▘ ▘▝▀▘▘   ▘ ▀▘▘▝ ▘",
+}
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -22,6 +29,22 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.builtin.alpha.dashboard.section.buttons.entries = {
+  { "SPC f",   "  Find File",                   "<CMD>Telescope find_files<CR>" },
+  { "SPC n",   "  New File",                    "<CMD>ene!<CR>" },
+  { "SPC p",   "  Recent Projects ",            "<CMD>Telescope projects<CR>" },
+  { "SPC u",   "  Recently Used Files",         "<CMD>Telescope oldfiles<CR>" },
+  { "SPC s",   "  Load last session",           "<CMD>SessionLoad<CR>" },
+  { "SPC r",   "  Ranger",                      "<CMD>RnvimrToggle<CR>" },
+  { "SPC m",   "  Marks              ",         "<CMD>Telescope marks<CR>" },
+  { "SPC w",   "  Find Word",                   "<CMD>Telescope live_grep<CR>" },
+  { "SPC c",   "  Edit Configuration",          "<CMD>e ~/bin/config/configFiles.md<CR>" },
+  { "SPC g",   "  Git status",                  "<CMD>Telescope git_status<CR>" }
+}
+lvim.builtin.which_key.mappings["z"] = {
+    "<cmd>ZenMode<CR>:set nospell<CR>",                    "Zen Mode"
+}
+--}}}
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -194,6 +217,7 @@ lvim.plugins = {
     end
   },
 
+  -- Copilot
   { "zbirenbaum/copilot.lua",
     event = { "InsertEnter" },
     config = function()
@@ -226,6 +250,38 @@ lvim.plugins = {
         method = "getCompletionsCycling",
       }
     end
+  },
+
+  -- Zen Mode
+  {
+    "folke/zen-mode.nvim",
+    cmd = "ZenMode",
+    config = function()
+      require("zen-mode").setup({
+        window = {
+            backdrop = 1,
+            height = 1,                     -- height of the Zen window
+            width = 1,                      -- height of the Zen window
+            options = {
+                signcolumn = "no",          -- disable signcolumn
+                number = true,              -- disable number column
+                relativenumber = false,     -- disable relative numbers
+                cursorline = true,          -- disable cursorline
+                cursorcolumn = false,       -- disable cursor column
+                foldcolumn = "0",           -- disable fold column
+                list = false,               -- disable whitespace characters
+            },
+        },
+
+        plugins = {
+            gitsigns = { enabled = false }, -- disables git signs
+            kitty = {
+                enabled = true,
+                font = "+5",                -- font size increment
+            }
+        },
+      })
+    end,
   },
 }
 
