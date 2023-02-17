@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-lvim.colorscheme = "onedark"
+lvim.colorscheme = "onedarker"
 vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
 vim.opt.linespace = 12
 -- Shorter ASCII art logo, so not too much space is taken up.
@@ -210,14 +210,6 @@ lvim.builtin.treesitter.highlight.enable = true
 -- })
 
 lvim.plugins = {
-    {"navarasu/onedark.nvim", config=function ()
-        require('onedark').setup {
-        style = 'darker'
-      }
-      require('onedark').load()
-    end
-  },
-
   -- Copilot
   { "zbirenbaum/copilot.lua",
     event = { "InsertEnter" },
