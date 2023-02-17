@@ -26,7 +26,7 @@ unbind '"'
 bind - split-window -v
 
 # This will let you manipulate the remote session with Ctrl-A
-bind-key -n C-a send-prefix
+# bind-key -n C-a send-prefix
 
 # prefix + h to clear screen and history buffer
 bind r send-keys "clear && tmux clear-history" \; send-keys "Enter"
