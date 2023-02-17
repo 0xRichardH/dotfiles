@@ -13,6 +13,7 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "onedark"
 vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
+vim.opt.linespace = 12
 -- Shorter ASCII art logo, so not too much space is taken up.
 lvim.builtin.alpha.dashboard.section.header.val = {
     "▌              ▌ ▌▗",
@@ -298,5 +299,7 @@ if vim.g.neovide then
   vim.g.neovide_remember_window_position = true
   vim.g.neovide_input_use_logo = 1
   vim.g.neovide_input_macos_alt_is_meta = true
+  vim.g.neovide_confirm_quit = true
+  vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.opt.title = true
 end
