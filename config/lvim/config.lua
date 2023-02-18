@@ -10,16 +10,21 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
-lvim.colorscheme = "onedarker"
+lvim.format_on_save.enabled = true
+lvim.colorscheme = "darkplus"
 vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
 vim.opt.linespace = 12
+vim.g.italic_comments = true -- italic comments(Default: true)
+vim.g.italic_keywords = true -- italic keywords(Default: true)
+vim.g.italic_functions = true -- italic functions(Default: false)
+vim.g.italic_variables = true -- italic variables(Default: false)
+
 -- Shorter ASCII art logo, so not too much space is taken up.
 lvim.builtin.alpha.dashboard.section.header.val = {
-    "▌              ▌ ▌▗",
-    "▌  ▌ ▌▛▀▖▝▀▖▙▀▖▚▗▘▄ ▛▚▀▖",
-    "▌  ▌ ▌▌ ▌▞▀▌▌  ▝▞ ▐ ▌▐ ▌",
-    "▀▀▘▝▀▘▘ ▘▝▀▘▘   ▘ ▀▘▘▝ ▘",
+  "▌              ▌ ▌▗",
+  "▌  ▌ ▌▛▀▖▝▀▖▙▀▖▚▗▘▄ ▛▚▀▖",
+  "▌  ▌ ▌▌ ▌▞▀▌▌  ▝▞ ▐ ▌▐ ▌",
+  "▀▀▘▝▀▘▘ ▘▝▀▘▘   ▘ ▀▘▘▝ ▘",
 }
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -30,20 +35,18 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-lvim.builtin.alpha.dashboard.section.buttons.entries = {
-  { "SPC f",   "  Find File",                   "<CMD>Telescope find_files<CR>" },
-  { "SPC n",   "  New File",                    "<CMD>ene!<CR>" },
-  { "SPC p",   "  Recent Projects ",            "<CMD>Telescope projects<CR>" },
-  { "SPC u",   "  Recently Used Files",         "<CMD>Telescope oldfiles<CR>" },
-  { "SPC s",   "  Load last session",           "<CMD>SessionLoad<CR>" },
-  { "SPC r",   "  Ranger",                      "<CMD>RnvimrToggle<CR>" },
-  { "SPC m",   "  Marks              ",         "<CMD>Telescope marks<CR>" },
-  { "SPC w",   "  Find Word",                   "<CMD>Telescope live_grep<CR>" },
-  { "SPC c",   "  Edit Configuration",          "<CMD>e ~/bin/config/configFiles.md<CR>" },
-  { "SPC g",   "  Git status",                  "<CMD>Telescope git_status<CR>" }
-}
 lvim.builtin.which_key.mappings["z"] = {
-    "<cmd>ZenMode<CR>:set nospell<CR>",                    "Zen Mode"
+  "<cmd>ZenMode<CR>:set nospell<CR>", "Zen Mode"
+}
+lvim.keys.term_mode = { ["<C-l>"] = false }
+lvim.builtin.cmp.cmdline.enable = false
+lvim.builtin.cmp.window.documentation = {
+  border = "rounded",
+  winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+}
+lvim.builtin.cmp.window.completion = {
+  border = "rounded",
+  winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 }
 --}}}
 -- unmap a default keymapping
@@ -216,21 +219,21 @@ lvim.plugins = {
     config = function()
       vim.defer_fn(function()
         require("copilot").setup {
-            plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
-            filetypes={
-              ["*"]=true
+          plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+          filetypes = {
+            ["*"] = true
+          },
+          suggestion = {
+            enabled = true,
+            auto_trigger = true,
+            keymap = {
+              accept = "<C-a>",
+              dismiss = "<C-]>",
+              next = "<M-]>",
+              prev = "<M-[>",
             },
-            suggestion = {
-              enabled = true,
-              auto_trigger = true,
-              keymap={
-                accept = "<C-a>",
-                dismiss = "<C-]>",
-                next = "<M-]>",
-                prev = "<M-[>",
-              },
-            },
-            panel = { enabled = false },
+          },
+          panel = { enabled = false },
         }
       end, 100)
     end,
@@ -238,7 +241,7 @@ lvim.plugins = {
 
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
-    config = function ()
+    config = function()
       require("copilot_cmp").setup {
         method = "getCompletionsCycling",
       }
@@ -252,26 +255,21 @@ lvim.plugins = {
     config = function()
       require("zen-mode").setup({
         window = {
-            backdrop = 1,
-            height = 1,                     -- height of the Zen window
-            width = 1,                      -- height of the Zen window
-            options = {
-                signcolumn = "no",          -- disable signcolumn
-                number = true,              -- disable number column
-                relativenumber = false,     -- disable relative numbers
-                cursorline = true,          -- disable cursorline
-                cursorcolumn = false,       -- disable cursor column
-                foldcolumn = "0",           -- disable fold column
-                list = false,               -- disable whitespace characters
-            },
+          backdrop = 1,
+          height = 1, -- height of the Zen window
+          width = 1, -- height of the Zen window
+          options = {
+            signcolumn = "no", -- disable signcolumn
+            number = true, -- disable number column
+            relativenumber = false, -- disable relative numbers
+            cursorline = true, -- disable cursorline
+            cursorcolumn = false, -- disable cursor column
+            foldcolumn = "0", -- disable fold column
+            list = false, -- disable whitespace characters
+          },
         },
-
         plugins = {
-            gitsigns = { enabled = false }, -- disables git signs
-            kitty = {
-                enabled = true,
-                font = "+5",                -- font size increment
-            }
+          gitsigns = { enabled = false }, -- disables git signs
         },
       })
     end,
@@ -284,18 +282,21 @@ lvim.plugins = {
 
     -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
     -- setup = function()
-      --  vim.o.timeoutlen = 500
+    --  vim.o.timeoutlen = 500
     -- end
   },
 
-  -- lightspeed 
+  -- lightspeed
   -- jetpack codebase navigation
   {
     "ggandor/lightspeed.nvim",
     event = "BufRead",
   },
+
+  { "lunarvim/darkplus.nvim" },
 }
 
+-- neovide
 if vim.g.neovide then
   vim.keymap.set('n', '<D-s>', ':w<CR>') -- Save
   vim.keymap.set('v', '<D-c>', '"+y') -- Copy
@@ -313,5 +314,5 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.g.neovide_hide_mouse_when_typing = true
   vim.opt.title = true
-  vim.opt.titlestring = "%<%F - 0x"
+  vim.opt.titlestring = "%<%F"
 end
