@@ -4,9 +4,6 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # https://github.com/rbenv/ruby-build/wiki#suggested-build-environment
 
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
 # asdf
 # dependency: `brew install asdf`
 source $(brew --prefix asdf)/libexec/asdf.sh
