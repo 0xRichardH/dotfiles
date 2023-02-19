@@ -1,9 +1,8 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "darkplus"
-vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
-vim.opt.linespace = 12
+lvim.colorscheme = "ayu-light"
+vim.opt.guifont = "Hack:h16"
 vim.g.italic_comments = true -- italic comments(Default: true)
 vim.g.italic_keywords = true -- italic keywords(Default: true)
 vim.g.italic_functions = true -- italic functions(Default: false)
@@ -30,15 +29,6 @@ lvim.builtin.which_key.mappings["z"] = {
 }
 lvim.keys.term_mode = { ["<C-l>"] = false }
 lvim.builtin.cmp.cmdline.enable = false
-lvim.builtin.cmp.window.documentation = {
-  border = "rounded",
-  winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
-}
-lvim.builtin.cmp.window.completion = {
-  border = "rounded",
-  winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
-}
-
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
@@ -145,7 +135,7 @@ lvim.plugins = {
     event = "BufRead",
   },
 
-  { "lunarvim/darkplus.nvim" },
+  { "Shatur/neovim-ayu" },
 }
 
 -- neovide
