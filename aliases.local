@@ -9,8 +9,10 @@ alias a="arch -x86_64"
 alias ibrew="arch -x86_64 brew"
 alias vim="lvim-gui"
 alias vi="lvim-gui"
+alias code="lvim-gui"
 alias e="code"
 alias ls='exa --git --icons --color=always --group-directories-first'
 alias cd='z'
 alias cat='bat'
 alias psql='pgcli'
+alias npm='pnpm'

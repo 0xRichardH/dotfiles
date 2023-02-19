@@ -1,50 +1,50 @@
-# Colors (Monokai Pro)
+# Colors (Ayu Light)
 colors:
-  # Default colors
+  # Default colors - taken from ayu-colors
   primary:
-    background: '#2D2A2E'
-    foreground: '#FCFCFA'
+    background: '0xFCFCFC'
+    foreground: '0x5C6166'
 
-  # Normal colors
+  # Normal colors - taken from ayu-iTerm
   normal:
-    black:   '#403E41'
-    red:     '#FF6188'
-    green:   '#A9DC76'
-    yellow:  '#FFD866'
-    blue:    '#FC9867'
-    magenta: '#AB9DF2'
-    cyan:    '#78DCE8'
-    white:   '#FCFCFA'
+    black:   '0x010101'
+    red:     '0xe7666a'
+    green:   '0x80ab24'
+    yellow:  '0xeba54d'
+    blue:    '0x4196df'
+    magenta: '0x9870c3'
+    cyan:    '0x51b891'
+    white:   '0xc1c1c1'
 
-  # Bright colors
+  # Bright colors - pastel lighten 0.1 <normal> except black lighten with 0.2
   bright:
-    black:   '#727072'
-    red:     '#FF6188'
-    green:   '#A9DC76'
-    yellow:  '#FFD866'
-    blue:    '#FC9867'
-    magenta: '#AB9DF2'
-    cyan:    '#78DCE8'
-    white:   '#FCFCFA'
+    black:   '0x343434'
+    red:     '0xee9295'
+    green:   '0x9fd32f'
+    yellow:  '0xf0bc7b'
+    blue:    '0x6daee6'
+    magenta: '0xb294d2'
+    cyan:    '0x75c7a8'
+    white:   '0xdbdbdb'
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: Hack Nerd Font
     style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: Hack Nerd Font
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font
+    family: Hack Nerd Font
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: Hack Nerd Font
     style: Bold Italic
 
-  size: 13
+  size: 16
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
