@@ -2,6 +2,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "ayu-light"
+lvim.use_icons = true
 vim.opt.guifont = "Hack:h16"
 vim.g.italic_comments = true -- italic comments(Default: true)
 vim.g.italic_keywords = true -- italic keywords(Default: true)
@@ -82,9 +83,13 @@ lvim.plugins = {
   },
 
   { "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua", "nvim-cmp" },
+    after = { "copilot.lua" },
     config = function()
       require("copilot_cmp").setup {
+        formatters = {
+          insert_text = require("copilot_cmp.format").remove_existing,
+          preview = require("copilot_cmp.format").deindent
+        },
         method = "getCompletionsCycling",
       }
     end
@@ -135,8 +140,13 @@ lvim.plugins = {
     event = "BufRead",
   },
 
+  -- colorscheme
   { "Shatur/neovim-ayu" },
 }
+
+-- Can not be placed into the config method of the plugins.
+lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 
 -- neovide
 if vim.g.neovide then
