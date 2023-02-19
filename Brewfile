@@ -27,3 +27,5 @@ brew 'gnupg'
 # Fonts
 cask 'font-jetbrains-mono'
 cask 'font-jetbrains-mono-nerd-font'
+cask 'font-hack'
+cask 'font-hack-nerd-font'
