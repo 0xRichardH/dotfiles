@@ -11,7 +11,8 @@ if vim.g.neovide then
   vim.g.neovide_input_use_logo = 1
   vim.g.neovide_input_macos_alt_is_meta = true
   vim.g.neovide_confirm_quit = true
-  vim.g.neovide_cursor_vfx_mode = "railgun"
+  -- vim.g.neovide_cursor_vfx_mode = "railgun"
+  vim.g.neovide_cursor_animation_length = 0
   vim.g.neovide_hide_mouse_when_typing = true
   vim.opt.title = true
   vim.opt.titlestring = "%<%F"
