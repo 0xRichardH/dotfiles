@@ -3,9 +3,6 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "ayu-light"
 lvim.use_icons = true
-vim.opt.guifont = "Hack:h16"
-vim.opt.title = true
-vim.opt.titlestring = "%<%F"
 vim.g.italic_comments = true -- italic comments(Default: true)
 vim.g.italic_keywords = true -- italic keywords(Default: true)
 vim.g.italic_functions = true -- italic functions(Default: false)
@@ -34,14 +31,24 @@ lvim.builtin.treesitter.ensure_installed = {
   "javascript",
   "json",
   "lua",
-  "python",
   "typescript",
   "tsx",
   "css",
   "rust",
-  "java",
   "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
+
+-- Vim options
+local vimOptions = {
+  guifont = "Hack:h16",
+  title = true,
+  titlestring = "%<%F",
+  relativenumber = true, -- set relative numbered lines
+}
+
+for k, v in pairs(vimOptions) do
+  vim.opt[k] = v
+end
