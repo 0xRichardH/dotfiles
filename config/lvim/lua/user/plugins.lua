@@ -1,4 +1,8 @@
 lvim.plugins = {
+  "jose-elias-alvarez/typescript.nvim",
+  "olexsmir/gopher.nvim",
+  "roobert/tailwindcss-colorizer-cmp.nvim",
+
   -- Copilot
   { "zbirenbaum/copilot.lua",
     event = { "InsertEnter" },
