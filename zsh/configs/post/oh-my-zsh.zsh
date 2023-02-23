@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-DEFAULT_USER="haoxilu"
+DEFAULT_USER="richard"
 
 plugins=(
   git
