@@ -1,1 +1,2 @@
-config/coc/extensions/node_modules
+Brewfile.lock.json
+Brewfile-macOS.lock.json
