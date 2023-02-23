@@ -1,3 +1,6 @@
+# Brewfile for macOS and Linux
+# brew bundle --file=~/Brewfile
+
 # Taps
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
@@ -8,7 +11,6 @@ tap 'kdash-rs/kdash'
 brew 'tmux'
 brew 'hub'
 brew 'asdf'
-brew 'reattach-to-user-namespace' #https://github.com/haoxilu/dotfiles-local/issues/9
 brew 'nvim', args: ['HEAD']
 brew 'node'
 brew 'pnpm' # https://pnpm.io/

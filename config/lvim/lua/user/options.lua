@@ -1,7 +1,7 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "ayu-light"
+lvim.colorscheme = "ayu-mirage"
 lvim.use_icons = true
 vim.g.italic_comments = true -- italic comments(Default: true)
 vim.g.italic_keywords = true -- italic keywords(Default: true)
