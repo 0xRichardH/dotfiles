@@ -2,6 +2,7 @@ lvim.plugins = {
   "jose-elias-alvarez/typescript.nvim",
   "olexsmir/gopher.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
+  "ghillb/cybu.nvim",
 
   -- Copilot
   { "zbirenbaum/copilot.lua",
