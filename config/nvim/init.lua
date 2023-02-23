@@ -1,13 +1,4 @@
-if vim.g.neovide then
-  vim.opt.guifont = { "JetBrainsMono Nerd Font", "h13" }
-
-  -- Allow clipboard copy paste in neovim
-  vim.g.neovide_input_use_logo = true
-  vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true })
-  vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true })
-  vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
-  vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
-elseif vim.g.vscode then
+if vim.g.vscode then
   -- VSCode extension
   vim.api.nvim_set_keymap('x', 'gc', '<Plug>VSCodeCommentary', { noremap = false, silent = true })
   vim.api.nvim_set_keymap('n', 'gc', '<Plug>VSCodeCommentary', { noremap = false, silent = true })
@@ -24,5 +15,4 @@ elseif vim.g.vscode then
       vim.opt.clipboard = { "unnamed" }
     end
   end
-else
 end
