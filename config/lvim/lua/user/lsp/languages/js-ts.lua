@@ -36,7 +36,7 @@ formatters.setup {
 }
 
 -- Set a linter.
-local linters = require("lvim.lsp.null-ls.linters")
-linters.setup({
-  { command = "eslint", filetypes = { "javascript", "typescript" } },
-})
+-- local linters = require("lvim.lsp.null-ls.linters")
+-- linters.setup({
+--   { command = "eslint", filetypes = { "javascript", "typescript" } },
+-- })
