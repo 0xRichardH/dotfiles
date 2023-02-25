@@ -90,6 +90,9 @@ lvim.plugins = {
 
   -- colorscheme
   { "Shatur/neovim-ayu" },
+
+  -- Astro supoprt for Neovim
+  { "wuelnerdotexe/vim-astro" },
 }
 
 -- Can not be placed into the config method of the plugins.
