@@ -26,12 +26,19 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- Vim options
 local vimOptions = {
-  guifont = "Hack:h16",
-  title = true,
-  titlestring = "%<%F",
+  guifont = "Hack:h16", -- set font
+  title = true, -- set title of window
+  titlestring = "%<%F", -- set title to filename
   relativenumber = true, -- set relative numbered lines
+  termguicolors = true, -- set term gui colors (most terminals support this)
 }
 
 for k, v in pairs(vimOptions) do
   vim.opt[k] = v
 end
+
+-- Vim options: disable ~ on empty lines
+vim.opt.fillchars = vim.opt.fillchars + "eob: "
+vim.opt.fillchars:append {
+  stl = " ",
+}
