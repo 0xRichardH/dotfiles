@@ -93,6 +93,9 @@ lvim.plugins = {
 
   -- Astro supoprt for Neovim
   { "wuelnerdotexe/vim-astro" },
+
+  -- 👀 " / @ / CTRL-R
+  { "junegunn/vim-peekaboo" },
 }
 
 -- Can not be placed into the config method of the plugins.
