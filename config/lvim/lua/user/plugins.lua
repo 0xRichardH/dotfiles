@@ -1,13 +1,18 @@
+local copilot_config = require("user.plugins.copilot")
+local copilot_cmp_config = require("user.plugins.copilot-cmp")
+
 lvim.plugins = {
   -- Copilot
   {
     "zbirenbaum/copilot.lua",
     event = { "InsertEnter" },
+    config = copilot_config.copilot,
   },
 
   {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
+    config = copilot_cmp_config.copilot_cmp,
   },
 
   -- colorscheme
