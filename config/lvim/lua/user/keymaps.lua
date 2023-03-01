@@ -2,7 +2,4 @@
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-
-lvim.builtin.which_key.mappings["z"] = {
-  "<cmd>ZenMode<CR>:set nospell<CR>", "Zen Mode"
-}
+lvim.keys.term_mode = { ["<C-l>"] = false }
