@@ -1,31 +1,23 @@
 lvim.plugins = {
-  "jose-elias-alvarez/typescript.nvim",
-  "olexsmir/gopher.nvim",
-  "roobert/tailwindcss-colorizer-cmp.nvim",
-  "ghillb/cybu.nvim",
-
   -- Copilot
-  { "zbirenbaum/copilot.lua",
+  {
+    "zbirenbaum/copilot.lua",
     event = { "InsertEnter" },
   },
 
-  { "zbirenbaum/copilot-cmp",
+  {
+    "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
   },
+
+  -- colorscheme
+  "Shatur/neovim-ayu",
 
   -- Zen Mode
   { "folke/zen-mode.nvim" },
 
-  -- vim-surround
-  -- mappings to delete, change and add surroundings
-  {
-    "tpope/vim-surround",
-
-    -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
-    -- setup = function()
-    --  vim.o.timeoutlen = 500
-    -- end
-  },
+  -- Cy[cle]bu[ffer
+  "ghillb/cybu.nvim",
 
   -- lightspeed
   -- jetpack codebase navigation
@@ -34,12 +26,22 @@ lvim.plugins = {
     event = "BufRead",
   },
 
-  -- colorscheme
-  { "Shatur/neovim-ayu" },
-
-  -- Astro supoprt for Neovim
-  { "wuelnerdotexe/vim-astro" },
+  -- vim-surround
+  -- mappings to delete, change and add surroundings
+  { "tpope/vim-surround" },
 
   -- 👀 " / @ / CTRL-R
-  { "junegunn/vim-peekaboo" },
+  "junegunn/vim-peekaboo",
+
+  -- Astro supoprt for Neovim
+  "wuelnerdotexe/vim-astro",
+
+  -- A minimal typescript-language-server integration plugin
+  "jose-elias-alvarez/typescript.nvim",
+
+  -- Minimalistic plugin for Go development in Neovim
+  "olexsmir/gopher.nvim",
+
+  -- 🌈 A Neovim plugin to add vscode-style TailwindCSS completion to nvim-cmp
+  "roobert/tailwindcss-colorizer-cmp.nvim",
 }
