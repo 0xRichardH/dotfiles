@@ -1,5 +1,7 @@
 local copilot_config = require("user.plugins.copilot")
 local copilot_cmp_config = require("user.plugins.copilot-cmp")
+local cybu_config = require("user.plugins.cybu")
+local zen_mode_config = require("user.plugins.zen-mode")
 
 lvim.plugins = {
   -- Copilot
@@ -19,10 +21,16 @@ lvim.plugins = {
   "Shatur/neovim-ayu",
 
   -- Zen Mode
-  { "folke/zen-mode.nvim" },
+  {
+    "folke/zen-mode.nvim",
+    config = zen_mode_config.zen_mode
+  },
 
   -- Cy[cle]bu[ffer
-  "ghillb/cybu.nvim",
+  {
+    "ghillb/cybu.nvim",
+    config = cybu_config.cybu
+  },
 
   -- lightspeed
   -- jetpack codebase navigation
