@@ -16,7 +16,6 @@ lvim.builtin.alpha.dashboard.section.header.val = {
   "▀▀▘▝▀▘▘ ▘▝▀▘▘   ▘ ▀▘▘▝ ▘",
 }
 
-lvim.keys.term_mode = { ["<C-l>"] = false }
 lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
