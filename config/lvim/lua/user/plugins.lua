@@ -51,6 +51,14 @@ lvim.plugins = {
   -- mappings to delete, change and add surroundings
   { "tpope/vim-surround" },
 
+  -- autoclose and autorename html tag
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+
   -- 👀 " / @ / CTRL-R
   "junegunn/vim-peekaboo",
 
