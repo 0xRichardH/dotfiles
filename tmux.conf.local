@@ -1,5 +1,5 @@
 # decrease command delay (increases vim responsiveness)
-set -sg escape-time 1
+set -sg escape-time 0
 
 # highlight window when it has new activity
 setw -g monitor-activity on
@@ -34,4 +34,4 @@ bind r send-keys "clear && tmux clear-history" \; send-keys "Enter"
 ###########################
 # Status Bar
 ###########################
-set-option -g status-position top
+set-option -g status-position bottom
