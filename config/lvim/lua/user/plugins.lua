@@ -20,6 +20,14 @@ lvim.plugins = {
   -- colorscheme
   "Shatur/neovim-ayu",
 
+  -- Remove all background colors to make nvim transparent
+  {
+    "xiyaowong/nvim-transparent",
+    config = function()
+      require("transparent").setup({ enable = true })
+    end
+  },
+
   -- Zen Mode
   {
     "folke/zen-mode.nvim",
@@ -42,6 +50,14 @@ lvim.plugins = {
   -- vim-surround
   -- mappings to delete, change and add surroundings
   { "tpope/vim-surround" },
+
+  -- autoclose and autorename html tag
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
 
   -- 👀 " / @ / CTRL-R
   "junegunn/vim-peekaboo",

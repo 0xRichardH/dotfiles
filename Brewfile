@@ -6,6 +6,8 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
 tap 'kdash-rs/kdash'
+tap 'arl/arl'
+tap 'jesseduffield/lazygit'
 
 # Binaries
 brew 'tmux'
@@ -25,6 +27,8 @@ brew 'git-delta'
 brew 'tealdeer'
 brew 'pgcli'
 brew 'gnupg'
+brew 'gitmux'
+brew 'lazygit'
 
 # Fonts
 cask 'font-jetbrains-mono'
