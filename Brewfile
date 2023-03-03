@@ -10,6 +10,7 @@ tap 'arl/arl'
 tap 'jesseduffield/lazygit'
 
 # Binaries
+brew 'fish'
 brew 'tmux'
 brew 'hub'
 brew 'asdf'
