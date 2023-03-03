@@ -2,14 +2,12 @@
 # unalias -m '*'
 unalias migrate
 
-alias mux='tmuxinator'
 alias x='extract'
 alias git='hub'
 alias a="arch -x86_64"
 alias ibrew="arch -x86_64 brew"
 alias vim="lvim"
 alias vi="lvim"
-alias code="lvim"
 alias e="code"
 alias ls='exa --git --icons --color=always --group-directories-first'
 alias cd='z'
