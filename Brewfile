@@ -32,6 +32,7 @@ brew 'gitmux'
 brew 'lazygit'
 brew 'fd' # alternative to 'find'
 brew 'fzf'
+brew 'gum' # A tool for glamorous shell scripts 🎀
 
 # Fonts
 cask 'font-jetbrains-mono'
