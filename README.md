@@ -1,5 +1,30 @@
 # dotfiles
 
+## Install
+
+Clone onto your laptop:
+
+```shell
+git clone git@github.com:0x4richard/dotfiles-local.git ~/dotfiles-local
+```
+
+- Install [rcm](https://github.com/thoughtbot/rcm):
+
+```shell
+brew install rcm
+```
+
+- Install the dotfiles:
+
+```shell
+env RCRC=$HOME/dotfiles/rcrc rcup
+```
+
+- Update the dotfiles
+```shell
+rcup
+```
+
 ## Vim
 
 - Clipboard
