@@ -2,7 +2,6 @@
 # brew bundle --file=~/Brewfile-macOS
 
 # Binaries
-brew 'reattach-to-user-namespace' #https://github.com/haoxilu/dotfiles-local/issues/9
 brew 'koekeishiya/formulae/yabai' # A tiling window manager for macOS
 brew 'koekeishiya/formulae/skhd' # Simple hotkey daemon for macOS
 

@@ -30,6 +30,8 @@ brew 'pgcli'
 brew 'gnupg'
 brew 'gitmux'
 brew 'lazygit'
+brew 'fd' # alternative to 'find'
+brew 'fzf'
 
 # Fonts
 cask 'font-jetbrains-mono'

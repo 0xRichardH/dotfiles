@@ -7,6 +7,7 @@ set -U LANG en_US.UTF-8
 set -U LC_ALL en_US.UTF-8
 
 # ordered by priority - bottom up
+fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path $PNPM_HOME
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/opt/grep/libexec/gnubin
