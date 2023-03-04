@@ -31,5 +31,8 @@ font:
 selection:
   save_to_clipboard: true
 
+mouse:
+  hide_when_typing: true
+
 # Live config reload (changes require restart)
 live_config_reload: true
