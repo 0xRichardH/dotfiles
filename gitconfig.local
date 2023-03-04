@@ -5,6 +5,7 @@
 [user]
   name = Richard Hao
   email = richard@digitalstar.tech
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPi+G13tX5FA4z28a8j8R/cjYe51usv7hiAI8ipx3bG1
 [core]
   editor = lvim
   pager = delta
@@ -19,3 +20,9 @@
   conflictstyle = diff3
 [diff]
   colorMoved = default
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+  gpgsign = true
