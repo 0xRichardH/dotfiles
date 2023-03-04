@@ -34,5 +34,8 @@ selection:
 mouse:
   hide_when_typing: true
 
+key_bindings:
+  - { key: J, mods: Command, chars: "\x02\x54" }  # use (cmd+j) to open the session manager popup (t)
+
 # Live config reload (changes require restart)
 live_config_reload: true
