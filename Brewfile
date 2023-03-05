@@ -33,6 +33,7 @@ brew 'lazygit'
 brew 'fd' # alternative to 'find'
 brew 'fzf'
 brew 'gum' # A tool for glamorous shell scripts 🎀
+brew 'lf' # Terminal file manager
 
 # Fonts
 cask 'font-jetbrains-mono'

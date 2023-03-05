@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -exo pipefail
+
+say "Pomodoro break is starting now. Please take a break for 5 minutes."

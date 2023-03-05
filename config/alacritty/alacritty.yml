@@ -45,8 +45,13 @@ key_bindings:
   - { key: Key8, mods: Command, chars: "\x028" } #                ... 8
   - { key: Key9, mods: Command, chars: "\x029" } #                ... 9
   - { key: Comma, mods: Command, chars: "\x02," } # rename the current tmux window
+  - { key: E, mods: Command, chars: "\x02|" } # split tmux window vertically
+  - { key: E, mods: Command|Shift, chars: "\x02-" } # split tmux window horizontally
+  - { key: F, mods: Command|Shift, chars: "\x02\x5b\x2f" } # start tmux search mode
+  - { key: F, mods: Command, chars: "v\n" } 
   - { key: J, mods: Command, chars: "\x02\x54" }  # use (cmd+j) to open the session manager popup (t)
   - { key: L, mods: Command, chars: "\x02L" } # switch to the last tmux session
+  - { key: O, mods: Command, chars: "lfcd\n" } # open file manager 'gokcehan/lf'
   - { key: T, mods: Command, chars: "\x02c" } # create a new tmux window
   - { key: U, mods: Command, chars: "\x02u" } # open URL (cmd+u)
   - { key: W, mods: Command, chars: "\x02x" } # kill the current pane
