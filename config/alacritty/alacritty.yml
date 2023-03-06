@@ -52,6 +52,8 @@ key_bindings:
   - { key: J, mods: Command, chars: "\x02\x54" }  # use (cmd+j) to open the session manager popup (t)
   - { key: L, mods: Command, chars: "\x02L" } # switch to the last tmux session
   - { key: O, mods: Command, chars: "lfcd\n" } # open file manager 'gokcehan/lf'
+  - { key: P, mods: Command, chars: ":GoToFile\n" } # files
+  - { key: P, mods: Command|Shift, chars: ":GoToCommand\n" } # commands
   - { key: T, mods: Command, chars: "\x02c" } # create a new tmux window
   - { key: U, mods: Command, chars: "\x02u" } # open URL (cmd+u)
   - { key: W, mods: Command, chars: "\x02x" } # kill the current pane
