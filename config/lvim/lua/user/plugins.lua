@@ -79,16 +79,4 @@ lvim.plugins = {
     --  { "<leader>ff", "<cmd>Lf<cr>", desc = "NeoTree" },
     -- }
   },
-
-  -- Astro supoprt for Neovim
-  "wuelnerdotexe/vim-astro",
-
-  -- A minimal typescript-language-server integration plugin
-  "jose-elias-alvarez/typescript.nvim",
-
-  -- Minimalistic plugin for Go development in Neovim
-  "olexsmir/gopher.nvim",
-
-  -- 🌈 A Neovim plugin to add vscode-style TailwindCSS completion to nvim-cmp
-  "roobert/tailwindcss-colorizer-cmp.nvim",
 }
