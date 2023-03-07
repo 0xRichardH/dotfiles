@@ -13,3 +13,21 @@ lvim.builtin.treesitter.ensure_installed = {
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
+
+-- Linting
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  {
+    command = "eslint",
+    fileTypes = "typescript, typescriptreact, javascript"
+  }
+}
+
+-- Formatters
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  {
+    command = 'prettier',
+    fileTypes = { "typescript", "typescriptreact", "javascript", "css", "html" }
+  }
+}
