@@ -5,7 +5,7 @@
 Clone onto your laptop:
 
 ```shell
-git clone git@github.com:0x4richard/dotfiles-local.git ~/dotfiles-local
+git clone git@github.com:0x4richard/dotfiles.git ~/dotfiles
 ```
 
 - Install [rcm](https://github.com/thoughtbot/rcm):
@@ -21,6 +21,7 @@ env RCRC=$HOME/dotfiles-local/rcrc rcup
 ```
 
 - Update the dotfiles
+
 ```shell
 rcup
 ```
