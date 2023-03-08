@@ -2,7 +2,11 @@
 
 # This script bootstraps my dotfiles on a new machine.
 
+# enable debug mode
 set -x
+
+# exit when any command fails
+set -e
 
 echo "Installing dotfiles"
 
