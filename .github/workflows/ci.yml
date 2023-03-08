@@ -1,0 +1,14 @@
+name: CI
+
+on: [push, workflow_dispatch]
+
+jobs:
+  bootstrap-on-macos:
+    name: macOS
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Install dotfiles
+        run: ./install.sh
