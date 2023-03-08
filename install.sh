@@ -10,7 +10,7 @@ set -e
 
 echo "Installing dotfiles"
 
-source scripts/package-manager.sh
-source scripts/brew.sh
+source ./scripts/package-manager.sh
+source ./scripts/brew.sh
 
 echo "Done."
