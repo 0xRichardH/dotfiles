@@ -1,0 +1,19 @@
+name: CI
+
+on: [push, workflow_dispatch]
+
+env:
+  HOME: ${{ github.workspace }}
+
+jobs:
+  bootstrap-on-macos:
+    name: macOS
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+        with:
+          path: ./dotfiles
+
+      - name: Install dotfiles
+        run: $HOME/dotfiles/install.sh

@@ -1,6 +1,7 @@
 # Brewfile for macOS
 # brew bundle --file=~/Brewfile-macOS
 
+tap 'koekeishiya/formulae'
 tap '0x4richard/formulae'
 
 # Binaries
