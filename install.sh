@@ -10,7 +10,12 @@ set -e
 
 echo "Installing dotfiles"
 
-source ./scripts/package-manager.sh
-source ./scripts/brew.sh
+dotfiles_path=${HOME}/dotfiles
+
+# shellcheck source=./scripts/package-manager.sh
+source "${dotfiles_path}/scripts/package-manager.sh"
+
+# shellcheck source=./scripts/brew.sh
+source "${dotfiles_path}/scripts/brew.sh"
 
 echo "Done."
