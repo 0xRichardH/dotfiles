@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles [![CI](https://github.com/0x4richard/dotfiles/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/0x4richard/dotfiles/actions/workflows/ci.yml)
 
 ## Install
 
