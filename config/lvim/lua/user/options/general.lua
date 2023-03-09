@@ -28,6 +28,9 @@ local vimOptions = {
   relativenumber = true, -- set relative numbered lines
   termguicolors = true, -- set term gui colors (most terminals support this)
   cursorline = false, -- highlight cursor line
+  fileencoding = "utf-8", -- the encoding written to a file
+  undofile = true, -- enable persistent undo
+  undodir = os.getenv("HOME") .. "/.vim/undodir",
 }
 
 for k, v in pairs(vimOptions) do
