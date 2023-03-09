@@ -1,12 +1,11 @@
-
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 import:
- - ~/.config/alacritty/themes/ayu_dark.yaml
+  - ~/.config/alacritty/themes/ayu_dark.yaml
 
 window:
   opacity: 0.85
-  padding: 
+  padding:
     x: 14
     y: 10
   dynamic_padding: false
@@ -48,8 +47,9 @@ key_bindings:
   - { key: E, mods: Command, chars: "\x02|" } # split tmux window vertically
   - { key: E, mods: Command|Shift, chars: "\x02-" } # split tmux window horizontally
   - { key: F, mods: Command|Shift, chars: "\x02\x5b\x2f" } # start tmux search mode
-  - { key: F, mods: Command, chars: "v\n" } 
-  - { key: J, mods: Command, chars: "\x02\x54" }  # use (cmd+j) to open the session manager popup (t)
+  - { key: F, mods: Command, chars: "v\n" }
+  - { key: G, mods: Command, chars: "\x02g" } # open git manager 'jesseduffield/lazygit'
+  - { key: J, mods: Command, chars: "\x02\x54" } # use (cmd+j) to open the session manager popup (t)
   - { key: L, mods: Command, chars: "\x02L" } # switch to the last tmux session
   - { key: O, mods: Command, chars: "lfcd\n" } # open file manager 'gokcehan/lf'
   - { key: P, mods: Command, chars: ":GoToFile\n" } # files
