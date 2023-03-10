@@ -22,18 +22,14 @@ vim.api.nvim_create_autocmd({ "BufRead" }, {
   end,
 })
 
--- Fonding: makeview & loadview
+-- mkview
+vim.api.nvim_create_autocmd("BufWinLeave", {
+  pattern = { "*" },
+  command = "silent! mkview",
+})
 
--- vim.api.nvim_create_autocmd("BufWinLeave", {
---   pattern = { "*" },
---   callback = function()
---     vim.cmd([[mkview]])
---   end,
--- })
-
--- vim.api.nvim_create_autocmd("BufWinEnter", {
---   pattern = { "*" },
---   callback = function()
---     vim.cmd([[silent loadview]])
---   end,
--- })
+-- loadview
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  pattern = { "*" },
+  command = "silent! loadview",
+})
