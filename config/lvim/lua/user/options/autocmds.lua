@@ -38,5 +38,11 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
 -- Run Telescope find_files on startup
 vim.api.nvim_create_autocmd("VimEnter", {
   pattern = { "*" },
-  command = "Telescope find_files",
+  callback = function()
+    if vim.bo.filetype ~= "" then
+      return
+    end
+
+    vim.cmd([[Telescope find_files]])
+  end,
 })
