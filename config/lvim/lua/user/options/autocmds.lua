@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd({ "BufRead" }, {
   end,
 })
 
+-- mkview and loadview
 -- mkview
 vim.api.nvim_create_autocmd("BufWinLeave", {
   pattern = { "*" },
@@ -32,4 +33,16 @@ vim.api.nvim_create_autocmd("BufWinLeave", {
 vim.api.nvim_create_autocmd("BufWinEnter", {
   pattern = { "*" },
   command = "silent! loadview",
+})
+
+-- Run Telescope find_files on startup
+vim.api.nvim_create_autocmd("VimEnter", {
+  pattern = { "*" },
+  callback = function()
+    if vim.bo.filetype ~= "" then
+      return
+    end
+
+    vim.cmd([[Telescope find_files]])
+  end,
 })
