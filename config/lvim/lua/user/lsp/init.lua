@@ -20,7 +20,9 @@ linters.setup {
   {
     command = "eslint",
     fileTypes = "typescript, typescriptreact, javascript"
-  }
+  },
+
+  { name = "golangci_lint", args = { "run", "--fix=false", "--out-format=json", "--path-prefix", "$ROOT" }, filetypes = { "go" } },
 }
 
 -- Formatters
@@ -29,5 +31,7 @@ formatters.setup {
   {
     command = 'prettier',
     fileTypes = { "typescript", "typescriptreact", "javascript", "css", "html" }
-  }
+  },
+
+  { name = "gofumpt", filetypes = { "go" } },
 }
