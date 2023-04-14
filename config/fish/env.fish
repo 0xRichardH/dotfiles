@@ -13,6 +13,8 @@ set -Ux FZF_TMUX_OPTS "-p --reverse --no-info --pointer='' --marker='' \
 --ansi --color='16,bg+:-1,gutter:-1,prompt:4,pointer:5,marker:6'"
 set -Ux FZF_CTRL_R_OPTS "--border-label=' History ' --prompt=' '"
 
+set -gx SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
 # ordered by priority - bottom up
 fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path $PNPM_HOME
