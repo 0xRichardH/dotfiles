@@ -1,5 +1,4 @@
 local copilot_config = require("user.plugins.copilot")
-local copilot_cmp_config = require("user.plugins.copilot-cmp")
 local cybu_config = require("user.plugins.cybu")
 local zen_mode_config = require("user.plugins.zen-mode")
 
@@ -9,12 +8,6 @@ lvim.plugins = {
     "zbirenbaum/copilot.lua",
     event = { "InsertEnter" },
     config = copilot_config.copilot,
-  },
-
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = copilot_cmp_config.copilot_cmp,
   },
 
   -- colorscheme
