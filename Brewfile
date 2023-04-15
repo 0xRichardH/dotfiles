@@ -34,6 +34,7 @@ brew 'fd' # alternative to 'find'
 brew 'fzf'
 brew 'gum' # A tool for glamorous shell scripts 🎀
 brew 'lf' # Terminal file manager
+brew 'pgformatter'
 
 # Fonts
 cask 'font-jetbrains-mono'

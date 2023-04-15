@@ -22,7 +22,11 @@ linters.setup {
     fileTypes = "typescript, typescriptreact, javascript"
   },
 
-  { name = "golangci_lint", args = { "run", "--fix=false", "--out-format=json", "--path-prefix", "$ROOT" }, filetypes = { "go" } },
+  {
+    name = "golangci_lint",
+    args = { "run", "--fix=false", "--out-format=json", "--path-prefix", "$ROOT" },
+    filetypes = { "go" }
+  },
 }
 
 -- Formatters
@@ -33,5 +37,7 @@ formatters.setup {
     fileTypes = { "typescript", "typescriptreact", "javascript", "css", "html" }
   },
 
-  { name = "gofumpt", filetypes = { "go" } },
+  { name = "gofumpt",   filetypes = { "go" } },
+
+  { name = "pg_format", filetypes = { "sql" } },
 }
