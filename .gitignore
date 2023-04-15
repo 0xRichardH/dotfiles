@@ -1,2 +1,3 @@
 Brewfile.lock.json
 Brewfile-macOS.lock.json
+config/lvim/.luarc.json
