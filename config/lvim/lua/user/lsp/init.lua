@@ -33,7 +33,5 @@ formatters.setup {
     fileTypes = { "typescript", "typescriptreact", "javascript", "css", "html" }
   },
 
-  { name = "gofumpt",       filetypes = { "go" } },
-
-  { name = "sql-formatter", filetypes = { "sql" } },
+  { name = "gofumpt", filetypes = { "go" } },
 }
