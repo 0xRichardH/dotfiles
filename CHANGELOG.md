@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v3.3.0 - 2023-04-15
+#### Bug Fixes
+- **(lvim)** to use TransparentEnable instead of enable=true - (f717418) - Richard Hao
+#### Features
+- **(lvim)** add pg_format - (a5f556d) - Richard Hao
+- add lazy-lock.json after upgrade lvim - (5a08957) - Richard Hao
+#### Miscellaneous Chores
+- **(lvim)** disable bufferline.nvim - (e406020) - Richard Hao
+- **(lvim)** add .luarc.json to .gitignore - (6817417) - Richard Hao
+- **(lvim)** remove sql-formatter from lsp config - (f3cace2) - Richard Hao
+- **(lvim)** remove copilot-cmp plugin - (7f4a8d2) - Richard Hao
+
+- - -
+
 ## v3.2.0 - 2023-04-14
 #### Features
 - **(ci)** add typos action - (252eb2e) - Richard Hao
