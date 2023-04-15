@@ -70,3 +70,6 @@ lvim.plugins = {
     -- }
   },
 }
+
+-- disable plugins
+lvim.builtin.bufferline.active = false
