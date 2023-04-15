@@ -16,9 +16,6 @@ lvim.plugins = {
   -- Remove all background colors to make nvim transparent
   {
     "xiyaowong/nvim-transparent",
-    config = function()
-      require("transparent").setup({ enable = true })
-    end
   },
 
   -- Zen Mode
