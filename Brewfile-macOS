@@ -7,6 +7,5 @@ tap '0x4richard/formulae'
 # Binaries
 brew 'koekeishiya/formulae/yabai' # A tiling window manager for macOS
 brew 'koekeishiya/formulae/skhd' # Simple hotkey daemon for macOS
-brew '0x4richard/formulae/openpomodoro-cli'
 brew 'spotifyd' # brew services start spotifyd
 brew 'spotify-tui'
