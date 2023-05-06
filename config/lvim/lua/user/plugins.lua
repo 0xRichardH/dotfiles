@@ -1,13 +1,21 @@
-local copilot_config = require("user.plugins.copilot")
+-- local copilot_config = require("user.plugins.copilot")
 local cybu_config = require("user.plugins.cybu")
 local zen_mode_config = require("user.plugins.zen-mode")
 
 lvim.plugins = {
   -- Copilot
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   event = { "InsertEnter" },
+  --   config = copilot_config.copilot,
+  -- },
+
+  -- Codeium
   {
-    "zbirenbaum/copilot.lua",
-    event = { "InsertEnter" },
-    config = copilot_config.copilot,
+    "Exafunction/codeium.vim",
+    config = function()
+      vim.keymap.set('i', '<C-a>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+    end,
   },
 
   -- colorscheme
