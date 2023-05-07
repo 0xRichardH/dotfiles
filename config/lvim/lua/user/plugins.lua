@@ -1,6 +1,7 @@
 -- local copilot_config = require("user.plugins.copilot")
 local cybu_config = require("user.plugins.cybu")
 local zen_mode_config = require("user.plugins.zen-mode")
+local lsp_signature_config = require("user.plugins.lsp_signature")
 
 lvim.plugins = {
   -- Copilot
@@ -80,6 +81,12 @@ lvim.plugins = {
 
   --  A GUI library for Neovim plugin developers
   { "ray-x/guihua.lua",  build = "cd lua/fzy && make" },
+
+  -- LSP signature hint as you type
+  {
+    "ray-x/lsp_signature.nvim",
+    config = lsp_signature_config.lsp_signature,
+  },
 
   -- Modern Go dev plugin
   {
