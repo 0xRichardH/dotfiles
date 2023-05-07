@@ -1,6 +1,7 @@
 -- local copilot_config = require("user.plugins.copilot")
 local cybu_config = require("user.plugins.cybu")
 local zen_mode_config = require("user.plugins.zen-mode")
+local lsp_signature_config = require("user.plugins.lsp_signature")
 
 lvim.plugins = {
   -- Copilot
@@ -76,6 +77,39 @@ lvim.plugins = {
     -- keys = {
     --  { "<leader>ff", "<cmd>Lf<cr>", desc = "NeoTree" },
     -- }
+  },
+
+  --  A GUI library for Neovim plugin developers
+  { "ray-x/guihua.lua",  build = "cd lua/fzy && make" },
+
+  -- LSP signature hint as you type
+  {
+    "ray-x/lsp_signature.nvim",
+    config = lsp_signature_config.lsp_signature,
+  },
+
+  -- Modern Go dev plugin
+  {
+    "ray-x/go.nvim",
+    dependencies = { -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("go").setup()
+    end,
+    event = { "CmdlineEnter" },
+    ft = { "go", 'gomod' },
+    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+  },
+
+  -- A tree like view for symbols in Neovim
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require("symbols-outline").setup()
+    end
   },
 }
 
