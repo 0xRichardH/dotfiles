@@ -78,6 +78,9 @@ lvim.plugins = {
     -- }
   },
 
+  --  A GUI library for Neovim plugin developers
+  { "ray-x/guihua.lua",  build = "cd lua/fzy && make" },
+
   -- Modern Go dev plugin
   {
     "ray-x/go.nvim",
