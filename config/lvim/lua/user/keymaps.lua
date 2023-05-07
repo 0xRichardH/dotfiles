@@ -6,3 +6,8 @@ lvim.keys.term_mode = { ["<C-l>"] = false }
 lvim.builtin.which_key.mappings["o"] = {
   "<cmd>Lf<CR>", "File Manager"
 }
+
+-- add keymappings to plugin simrat39/symbols-outline.nvim
+lvim.builtin.which_key.mappings["v"] = {
+  "<cmd>SymbolsOutline<CR>", "SymbolsOutline"
+}
