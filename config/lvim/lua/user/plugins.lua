@@ -103,6 +103,14 @@ lvim.plugins = {
     ft = { "go", 'gomod' },
     build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
   },
+
+  -- A tree like view for symbols in Neovim
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require("symbols-outline").setup()
+    end
+  },
 }
 
 -- disable plugins
