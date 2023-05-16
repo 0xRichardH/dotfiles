@@ -41,3 +41,16 @@ formatters.setup {
 
   { name = "pg_format", filetypes = { "sql" } },
 }
+
+-- lsp manager
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "gopls" })
+require("lvim.lsp.manager").setup("gopls", {
+  settings = {
+    gopls = {
+      hints = {
+        parameterNames = true,
+        constantValues = true,
+      }
+    }
+  }
+})
