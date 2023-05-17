@@ -35,6 +35,7 @@ brew 'fzf'
 brew 'gum' # A tool for glamorous shell scripts 🎀
 brew 'lf' # Terminal file manager
 brew 'pgformatter'
+brew 'ms-jpq/sad/sad'
 
 # Fonts
 cask 'font-jetbrains-mono'

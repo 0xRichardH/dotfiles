@@ -3,6 +3,7 @@ local cybu_config = require("user.plugins.cybu")
 local zen_mode_config = require("user.plugins.zen-mode")
 local lsp_signature_config = require("user.plugins.lsp_signature")
 local go_config = require("user.plugins.go")
+local sad_config = require("user.plugins.sad")
 
 lvim.plugins = {
   -- Copilot
@@ -110,6 +111,11 @@ lvim.plugins = {
       require("symbols-outline").setup()
     end
   },
+
+  {
+    "ray-x/sad.nvim",
+    config = sad_config.sad
+  }
 }
 
 -- disable plugins
