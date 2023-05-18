@@ -50,6 +50,7 @@ require("lvim.lsp.manager").setup("gopls", {
       hints = {
         parameterNames = true,
         constantValues = true,
+        functionTypeParameters = true,
       }
     }
   }
