@@ -119,4 +119,4 @@ lvim.plugins = {
 }
 
 -- disable plugins
-lvim.builtin.bufferline.active = false
+-- lvim.builtin.bufferline.active = false
