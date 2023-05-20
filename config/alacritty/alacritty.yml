@@ -3,6 +3,9 @@
 import:
   - ~/.config/alacritty/themes/ayu_dark.yaml
 
+env:
+  TERM: xterm-256color
+
 window:
   opacity: 0.85
   padding:
@@ -13,18 +16,23 @@ window:
 
 font:
   normal:
-    family: Hack Nerd Font
-    style: Regular
+    family: VictorMono Nerd Font
+    style: SemiBold
   bold:
-    family: Hack Nerd Font
+    family: VictorMono Nerd Font
     style: Bold
   italic:
-    family: Hack Nerd Font
-    style: Italic
+    family: VictorMono Nerd Font
+    style: SemiBold Italic
   bold_italic:
-    family: Hack Nerd Font
+    family: VictorMono Nerd Font
     style: Bold Italic
   size: 16
+  # Offset is the extra space around each character. `offset.y` can be thought of
+  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+  offset:
+    x: 2
+    y: 1
 
 # copy on selection
 selection:
