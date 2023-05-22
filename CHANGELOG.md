@@ -2,6 +2,40 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v3.4.0 - 2023-05-22
+#### Features
+- **(lvim)** add plugin hbac.nvim to autoclose buffers - (b84c78c) - Richard Hao
+- **(lvim)** update the neovim plugin codeium - (531c6ef) - Richard Hao
+- **(lvim)** enable bufferline - (becb370) - Richard Hao
+- **(lvim)** update go.nvim configs - (7dd9b86) - Richard Hao
+- **(lvim)** add `err != nil` snippet for golang - (0a87b77) - Richard Hao
+- **(lvim)** add keymappings to plugin simrat39/symbols-outline.nvim - (0358414) - Richard Hao
+- **(lvim)** add plugin simrat39/symbols-outline.nvim - (2b13b2d) - Richard Hao
+- **(lvim)** add plugin ray-x/lsp_signature.nvim - (bf70b78) - Richard Hao
+- **(lvim)** add plugin guihua - (31529a6) - Richard Hao
+- **(lvim)** add ray-x/go.nvim - (785b910) - Richard Hao
+- **(lvim)** add codeium support - (e61ea2b) - Richard Hao
+- add neofetch config - (e603669) - Richard Hao
+- add bat config - (4849ec8) - Richard Hao
+- change the font to Victor Mono - (fb50355) - Richard Hao
+- add `sad` plugin to `lvim` configuration - (839d82a) - Richard Hao
+#### Miscellaneous Chores
+- **(:lvim)** update plugins - (7186e96) - Richard Hao
+- **(fish)** remove vi alias - (3398a46) - Richard Hao
+- **(gopls)** improve LSP hints and signatures appearance and functionality - (52f7453) - Richard Hao
+- **(lvim)** update the options for lvim - (6195880) - Richard Hao
+- **(lvim)** update plugins - (05b9ee1) - Richard Hao
+- **(lvim)** upgrade lunarvim - (7862bb7) - Richard Hao
+- **(lvim)** add default go.nvim config - (a4332a1) - Richard Hao
+- update gitmux.conf - (c190aac) - Richard Hao
+- update tmux config - (3ca36cd) - Richard Hao
+- update the starship configs - (25829a1) - Richard Hao
+- update alacritty configs - (7a6511a) - Richard Hao
+- remove unused file - (53e758f) - Richard Hao
+- remove pomodoro - (d98e0b7) - Richard Hao
+
+- - -
+
 ## v3.3.0 - 2023-04-15
 #### Bug Fixes
 - **(lvim)** to use TransparentEnable instead of enable=true - (f717418) - Richard Hao
