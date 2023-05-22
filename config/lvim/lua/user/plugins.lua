@@ -15,10 +15,15 @@ lvim.plugins = {
 
   -- Codeium
   {
-    "Exafunction/codeium.vim",
+    "jcdickinson/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
     config = function()
-      vim.keymap.set('i', '<C-a>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-    end,
+      require("codeium").setup({
+      })
+    end
   },
 
   -- colorscheme
@@ -87,6 +92,7 @@ lvim.plugins = {
   -- LSP signature hint as you type
   {
     "ray-x/lsp_signature.nvim",
+    event = "BufRead",
     config = lsp_signature_config.lsp_signature,
   },
 
