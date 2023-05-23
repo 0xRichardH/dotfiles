@@ -38,3 +38,11 @@ sudo apt-get install xclip
 ## Tmux
 
 ### Tmux Plugin [https://github.com/tmux-plugins/tpm](https://github.com/tmux-plugins/tpm)
+
+## Font
+
+- List fonts with `brew search font-`
+
+```
+brew search font- | rg victor-mono
+```
