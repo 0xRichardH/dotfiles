@@ -143,4 +143,7 @@ lvim.plugins = {
 }
 
 -- disable plugins
--- lvim.builtin.bufferline.active = false
+lvim.builtin.bufferline.active = false
+lvim.builtin.alpha.active = false
+lvim.builtin.cmp.cmdline.enable = false
+lvim.builtin.nvimtree.active = false
