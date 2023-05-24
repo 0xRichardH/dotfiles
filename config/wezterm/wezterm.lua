@@ -49,17 +49,17 @@ config.keys = {
   --
   -- tmux
   -- tmux window selection
-  { key = "1", mods = "CMD",       action = wezterm.action { SendString = "\x021" } },
-  { key = "2", mods = "CMD",       action = wezterm.action { SendString = "\x022" } },
-  { key = "3", mods = "CMD",       action = wezterm.action { SendString = "\x023" } },
-  { key = "4", mods = "CMD",       action = wezterm.action { SendString = "\x024" } },
-  { key = "5", mods = "CMD",       action = wezterm.action { SendString = "\x025" } },
-  { key = "6", mods = "CMD",       action = wezterm.action { SendString = "\x026" } },
-  { key = "7", mods = "CMD",       action = wezterm.action { SendString = "\x027" } },
-  { key = "8", mods = "CMD",       action = wezterm.action { SendString = "\x028" } },
-  { key = "9", mods = "CMD",       action = wezterm.action { SendString = "\x029" } },
+  { key = "1", mods = "CMD",       action = act.SendString("\x021") },
+  { key = "2", mods = "CMD",       action = act.SendString("\x022") },
+  { key = "3", mods = "CMD",       action = act.SendString("\x023") },
+  { key = "4", mods = "CMD",       action = act.SendString("\x024") },
+  { key = "5", mods = "CMD",       action = act.SendString("\x025") },
+  { key = "6", mods = "CMD",       action = act.SendString("\x026") },
+  { key = "7", mods = "CMD",       action = act.SendString("\x027") },
+  { key = "8", mods = "CMD",       action = act.SendString("\x028") },
+  { key = "9", mods = "CMD",       action = act.SendString("\x029") },
   -- Rename the current tmux window
-  { key = ",", mods = "CMD",       action = wezterm.action { SendString = "\x02," } },
+  { key = ",", mods = "CMD",       action = act.SendString("\x02,") },
   -- split tmux window vertically
   { key = 'e', mods = 'CMD',       action = act.SendString('\x02|') },
   -- split tmux window horizontally
