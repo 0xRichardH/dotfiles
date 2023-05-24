@@ -1,0 +1,12 @@
+[files]
+extend-exclude = ["CHANGELOG.md", "_typos.toml"]
+
+[default]
+extend-ignore-identifiers-re = [
+  "Siduction",
+  "iterm2",
+  "noice",
+  "currentpos",
+]
+
+
