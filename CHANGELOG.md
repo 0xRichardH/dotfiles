@@ -2,6 +2,26 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v3.5.0 - 2023-05-24
+#### Bug Fixes
+- fix typos - (9bf60c8) - Richard Hao
+#### Documentation
+- **(README)** add section to search fonts - (bacc8c4) - Richard Hao
+#### Features
+- **(lvim)** add plugin to preview markdown - (9f9d87e) - Richard Hao
+- **(wezterm)** migrate keybindings from alacritty - (6bbb523) - Richard Hao
+- **(wezterm)** init wezterm configs - (6569e47) - Richard Hao
+#### Miscellaneous Chores
+- **(lvim)** update gopls inlay config - (7ff1de9) - Richard Hao
+- **(lvim)** run `Lazy sync` to sync plugins - (ef6a0d4) - Richard Hao
+- **(lvim)** update plugins - (86c350f) - Richard Hao
+- **(lvim)** update the config for codeium - (df4ac0d) - Richard Hao
+- **(terminal)** add space to gitmux config - (4679ac6) - Richard Hao
+- remove sign for gitmux - (38e896a) - Richard Hao
+- update vim config- move `disable builtin plugins` to plugin.lua- use If to replace nvimtree - (7aec2ec) - Richard Hao
+
+- - -
+
 ## v3.4.0 - 2023-05-22
 #### Features
 - **(lvim)** add plugin hbac.nvim to autoclose buffers - (b84c78c) - Richard Hao
