@@ -51,6 +51,9 @@ require("lvim.lsp.manager").setup("gopls", {
         parameterNames = true,
         constantValues = true,
         functionTypeParameters = true,
+        assignVariableTypes = true,
+        compositeLiteralFields = true,
+        rangeVariableTypes = true,
       }
     }
   }
