@@ -9,15 +9,9 @@ vim.g.italic_keywords = true  -- italic keywords(Default: true)
 vim.g.italic_functions = true -- italic functions(Default: false)
 vim.g.italic_variables = true -- italic variables(Default: false)
 
--- disable dashboard
-lvim.builtin.alpha.dashboard.section.header.val = {}
-lvim.builtin.alpha.active = false
-
-lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
--- lvim.icons
+-- lvim.builtin.nvimtree.setup.view.side = "left"
+-- lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- Vim options
 local vimOptions = {
