@@ -4,7 +4,7 @@
 -- +-------------------------------------------------+
 
 local components = require("lvim.core.lualine.components")
-local theme = require("lualine.themes.ayu")
+local theme = require("lualine.themes.catppuccin")
 theme.normal.c.bg = nil
 
 lvim.builtin.lualine.options.theme = theme
@@ -12,9 +12,9 @@ lvim.builtin.lualine.options.theme = theme
 lvim.builtin.lualine.sections = {
   lualine_a = {},
   lualine_b = {},
-  lualine_c = { components.diff },
-  lualine_x = {},
-  lualine_y = { components.diagnostics, components.lsp },
+  lualine_c = {},
+  lualine_x = { components.diff, components.diagnostics },
+  lualine_y = {},
   lualine_z = {},
 }
 
@@ -26,3 +26,6 @@ lvim.builtin.lualine.inactive_sections = {
   lualine_y = {},
   lualine_z = {},
 }
+
+lvim.builtin.lualine.tabline = {}
+lvim.builtin.lualine.extensions = {}

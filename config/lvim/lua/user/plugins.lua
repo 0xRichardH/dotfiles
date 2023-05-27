@@ -27,12 +27,21 @@ lvim.plugins = {
   },
 
   -- colorscheme
-  "Shatur/neovim-ayu",
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    config = function()
+      require("catppuccin").setup({
+        flavour = "mocha", -- latte, frappe, macchiato, mocha
+        transparent_background = false,
+      })
+    end
+  },
 
   -- Remove all background colors to make nvim transparent
-  {
-    "xiyaowong/nvim-transparent",
-  },
+  -- {
+  --   "xiyaowong/nvim-transparent",
+  -- },
 
   -- Zen Mode
   {
