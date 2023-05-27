@@ -12,7 +12,7 @@ end
 
 -- windows
 config.color_scheme = 'Catppuccin Mocha'
-config.window_background_opacity = 1
+config.window_background_opacity = 0.75
 config.hide_tab_bar_if_only_one_tab = true
 config.scrollback_lines = 36000
 config.window_decorations = 'RESIZE'
