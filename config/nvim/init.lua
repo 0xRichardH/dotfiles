@@ -15,4 +15,7 @@ if vim.g.vscode then
       vim.opt.clipboard = { "unnamed" }
     end
   end
+else
+  -- bootstrap lazy.nvim, LazyVim and your plugins
+  require("config.lazy")
 end
