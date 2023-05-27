@@ -1,9 +1,9 @@
 -- local copilot_config = require("user.plugins.copilot")
-local cybu_config = require("user.plugins.cybu")
-local zen_mode_config = require("user.plugins.zen-mode")
-local lsp_signature_config = require("user.plugins.lsp_signature")
-local go_config = require("user.plugins.go")
-local sad_config = require("user.plugins.sad")
+local cybu_config = require "user.plugins.cybu"
+local zen_mode_config = require "user.plugins.zen-mode"
+local lsp_signature_config = require "user.plugins.lsp_signature"
+local go_config = require "user.plugins.go"
+local sad_config = require "user.plugins.sad"
 
 lvim.plugins = {
   -- Copilot
@@ -21,9 +21,8 @@ lvim.plugins = {
       "hrsh7th/nvim-cmp",
     },
     config = function()
-      require("codeium").setup({
-      })
-    end
+      require("codeium").setup {}
+    end,
   },
 
   -- colorscheme
@@ -31,11 +30,11 @@ lvim.plugins = {
     "catppuccin/nvim",
     name = "catppuccin",
     config = function()
-      require("catppuccin").setup({
+      require("catppuccin").setup {
         flavour = "mocha", -- latte, frappe, macchiato, mocha
         transparent_background = true,
-      })
-    end
+      }
+    end,
   },
 
   -- Remove all background colors to make nvim transparent
@@ -46,13 +45,13 @@ lvim.plugins = {
   -- Zen Mode
   {
     "folke/zen-mode.nvim",
-    config = zen_mode_config.zen_mode
+    config = zen_mode_config.zen_mode,
   },
 
   -- Cy[cle]bu[ffer
   {
     "ghillb/cybu.nvim",
-    config = cybu_config.cybu
+    config = cybu_config.cybu,
   },
 
   -- lightspeed
@@ -96,7 +95,7 @@ lvim.plugins = {
   },
 
   --  A GUI library for Neovim plugin developers
-  { "ray-x/guihua.lua",  build = "cd lua/fzy && make" },
+  { "ray-x/guihua.lua", build = "cd lua/fzy && make" },
 
   -- LSP signature hint as you type
   {
@@ -115,8 +114,8 @@ lvim.plugins = {
     },
     config = go_config.go,
     event = { "CmdlineEnter" },
-    ft = { "go", 'gomod' },
-    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+    ft = { "go", "gomod" },
+    build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
   },
 
   -- A tree like view for symbols in Neovim
@@ -124,31 +123,31 @@ lvim.plugins = {
     "simrat39/symbols-outline.nvim",
     config = function()
       require("symbols-outline").setup()
-    end
+    end,
   },
 
   {
     "ray-x/sad.nvim",
-    config = sad_config.sad
+    config = sad_config.sad,
   },
 
   -- Heuristic buffer auto-close
   {
-    'axkirillov/hbac.nvim',
+    "axkirillov/hbac.nvim",
     config = function()
-      require("hbac").setup({
+      require("hbac").setup {
         autoclose = true, -- set autoclose to false if you want to close manually
-        threshold = 5,    -- hbac will start closing unedited buffers once that number is reached
+        threshold = 5, -- hbac will start closing unedited buffers once that number is reached
         close_command = function(bufnr)
           vim.api.nvim_buf_delete(bufnr, {})
         end,
         close_buffers_with_windows = false, -- hbac will close buffers with associated windows if this option is `true`
-      })
-    end
+      }
+    end,
   },
 
   -- A markdown preview directly in your neovim.
-  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" }
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 }
 
 -- disable plugins
