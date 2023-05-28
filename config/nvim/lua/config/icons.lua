@@ -10,6 +10,9 @@ local M = {
     changed = "",
     deleted = "",
   },
+  kinds = {
+    Codeium = "",
+  },
 }
 
 return M
