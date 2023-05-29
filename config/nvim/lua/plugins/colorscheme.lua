@@ -37,7 +37,7 @@ return {
       views = {
         mini = {
           win_options = {
-            winblend = 0,
+            winblend = 0, -- https://github.com/folke/noice.nvim/issues/226
           },
         },
       },
