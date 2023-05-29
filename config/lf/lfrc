@@ -32,7 +32,15 @@ cmd open ${{
 }}
 
 # define new file command
-cmd new %[ -e $1 ] || touch $1
+cmd new ${{
+    if [[ -e "$1" ]]; then
+        echo "$1 already exists"
+    elif [[ "$1" == */ ]]; then
+        mkdir -p "$1"
+    else
+        mkdir -p "$(dirname "$1")" && touch "$1"
+    fi
+}}
 map n push :new<space>
 
 # define a custom 'rename' command without prompt for overwrite
