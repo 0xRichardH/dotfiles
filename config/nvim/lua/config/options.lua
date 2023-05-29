@@ -14,6 +14,7 @@ local vimOptions = {
   fileencoding = "utf-8", -- the encoding written to a file
   undofile = true, -- enable persistent undo
   undodir = os.getenv("HOME") .. "/.vim/undodir",
+  pumblend = 0,
 }
 
 for k, v in pairs(vimOptions) do

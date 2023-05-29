@@ -17,14 +17,13 @@ return {
       integrations = {
         cmp = true,
         gitsigns = true,
-        harpoon = true,
         telescope = true,
       },
     },
   },
-  {
-    "xiyaowong/nvim-transparent",
-  },
+  -- {
+  --   "xiyaowong/nvim-transparent",
+  -- },
   {
     "rcarriga/nvim-notify",
     opts = {
