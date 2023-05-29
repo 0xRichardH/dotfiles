@@ -23,9 +23,29 @@ return {
   },
   -- {
   --   "xiyaowong/nvim-transparent",
+  --   lazy = false,
+  --   opts = {
+  --     extra_groups = {
+  --       "NormalFloat",
+  --     },
+  --   },
   -- },
   {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      views = {
+        mini = {
+          win_options = {
+            winblend = 0,
+          },
+        },
+      },
+    },
+  },
+  {
     "rcarriga/nvim-notify",
+    event = "VeryLazy",
     opts = {
       background_colour = "#000000",
     },
