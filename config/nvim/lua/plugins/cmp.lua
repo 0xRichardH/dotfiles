@@ -10,6 +10,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       { "jcdickinson/codeium.nvim" },
+      { "hrsh7th/cmp-emoji" },
     },
     opts = function(_, opts)
       local cmp = require("cmp")
@@ -25,6 +26,7 @@ return {
       local default_format_fn = opts.formatting.format
       local sources = opts.sources
       table.insert(sources, 1, { name = "codeium" })
+      table.insert(sources, { name = "emoji" })
       opts.sources = cmp.config.sources(sources)
       opts.formatting = {
         format = function(entry, item)
