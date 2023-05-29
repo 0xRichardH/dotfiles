@@ -7,7 +7,7 @@
   email = richard@digitalstar.tech
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPi+G13tX5FA4z28a8j8R/cjYe51usv7hiAI8ipx3bG1
 [core]
-  editor = lvim
+  editor = nvim
   pager = delta
 [interactive]
   diffFilter = delta --color-only
