@@ -1,4 +1,4 @@
-alias vim lvim
+alias vim nvim
 alias cat bat
 alias ls 'exa --git --icons --color=always --group-directories-first'
 alias cd z

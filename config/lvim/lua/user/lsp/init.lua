@@ -8,7 +8,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "tsx",
   "css",
   "yaml",
-  "go"
+  "go",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -19,13 +19,13 @@ local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   {
     command = "eslint",
-    fileTypes = "typescript, typescriptreact, javascript"
+    fileTypes = "typescript, typescriptreact, javascript",
   },
 
   {
     name = "golangci_lint",
     args = { "run", "--fix=false", "--out-format=json", "--path-prefix", "$ROOT" },
-    filetypes = { "go" }
+    filetypes = { "go" },
   },
 }
 
@@ -33,11 +33,11 @@ linters.setup {
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
-    command = 'prettier',
-    fileTypes = { "typescript", "typescriptreact", "javascript", "css", "html" }
+    command = "prettier",
+    fileTypes = { "typescript", "typescriptreact", "javascript", "css", "html" },
   },
 
-  { name = "gofumpt",   filetypes = { "go" } },
+  { name = "gofumpt", filetypes = { "go" } },
 
   { name = "pg_format", filetypes = { "sql" } },
 }
@@ -54,7 +54,7 @@ require("lvim.lsp.manager").setup("gopls", {
         assignVariableTypes = true,
         compositeLiteralFields = true,
         rangeVariableTypes = true,
-      }
-    }
-  }
+      },
+    },
+  },
 })
