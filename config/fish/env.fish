@@ -6,6 +6,8 @@ set -U VISUAL nvim
 set -U LANG en_US.UTF-8
 set -U LC_ALL en_US.UTF-8
 
+set -U TERM xterm-256color
+
 set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -Ux FZF_DEFAULT_OPTS "--reverse --no-info --pointer='' --marker='' \
 --ansi --color='16,bg+:-1,gutter:-1,prompt:4,pointer:5,marker:6'"
