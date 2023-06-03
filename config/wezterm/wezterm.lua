@@ -83,7 +83,7 @@ config.keys = {
 	{
 		key = "o",
 		mods = "CMD",
-		action = act.SendString("lfcd\n"),
+		action = act.SendString("lf\n"),
 	},
 	-- create a new tmux window
 	{ key = "t", mods = "CMD", action = act.SendString("\x02c") },
