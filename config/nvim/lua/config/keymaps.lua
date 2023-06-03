@@ -8,4 +8,7 @@ local map = vim.keymap.set
 map("n", "<cr>", "ciw", { desc = "ciw" })
 
 -- add keymaps for
-map("n", "<leader><space>", "<cmd>CodeActionMenu<cr>", { desc = "CodeActionMenu" })
+map("n", "ga", "<cmd>CodeActionMenu<cr>", { desc = "CodeActionMenu" })
+
+-- custom keymaps
+map("n", "gl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
