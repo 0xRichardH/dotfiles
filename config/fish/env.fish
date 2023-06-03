@@ -1,8 +1,8 @@
 set -gx fish_greeting # disable fish greeting
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 
-set -Ux EDITOR lvim 
-set -U VISUAL lvim
+set -Ux EDITOR nvim
+set -U VISUAL nvim
 set -U LANG en_US.UTF-8
 set -U LC_ALL en_US.UTF-8
 
@@ -12,6 +12,9 @@ set -Ux FZF_DEFAULT_OPTS "--reverse --no-info --pointer='' --marker='' \
 set -Ux FZF_TMUX_OPTS "-p --reverse --no-info --pointer='' --marker='' \
 --ansi --color='16,bg+:-1,gutter:-1,prompt:4,pointer:5,marker:6'"
 set -Ux FZF_CTRL_R_OPTS "--border-label=' History ' --prompt=' '"
+
+# set BAT_THEME
+set -Ux BAT_THEME Catppuccin-mocha
 
 set -gx SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 

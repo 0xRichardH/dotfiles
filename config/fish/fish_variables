@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export BAT_THEME:Catppuccin\x2dmocha
 SETUVAR --export EDITOR:lvim
 SETUVAR --export FZF_CTRL_R_OPTS:\x2d\x2dborder\x2dlabel\x3d\x27\x20History\x20\x27\x20\x2d\x2dprompt\x3d\x27\uea82\x20\x27
 SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2dH\x20\x2dE\x20\x27\x2egit\x27
