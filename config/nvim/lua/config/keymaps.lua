@@ -6,3 +6,6 @@ local map = vim.keymap.set
 
 -- map enter to ciw
 map("n", "<cr>", "ciw", { desc = "ciw" })
+
+-- add keymaps for
+map("n", "<leader><space>", "<cmd>CodeActionMenu<cr>", { desc = "CodeActionMenu" })
