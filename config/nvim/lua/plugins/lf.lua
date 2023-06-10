@@ -1,5 +1,5 @@
 return {
-  "0x4richard/lf.nvim",
+  "lmburns/lf.nvim",
   lazy = true,
   cmd = "Lf",
   dependencies = { "nvim-lua/plenary.nvim", "akinsho/toggleterm.nvim" },
@@ -8,9 +8,7 @@ return {
     winblend = 0,
     highlights = { NormalFloat = { guibg = "NONE" } },
     direction = "float",
-    border = "double", -- border kind: single double shadow curved
-    height = 0.70,
-    width = 0.85,
+    border = "single", -- border kind: single double shadow curved
     escape_quit = true,
     focus_on_open = false, -- focus the current file when opening Lf (experimental)
     mappings = true, -- whether terminal buffer mapping is enabled
