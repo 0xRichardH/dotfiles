@@ -26,5 +26,14 @@ map("n", "ga", "<cmd>CodeActionMenu<cr>", { desc = "CodeActionMenu" })
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
+-- tmux navigator
+vim.cmd([[
+  noremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
+  noremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
+  noremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
+  noremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
+  noremap <silent> <c-\> :<C-U>TmuxNavigatePrevious<cr>
+]])
+
 -- custom keymaps
 map("n", "gl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
