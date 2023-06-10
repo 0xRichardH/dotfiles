@@ -30,6 +30,7 @@ rcup
 
 - Clipboard
 - LunarVim https://www.lunarvim.org/
+- LazyVim (Currently Using) https://www.lazyvim.org/
 
 ```
 sudo apt-get install xclip
@@ -46,3 +47,7 @@ sudo apt-get install xclip
 ```
 brew search font- | rg victor-mono
 ```
+
+## Credit
+
+- Huge thanks to [Josh Medeski](https://github.com/joshmedeski). I borrowed a lot of configurations from his repo https://github.com/joshmedeski/dotfiles
