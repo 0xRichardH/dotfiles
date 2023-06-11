@@ -37,6 +37,7 @@ brew 'lf' # Terminal file manager
 brew 'pgformatter'
 brew 'ms-jpq/sad/sad'
 brew 'neofetch'
+brew 'gnu-sed' # for the neovim plugin -> nvim-pack/nvim-spectre
 
 # Fonts
 cask 'font-jetbrains-mono'
