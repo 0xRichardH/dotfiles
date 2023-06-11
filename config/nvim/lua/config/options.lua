@@ -15,6 +15,7 @@ local vimOptions = {
   undofile = true, -- enable persistent undo
   undodir = os.getenv("HOME") .. "/.vim/undodir",
   pumblend = 0,
+  colorcolumn = "80",
 }
 
 for k, v in pairs(vimOptions) do
