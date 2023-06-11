@@ -60,6 +60,8 @@ config.keys = {
 	{ key = "9", mods = "CMD", action = act.SendString("\x029") },
 	-- Rename the current tmux window
 	{ key = ",", mods = "CMD", action = act.SendString("\x02,") },
+	-- clear tmux screen
+	{ key = "d", mods = "CMD", action = act.SendString("\x02\x0C") },
 	-- split tmux window vertically
 	{ key = "e", mods = "CMD", action = act.SendString("\x02|") },
 	-- split tmux window horizontally
