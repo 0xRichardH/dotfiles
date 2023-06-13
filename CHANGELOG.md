@@ -2,6 +2,64 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v3.6.0 - 2023-06-13
+#### Bug Fixes
+- **(If)** display hidden file - (04bf2e8) - Richard Hao
+- **(nvim)** failed to open lf panel after upgrading - (987a1c6) - Richard Hao
+- **(nvim)** cannot open lf after updating the plugin - (e69ea5a) - Richard Hao
+#### Documentation
+- **(README)** update docs to add Credit section - (9541281) - Richard Hao
+- add comments - (2d9af91) - Richard Hao
+#### Features
+- **(brew)** add gnu-sed to brewfile - (0b64195) - Richard Hao
+- **(git)** use neovim as default git editor 🌱 - (fd0c7d6) - Richard Hao
+- **(lazyvim)** load lazyvim no matter it is vscode - (6da6213) - Richard Hao
+- **(lf)** copy path and filename to clipboard - (7c5cf85) - Richard Hao
+- **(nvim)** add colorcolumn to neovim - (ca0498f) - Richard Hao
+- **(nvim)** add tmux navigator - (e1b55b5) - Richard Hao
+- **(nvim)** add oil.nvim to edit your filesystem like a buffer - (b6434d6) - Richard Hao
+- **(nvim)** add wakatime support - (dc3c82a) - Richard Hao
+- **(nvim)** add keybindings for moving lines with a pair of keymaps - (ee8a1d8) - Richard Hao
+- **(nvim)** add new plugin code-action-menu - (e5455c8) - Richard Hao
+- **(nvim)** add SymbolsOutline plugin 🔌 - (e95fce0) - Richard Hao
+- **(nvim)** add cmp-emoji - (a9f07cb) - Richard Hao
+- **(nvim)** Add telescope-fzf-native - (4425e81) - Richard Hao
+- **(nvim)** add plugins for golang development - (48786bc) - Richard Hao
+- **(nvim)** add autocmds - (16929c0) - Richard Hao
+- **(nvim)** add some plugins - (8b78a26) - Richard Hao
+- **(tmux)** capture whole tmux buffer & jump to end - (21e5f2a) - Richard Hao
+- update tmux keybindings - (7afc797) - Richard Hao
+- add new modules for formatting and linting in LazyVim - (299a077) - Richard Hao
+- add alias `vim -> nvim` - (d3af608) - Richard Hao
+- add some ui related plugins - (fcb931b) - Richard Hao
+#### Miscellaneous Chores
+- **(gitmux)** update config - (dff314a) - Richard Hao
+- **(lazyvim)** initialize the lazyvim configs - (7e52241) - Richard Hao
+- **(lf)** use `lf` rather than `lfcd` - (b604976) - Richard Hao
+- **(noice)** make the progress bar transparent - (2832983) - Richard Hao
+- **(nvim)** display filename in the lualine - (e542a51) - Richard Hao
+- **(nvim)** enhancement - (c77ad36) - Richard Hao
+- **(nvim)** add custom keybindings - (a38c410) - Richard Hao
+- **(nvim)** map enter to ciw - (a12e62c) - Richard Hao
+- **(nvim)** enable cursorline - (ac0a7ae) - Richard Hao
+- **(tmux)** make the configs look nicer - (854d25f) - Richard Hao
+- **(tmux)** update the config -> terminal-overrides - (746cb7d) - Richard Hao
+- **(vim)** udpate plugins - (7ca7ff4) - Richard Hao
+- update fish env - (e1ece99) - Richard Hao
+- update fish config - (6a63df7) - Richard Hao
+- disable supertab in nvim and decrease wezterm background opacity - (93931b9) - Richard Hao
+- format wezterm config - (cf7a22f) - Richard Hao
+- update - (75fd569) - Richard Hao
+- update the looks of LazyVim - (04c8cd5) - Richard Hao
+- disable plugins - (afd025c) - Richard Hao
+- enable transparent_background - (38f3d3e) - Richard Hao
+- change theme to catppuccin-mocha - (464774c) - Richard Hao
+#### Refactoring
+- **(if)** support to create files and folders - (81c66e8) - Richard Hao
+- **(wezterm)** update tmux key bindings - (45c1c1e) - Richard Hao
+
+- - -
+
 ## v3.5.0 - 2023-05-24
 #### Bug Fixes
 - fix typos - (9bf60c8) - Richard Hao
