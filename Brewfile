@@ -38,6 +38,7 @@ brew 'pgformatter'
 brew 'ms-jpq/sad/sad'
 brew 'neofetch'
 brew 'gnu-sed' # for the neovim plugin -> nvim-pack/nvim-spectre
+brew 'jesseduffield/lazydocker/lazydocker' # the lazy way to manage docker
 
 # Fonts
 cask 'font-jetbrains-mono'
