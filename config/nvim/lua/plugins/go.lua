@@ -160,7 +160,6 @@ return {
         _, _, _ = code, signal, output
       end, -- callback for jobexit, output : string
     },
-    event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
     build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
   },
