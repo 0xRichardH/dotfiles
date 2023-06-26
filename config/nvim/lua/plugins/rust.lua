@@ -8,6 +8,36 @@ return {
         on_attach = function(_, bufnr)
           vim.keymap.set("n", "<Leader>k", require("rust-tools").hover_actions.hover_actions, { buffer = bufnr })
         end,
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              autoReload = true,
+            },
+            inlayHints = {
+              bindingModeHints = {
+                enable = true,
+              },
+              chainingHints = {
+                enable = false,
+              },
+              closingBraceHints = {
+                enable = true,
+              },
+              closureReturnTypeHints = {
+                enable = "always",
+              },
+              parameterHints = {
+                enable = true,
+              },
+              reborrowHints = {
+                enable = "always",
+              },
+              typeHints = {
+                enable = true,
+              },
+            },
+          },
+        },
       },
       tools = {
         hover_actions = {
@@ -15,7 +45,6 @@ return {
         },
       },
       inlay_hints = {
-        enable = true,
         -- automatically set inlay hints (type hints)
         -- default: true
         auto = true,
