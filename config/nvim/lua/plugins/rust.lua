@@ -4,6 +4,16 @@ return {
     ft = "rust",
     opts = {
       reload_workspace_from_cargo_toml = true,
+      server = {
+        on_attach = function(_, bufnr)
+          vim.keymap.set("n", "<Leader>k", require("rust-tools").hover_actions.hover_actions, { buffer = bufnr })
+        end,
+      },
+      tools = {
+        hover_actions = {
+          auto_focus = true,
+        },
+      },
       inlay_hints = {
         enable = true,
         -- automatically set inlay hints (type hints)
