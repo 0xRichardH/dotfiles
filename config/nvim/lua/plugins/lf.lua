@@ -12,7 +12,7 @@ return {
     escape_quit = true,
     focus_on_open = true, -- focus the current file when opening Lf (experimental)
     mappings = true, -- whether terminal buffer mapping is enabled
-    tmux = true, -- tmux statusline can be disabled on opening of Lf
+    tmux = false, -- tmux statusline can be disabled on opening of Lf
   },
   keys = {
     { "<leader>o", "<cmd>Lf<cr>", desc = "File Manager" },
