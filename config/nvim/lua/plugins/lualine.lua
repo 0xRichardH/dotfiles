@@ -50,10 +50,7 @@ return {
       sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = {
-          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          { "filename", path = 0, symbols = { modified = "  ", readonly = "", unnamed = "" } },
-        },
+        lualine_c = {},
         lualine_x = { diff, diagnostics },
         lualine_y = {},
         lualine_z = {},

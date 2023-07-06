@@ -1,5 +1,6 @@
 return {
   "gorbit99/codewindow.nvim",
+  event = "VeryLazy",
   config = function()
     local codewindow = require("codewindow")
     codewindow.setup({
