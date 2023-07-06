@@ -1,7 +1,7 @@
 postgresql:
   image: postgres:13.4
   ports:
-    - '5432:5432'
+    - "5432:5432"
   environment:
     - POSTGRES_PASSWORD=password
   volumes:
@@ -11,7 +11,7 @@ postgresql:
 postgis:
   image: mdillon/postgis:latest
   ports:
-    - '5432:5432'
+    - "5432:5432"
   volumes:
     - ~/data/postgis:/var/lib/postgis/data
   restart: unless-stopped
@@ -19,7 +19,7 @@ postgis:
 mysql:
   image: mysql:5.7
   ports:
-    - '127.0.0.1:3306:3306'
+    - "127.0.0.1:3306:3306"
   volumes:
     - ~/data/mysql:/var/lib/mysql
   environment:
@@ -50,8 +50,8 @@ elasticsearch-6-5:
   volumes:
     - ~/data/elasticsearch-6-5:/usr/share/elasticsearch/data
   ports:
-    - '9200:9200'
-    - '9300:9300'
+    - "9200:9200"
+    - "9300:9300"
   restart: unless-stopped
 
 kibana-6-5:
@@ -60,7 +60,7 @@ kibana-6-5:
     SERVER_NAME: 127.0.0.1
     ELASTICSEARCH_HOSTS: http://elasticsearch-6-5:9200
   ports:
-    - '5601:5601'
+    - "5601:5601"
   links:
     - elasticsearch-6-5
   restart: unless-stopped
@@ -79,8 +79,8 @@ elasticsearch:
   volumes:
     - ~/data/elasticsearch:/usr/share/elasticsearch/data
   ports:
-    - '9200:9200'
-    - '9300:9300'
+    - "9200:9200"
+    - "9300:9300"
   restart: unless-stopped
 
 kibana:
@@ -89,7 +89,7 @@ kibana:
     SERVER_NAME: 127.0.0.1
     ELASTICSEARCH_HOSTS: http://elasticsearch:9200
   ports:
-    - '5601:5601'
+    - "5601:5601"
   links:
     - elasticsearch
   restart: unless-stopped
@@ -107,7 +107,7 @@ metabase:
 redis:
   image: redis:5.0.6
   ports:
-    - '127.0.0.1:6379:6379'
+    - "127.0.0.1:6379:6379"
   volumes:
     - ~/data/redis-5:/data
   restart: unless-stopped
@@ -115,7 +115,7 @@ redis:
 redis_with_password:
   image: redis:3.0.5
   ports:
-    - '127.0.0.1:6379:6379'
+    - "127.0.0.1:6379:6379"
   volumes:
     - ~/data/redis:/data
   command: redis-server --requirepass redis
@@ -124,7 +124,7 @@ redis_with_password:
 redis-3-0-5:
   image: redis:3.0.5
   ports:
-    - '127.0.0.1:6379:6379'
+    - "127.0.0.1:6379:6379"
   volumes:
     - ~/data/redis:/data
   restart: unless-stopped
@@ -132,7 +132,7 @@ redis-3-0-5:
 memcached:
   image: memcached:1.4.31
   ports:
-    - '127.0.0.1:11211:11211'
+    - "127.0.0.1:11211:11211"
   restart: unless-stopped
 
 zookeeper:
@@ -174,7 +174,7 @@ zeronet:
     - "127.0.0.1:26552:26552"
     - "127.0.0.1:43110:43110"
   environment:
-    ENABLE_TOR: 'true'
+    ENABLE_TOR: "true"
   volumes:
     - ~/data/zeronet:/root/data
 

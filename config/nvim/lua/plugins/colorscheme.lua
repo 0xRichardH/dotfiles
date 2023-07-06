@@ -8,15 +8,15 @@ return {
       transparent_background = true,
     },
   },
-  -- {
-  --   "xiyaowong/nvim-transparent",
-  --   lazy = false,
-  --   opts = {
-  --     extra_groups = {
-  --       "NormalFloat",
-  --     },
-  --   },
-  -- },
+  {
+    "xiyaowong/nvim-transparent",
+    lazy = false,
+    opts = {
+      groups = {
+        "NormalFloat",
+      },
+    },
+  },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
