@@ -4,7 +4,7 @@
 
 -- Vim options
 local vimOptions = {
-  guifont = "VictorMono Nerd Font:h17", -- set font
+  -- guifont = "VictorMono Nerd Font:h17", -- set font
   title = true, -- set title of window
   titlestring = "%<%F", -- set title to filename
   number = true, -- set numbered lines

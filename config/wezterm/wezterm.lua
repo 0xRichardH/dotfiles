@@ -19,12 +19,12 @@ config.window_decorations = "RESIZE"
 
 -- fonts
 config.font = wezterm.font_with_fallback({
-	{ family = "Victor Mono", weight = "Bold" },
-	{ family = "Symbols Nerd Font Mono", scale = 0.75 },
+	{ family = "Comic Mono", weight = "Regular", stretch = "Normal", italic = false },
+	{ family = "Symbols Nerd Font Mono", scale = 0.75, italic = false },
 })
 config.font_size = 17.0
-config.line_height = 1.0
-config.cell_width = 1.0
+config.line_height = 1.2
+config.cell_width = 1.1
 config.use_cap_height_to_scale_fallback_fonts = true
 
 -- keybindings
