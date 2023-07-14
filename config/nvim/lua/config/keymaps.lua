@@ -23,8 +23,12 @@ map("n", "<cr>", "ciw", { desc = "ciw" })
 map("n", "ga", "<cmd>CodeActionMenu<cr>", { desc = "CodeActionMenu" })
 
 -- move lines with a pair of keymaps
-map("v", "J", ":m '>+1<CR>gv=gv")
-map("v", "K", ":m '<-2<CR>gv=gv")
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Line Down" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Line Up" })
+
+-- move to start/end of the line
+map({ "n", "x", "o" }, "H", "^", { desc = "Move to Start of Line" })
+map({ "n", "x", "o" }, "L", "$", { desc = "Move to End of Line" })
 
 -- tmux navigator
 vim.cmd([[
