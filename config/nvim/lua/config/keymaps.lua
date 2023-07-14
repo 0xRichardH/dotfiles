@@ -16,19 +16,28 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+local function defaultOptsWithDesc(desc)
+  local default_opts = { noremap = true, silent = true }
+  default_opts.desc = desc
+  return default_opts
+end
+
 -- map enter to ciw
-map("n", "<cr>", "ciw", { desc = "ciw" })
+map("n", "<cr>", "ciw", defaultOptsWithDesc("ciw"))
 
 -- add keymaps for
-map("n", "ga", "<cmd>CodeActionMenu<cr>", { desc = "CodeActionMenu" })
+map("n", "ga", "<cmd>CodeActionMenu<cr>", defaultOptsWithDesc("CodeAction Menu"))
 
 -- move lines with a pair of keymaps
-map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Line Down" })
-map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Line Up" })
+map("v", "J", ":m '>+1<CR>gv=gv", defaultOptsWithDesc("Move Line Down"))
+map("v", "K", ":m '<-2<CR>gv=gv", defaultOptsWithDesc("Move Line Up"))
 
 -- move to start/end of the line
-map({ "n", "x", "o" }, "H", "^", { desc = "Move to Start of Line" })
-map({ "n", "x", "o" }, "L", "$", { desc = "Move to End of Line" })
+map({ "n", "x", "o" }, "H", "^", defaultOptsWithDesc("Move to Start of Line"))
+map({ "n", "x", "o" }, "L", "$", defaultOptsWithDesc("Move to End of Line"))
+
+-- custom keymaps
+map("n", "gl", vim.diagnostic.open_float, defaultOptsWithDesc("Show Diagnostics"))
 
 -- tmux navigator
 vim.cmd([[
@@ -38,6 +47,3 @@ vim.cmd([[
   noremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
   noremap <silent> <c-\> :<C-U>TmuxNavigatePrevious<cr>
 ]])
-
--- custom keymaps
-map("n", "gl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
