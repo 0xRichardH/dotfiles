@@ -36,6 +36,14 @@ map("v", "K", ":m '<-2<CR>gv=gv", defaultOptsWithDesc("Move Line Up"))
 map({ "n", "x", "o" }, "H", "^", defaultOptsWithDesc("Move to Start of Line"))
 map({ "n", "x", "o" }, "L", "$", defaultOptsWithDesc("Move to End of Line"))
 
+-- navigate buffers
+map("n", "<Right>", ":bnext<CR>", defaultOptsWithDesc("Next Buffer"))
+map("n", "<Left>", ":bprevious<CR>", defaultOptsWithDesc("Previous Buffer"))
+
+-- exit insert mode on jj and jk
+map("i", "jj", "<ESC>", defaultOptsWithDesc("Exit Insert Mode"))
+map("i", "jk", "<ESC>", defaultOptsWithDesc("Exit Insert Mode"))
+
 -- custom keymaps
 map("n", "gl", vim.diagnostic.open_float, defaultOptsWithDesc("Show Diagnostics"))
 
