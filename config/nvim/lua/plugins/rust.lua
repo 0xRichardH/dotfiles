@@ -13,6 +13,10 @@ return {
             cargo = {
               autoReload = true,
             },
+            check = {
+              command = "clippy",
+              extraArgs = { "--all", "--", "-W", "clippy::all" },
+            },
             inlayHints = {
               bindingModeHints = {
                 enable = true,
