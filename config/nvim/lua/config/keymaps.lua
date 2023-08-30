@@ -55,3 +55,6 @@ vim.cmd([[
   noremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
   noremap <silent> <c-\> :<C-U>TmuxNavigatePrevious<cr>
 ]])
+
+-- no-neck-pain -> center current buffer
+map("n", "=", "<cmd>NoNeckPain<cr>")
