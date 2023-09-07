@@ -12,10 +12,34 @@ local vimOptions = {
   termguicolors = true, -- set term gui colors (most terminals support this)
   cursorline = true, -- highlight cursor line
   fileencoding = "utf-8", -- the encoding written to a file
-  undofile = true, -- enable persistent undo
-  undodir = os.getenv("HOME") .. "/.vim/undodir",
   pumblend = 0,
   colorcolumn = "80",
+
+  -- search
+  hlsearch = true,
+  incsearch = true,
+  ignorecase = true,
+
+  -- backup
+  backup = false,
+  swapfile = false,
+  undofile = true, -- enable persistent undo
+  undodir = os.getenv("HOME") .. "/.vim/undodir",
+
+  -- warpping
+  wrap = true,
+  linebreak = true,
+
+  -- spelling
+  spell = false,
+  spelllang = { "en_us" },
+
+  -- indent
+  tabstop = 2,
+  softtabstop = 2,
+  shiftwidth = 2,
+  expandtab = true,
+  smartindent = true,
 }
 
 for k, v in pairs(vimOptions) do
