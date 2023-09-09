@@ -1,5 +1,5 @@
 return {
-  "jcdickinson/codeium.nvim",
+  "0x4richard/codeium.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
