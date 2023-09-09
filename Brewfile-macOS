@@ -3,9 +3,15 @@
 
 tap 'koekeishiya/formulae'
 tap '0x4richard/formulae'
+tap 'teamookla/speedtest'
 
 # Binaries
 brew 'koekeishiya/formulae/yabai' # A tiling window manager for macOS
 brew 'koekeishiya/formulae/skhd' # Simple hotkey daemon for macOS
 brew 'spotifyd' # brew services start spotifyd
 brew 'spotify-tui'
+brew 'speedtest'
+
+# Apps
+cask 'stats' # menu stats
+cask 'mos' # smooth 3rd mouse
