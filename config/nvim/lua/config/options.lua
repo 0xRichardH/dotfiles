@@ -26,7 +26,7 @@ local vimOptions = {
   undofile = true, -- enable persistent undo
   undodir = os.getenv("HOME") .. "/.vim/undodir",
 
-  -- warpping
+  -- wrapping
   wrap = true,
   linebreak = true,
 
