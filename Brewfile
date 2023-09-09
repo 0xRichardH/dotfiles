@@ -39,6 +39,7 @@ brew 'ms-jpq/sad/sad'
 brew 'neofetch'
 brew 'gnu-sed' # for the neovim plugin -> nvim-pack/nvim-spectre
 brew 'jesseduffield/lazydocker/lazydocker' # the lazy way to manage docker
+brew 'yq' # dependency -> joshmedeski/tmux-nerd-font-window-name
 
 # Fonts
 cask 'font-jetbrains-mono'
