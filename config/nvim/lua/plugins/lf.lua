@@ -1,5 +1,5 @@
 return {
-  "0x4richard/lf.nvim",
+  "0xRichardH/lf.nvim",
   lazy = true,
   cmd = "Lf",
   dependencies = { "nvim-lua/plenary.nvim", "akinsho/toggleterm.nvim" },

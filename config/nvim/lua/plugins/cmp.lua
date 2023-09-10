@@ -2,7 +2,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      { "0x4richard/codeium.nvim" },
+      { "0xRichardH/codeium.nvim" },
       { "hrsh7th/cmp-emoji" },
     },
     opts = function(_, opts)

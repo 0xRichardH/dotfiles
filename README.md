@@ -1,11 +1,11 @@
-# dotfiles [![CI](https://github.com/0x4richard/dotfiles/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/0x4richard/dotfiles/actions/workflows/ci.yml)
+# dotfiles [![CI](https://github.com/0xRichardH/dotfiles/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/0xRichardH/dotfiles/actions/workflows/ci.yml)
 
 ## Install
 
 Clone onto your laptop:
 
 ```shell
-git clone git@github.com:0x4richard/dotfiles.git ~/dotfiles
+git clone git@github.com:0xRichardH/dotfiles.git ~/dotfiles
 ```
 
 - Install [rcm](https://github.com/thoughtbot/rcm):

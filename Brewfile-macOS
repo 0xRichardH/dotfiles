@@ -2,7 +2,7 @@
 # brew bundle --file=~/Brewfile-macOS
 
 tap 'koekeishiya/formulae'
-tap '0x4richard/formulae'
+tap '0xRichardH/formulae'
 tap 'teamookla/speedtest'
 
 # Binaries
