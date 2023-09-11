@@ -2,7 +2,7 @@ return {
   {
     "simrat39/rust-tools.nvim",
     ft = { "rust", "rs" },
-    dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap", "mason.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       reload_workspace_from_cargo_toml = true,
       server = {
@@ -105,18 +105,6 @@ return {
           max_height = nil,
           auto_focus = true,
         },
-      },
-      dap = {
-        adapter = function()
-          local mason_registry = require("mason-registry")
-
-          local codelldb = mason_registry.get_package("codelldb")
-          local extension_path = codelldb:get_install_path() .. "/extension/"
-          local codelldb_path = extension_path .. "adapter/codelldb"
-          local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
-
-          return require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
-        end,
       },
     },
   },
