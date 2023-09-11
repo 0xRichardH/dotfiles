@@ -12,10 +12,26 @@ return {
           ["rust-analyzer"] = {
             cargo = {
               autoReload = true,
+              features = "all",
+              expressionFillDefault = "default",
+              checkOnSave = true,
             },
             check = {
               command = "clippy",
               extraArgs = { "--all", "--", "-W", "clippy::all" },
+              features = "all",
+            },
+            typing = {
+              autoClosingAngleBrackets = {
+                enable = true,
+              },
+            },
+            hover = {
+              actions = {
+                references = {
+                  enable = true,
+                },
+              },
             },
             inlayHints = {
               bindingModeHints = {
