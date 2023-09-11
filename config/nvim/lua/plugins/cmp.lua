@@ -4,6 +4,7 @@ return {
     dependencies = {
       { "0xRichardH/codeium.nvim" },
       { "hrsh7th/cmp-emoji" },
+      { "saecki/crates.nvim" },
     },
     opts = function(_, opts)
       local cmp = require("cmp")
@@ -20,6 +21,7 @@ return {
       local sources = opts.sources
       table.insert(sources, 1, { name = "codeium" })
       table.insert(sources, { name = "emoji" })
+      table.insert(sources, { name = "crates" })
       opts.sources = cmp.config.sources(sources)
       opts.formatting = {
         format = function(entry, item)
