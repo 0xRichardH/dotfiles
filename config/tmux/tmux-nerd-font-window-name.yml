@@ -3,7 +3,7 @@ config:
   show-name: false # show the window name with the icon
 
 icons:
-  fish: "🐠"
-  nvim: "📝"
+  fish: "⚡"
+  nvim: ""
   btm: "📈"
   cargo: "🦀"
