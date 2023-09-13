@@ -24,6 +24,9 @@ return {
     event = "VeryLazy",
     opts = {
       presets = { lsp_doc_border = true }, -- add border https://github.com/LazyVim/LazyVim/issues/173#issuecomment-1457724549
+      lsp = {
+        progress = { enabled = false },
+      },
       views = {
         mini = {
           win_options = {
