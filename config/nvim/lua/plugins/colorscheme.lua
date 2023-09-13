@@ -23,6 +23,7 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
+      presets = { lsp_doc_border = true }, -- add border https://github.com/LazyVim/LazyVim/issues/173#issuecomment-1457724549
       views = {
         mini = {
           win_options = {
