@@ -45,7 +45,7 @@ map("i", "jj", "<ESC>", defaultOptsWithDesc("Exit Insert Mode"))
 map("i", "jk", "<ESC>", defaultOptsWithDesc("Exit Insert Mode"))
 
 -- save file to disk only when there are changes
-map("n", "<ESC>", "<ESC>:update<CR>", defaultOptsWithDesc("Save File"))
+map("n", "<ESC>", ":update<CR>", defaultOptsWithDesc("Save File"))
 
 -- custom keymaps
 map("n", "gl", vim.diagnostic.open_float, defaultOptsWithDesc("Show Diagnostics"))
