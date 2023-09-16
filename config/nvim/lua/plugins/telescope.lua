@@ -5,7 +5,6 @@ return {
   dependencies = {
     "kkharji/sqlite.lua",
     { "prochri/telescope-all-recent.nvim", opts = {} },
-    "AckslD/nvim-neoclip.lua",
     "danielvolchek/tailiscope.nvim",
     "debugloop/telescope-undo.nvim",
     "natecraddock/telescope-zf-native.nvim",
@@ -14,7 +13,6 @@ return {
   config = function(_, opts)
     local telescope = require("telescope")
     telescope.setup(opts)
-    telescope.load_extension("neoclip")
     telescope.load_extension("notify")
     telescope.load_extension("tailiscope")
     telescope.load_extension("undo")
