@@ -41,6 +41,7 @@ brew 'gnu-sed' # for the neovim plugin -> nvim-pack/nvim-spectre
 brew 'jesseduffield/lazydocker/lazydocker' # the lazy way to manage docker
 brew 'yq' # dependency -> joshmedeski/tmux-nerd-font-window-name
 brew 'bash'
+brew 'atuin'
 
 # Fonts
 cask 'font-jetbrains-mono'

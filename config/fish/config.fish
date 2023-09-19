@@ -9,3 +9,8 @@ zoxide init fish | source # 'ajeetdsouza/zoxide'
 
 # set aliases
 source (dirname (status --current-filename))/alias.fish
+
+# To do something only in interactive shells
+if status is-interactive
+    atuin init fish | source # https://atuin.sh/
+end
