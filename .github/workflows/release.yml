@@ -18,8 +18,8 @@ jobs:
         uses: oknozor/cocogitto-action@v3.4
         with:
           release: true
-          git-user: "github-actions"
-          git-user-email: "github-actions@github.com"
+          git-user: "dotfile-github-actions"
+          git-user-email: "dotfile@0xdev.dev"
 
       - name: Print version
         run: "echo '${{ steps.release.outputs.version }}'"
