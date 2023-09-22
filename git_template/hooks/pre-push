@@ -1,7 +1,14 @@
 #!/bin/sh
 
-local_hook="$HOME"/.git_template.local/hooks/pre-push
+local_hook="$HOME"/.git_template.local/hooks/commit-msg
 
 if [ -f "$local_hook" ]; then
-  . "$local_hook"
+	. "$local_hook"
 fi
+
+if cog check; then
+	exit 0
+fi
+
+echo "Invalid commits were found, force push with '--no-verify'"
+exit 1

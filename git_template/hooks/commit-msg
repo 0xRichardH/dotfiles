@@ -3,5 +3,16 @@
 local_hook="$HOME"/.git_template.local/hooks/commit-msg
 
 if [ -f "$local_hook" ]; then
-  . "$local_hook"
+	. "$local_hook"
+fi
+
+COMMIT_MSG_FILE=$1
+
+MESSAGE=$(cat $COMMIT_MSG_FILE)
+
+if cog verify "$MESSAGE"; then
+	echo "Commit parse succeeded"
+else
+	echo "See https://www.conventionalcommits.org/en/v1.0.0"
+	exit 1
 fi
