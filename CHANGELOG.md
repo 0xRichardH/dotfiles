@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v3.8.0 - 2023-09-22
+#### Features
+- update git template - (30431d7) - Richard Hao
+#### Miscellaneous Chores
+- **(github-action)** update git-user info - (e27a225) - Richard Hao
+
+- - -
+
 ## v3.7.0 - 2023-09-22
 #### Bug Fixes
 - **(nvim)** `:update` is being triggered twice - (03ab475) - Richard Hao
