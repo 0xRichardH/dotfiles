@@ -2,6 +2,80 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v3.7.0 - 2023-09-22
+#### Bug Fixes
+- **(nvim)** `:update` is being triggered twice - (03ab475) - Richard Hao
+- **(nvim)** fix typo - (7eebd11) - Richard Hao
+- telescope preview_width should be defined on horizontal table - (4cca63c) - Richard Hao
+#### Features
+- **(brew)** add `bash` - (ab9426a) - Richard Hao
+- **(brew)** add more tools to brewfile - (dd8a282) - Richard Hao
+- **(fish)** add cog completion config - (3241cc5) - Richard Hao
+- **(nvim)** enable inlay hints globally on the nightly neovim release - (6c05d5a) - Richard Hao
+- **(nvim)** use mini-files.nvim to replace `oil.nvim` and `lf.nvim` - (8e72f62) - Richard Hao
+- **(nvim)** using yanky to replace neoclip - (5cd591a) - Richard Hao
+- **(nvim)** add more telescope keymaps - (263949b) - Richard Hao
+- **(nvim)** add shortcut for saving file to disk - (6dd7240) - Richard Hao
+- **(nvim)** Use <tab> for completion and snippets (supertab) - (5d05f93) - Richard Hao
+- **(nvim)** add border to hover window - (16dbefc) - Richard Hao
+- **(nvim)** add dap to rust - (a528eb8) - Richard Hao
+- **(nvim)** add crates.nvim to rust tool - (de06d93) - Richard Hao
+- **(nvim)** update rust-tools config - (ad16983) - Richard Hao
+- **(nvim)** update rust_analyzer config - (81703ba) - Richard Hao
+- **(nvim)** update codeium.nvim - (49d8386) - Richard Hao
+- **(nvim)** track nvim/lazy-lock.json - (0cfeb78) - Richard Hao
+- **(nvim)** update general options - (71ef4d1) - Richard Hao
+- **(nvim)** update telescope configs - (386a098) - Richard Hao
+- **(nvim)** add no-neck-pain plugin - (f6c92a9) - Richard Hao
+- **(nvim)** enable `cargo clippy` checking for rust files - (3f5f7c7) - Richard Hao
+- **(nvim)** add keymaps to nvim - (8e73a13) - Richard Hao
+- **(nvim)** add keymaps to move to start/end of the line - (e5c8a6b) - Richard Hao
+- **(nvim)** add new plugin committia for better display git commmit message - (e85d74a) - Richard Hao
+- **(nvim)** add barbecue plugin to display winbar - (4e91983) - Richard Hao
+- **(nvim)** add new plugin codewindow for displaying code minimap - (366df14) - Richard Hao
+- **(nvim)** add rust-tools.nvim for the rust - (5aaccf3) - Richard Hao
+- add karabiner config - (821760f) - Richard Hao
+- instal bob-nvim - (783e285) - Richard Hao
+- add atuin to manage the command history - (a436c0a) - Richard Hao
+- update tmux-nerd-font-window-name and t-smart-tmux-session-manager - (d86a57a) - Richard Hao
+- update the Hint diagnostic icon - (384e3c7) - Richard Hao
+#### Miscellaneous Chores
+- **(fish)** remove plugin sponge - (6caacda) - Richard Hao
+- **(fish)** add clear alias cl - (03032a4) - Richard Hao
+- **(git)** update email address - (7dd75bf) - Richard Hao
+- **(nvim)** update keymaps - (5f36b25) - Richard Hao
+- **(nvim)** disable lsp progress bar - (4b0cd71) - Richard Hao
+- **(nvim)** remove dap - (98959d7) - Richard Hao
+- **(nvim)** using forked lf.nvim - (e1cb1f5) - Richard Hao
+- **(nvim)** add configuration for toggleterm plugin - (7a174bb) - Richard Hao
+- **(nvim)** add defaultOptsWithDesc helper function for keymaps - (d58bff9) - Richard Hao
+- **(nvim)** remove plugin codewindow (mini map) - (82f5592) - Richard Hao
+- **(nvim)** bring back nvim-transparent to neovim - (0c87fec) - Richard Hao
+- **(nvim)** enable tmux statusline in Lf file manager - (03437fb) - Richard Hao
+- **(nvim)**  Remove the `ghillb/cybu.nvim` plugin - (57bf83e) - Richard Hao
+- **(nvim)** disable automatically version check for plugins - (cf28bcd) - Richard Hao
+- **(nvim)** update inlay hints configs for rust - (a9d0705) - Richard Hao
+- **(nvim)** update hover actions for rust - (13304c7) - Richard Hao
+- **(nvim)** remove unused code - (c12bc5a) - Richard Hao
+- **(tmux)** do not displaoy parent folder on the t_session_name - (3cd4952) - Richard Hao
+- **(tmux)** add cargo icon to `tmux-nerd-font-window-name`` - (358b816) - Richard Hao
+- **(tmux)** revert to `joshmedeski/t-smart-tmux-session-manager` - (c393026) - Richard Hao
+- add `*` to active tmux window name - (cdbe3d3) - Richard Hao
+- update configs - (8e4c5dd) - Richard Hao
+- update fzf default options - (4664674) - Richard Hao
+- update the icons of tmux window name - (da607dd) - Richard Hao
+- update the icons of tmux window name - (6dab182) - Richard Hao
+- update the handler name to `0xRichardH` - (1700e83) - Richard Hao
+- Create LICENSE - (c88194f) - Richard Hao
+- change font to comoic mono - (c5d3d9f) - Richard Hao
+- increase font size for alacritty - (134a61e) - Richard Hao
+- remove invalid file - (eea6e79) - Richard Hao
+- add `lazydocker` package to Brewfile for easier Docker management - (32e95df) - Richard Hao
+#### Refactoring
+- remove event from go.lua plugin file - (85472c0) - Richard Hao
+
+- - -
+
 ## v3.6.0 - 2023-06-13
 #### Bug Fixes
 - **(If)** display hidden file - (04bf2e8) - Richard Hao
