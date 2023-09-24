@@ -42,6 +42,7 @@ brew 'jesseduffield/lazydocker/lazydocker' # the lazy way to manage docker
 brew 'yq' # dependency -> joshmedeski/tmux-nerd-font-window-name
 brew 'bash'
 brew 'atuin'
+brew 'bitwarden-cli'
 
 # Fonts
 cask 'font-jetbrains-mono'
