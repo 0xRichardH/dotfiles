@@ -27,8 +27,8 @@ local vimOptions = {
   undodir = os.getenv("HOME") .. "/.vim/undodir",
 
   -- wrapping
-  wrap = true,
-  linebreak = true,
+  wrap = false,
+  linebreak = false,
 
   -- spelling
   spell = false,
