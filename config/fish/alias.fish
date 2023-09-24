@@ -7,3 +7,4 @@ alias npm pnpm
 alias git hub
 alias v 'fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs lvim'
 alias cl clear
+alias mrsk kamal # kamal is former mrsk.
