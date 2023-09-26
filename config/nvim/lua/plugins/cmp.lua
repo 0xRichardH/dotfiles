@@ -2,7 +2,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      { "0xRichardH/codeium.nvim" },
+      { "Exafunction/codeium.nvim" },
       { "hrsh7th/cmp-emoji" },
       { "saecki/crates.nvim" },
     },
