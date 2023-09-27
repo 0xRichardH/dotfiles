@@ -43,6 +43,8 @@ brew 'yq' # dependency -> joshmedeski/tmux-nerd-font-window-name
 brew 'bash'
 brew 'atuin'
 brew 'bitwarden-cli'
+brew 'jq' # format json
+brew 'ffmpeg'
 
 # Fonts
 cask 'font-jetbrains-mono'
