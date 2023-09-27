@@ -35,3 +35,6 @@ disabled = true
 
 [git_status]
 disabled = true
+
+[aws]
+disabled = true

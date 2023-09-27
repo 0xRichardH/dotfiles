@@ -9,6 +9,8 @@ zoxide init fish | source # 'ajeetdsouza/zoxide'
 
 # set aliases
 source (dirname (status --current-filename))/alias.fish
+# set custom keybindings
+source (dirname (status --current-filename))/keybindings.fish
 
 # To do something only in interactive shells
 if status is-interactive

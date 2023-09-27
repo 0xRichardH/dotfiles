@@ -1,5 +1,6 @@
 set -gx fish_greeting # disable fish greeting
 set -gx PNPM_HOME "$HOME/Library/pnpm"
+set -U fish_key_bindings fish_vi_key_bindings
 
 set -Ux EDITOR nvim
 set -U VISUAL nvim
