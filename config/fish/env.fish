@@ -7,6 +7,8 @@ set -U VISUAL nvim
 set -U LANG en_US.UTF-8
 set -U LC_ALL en_US.UTF-8
 
+set -Ux SSH_ASKPASS_REQUIRE force
+
 set -U TERM xterm-256color
 
 set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
@@ -35,6 +37,7 @@ fish_add_path $PNPM_HOME
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/opt/grep/libexec/gnubin
 fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/.nix-profile/bin
 fish_add_path $HOME/.local/share/bob/nvim-bin
 fish_add_path $HOME/.bin
 fish_add_path $HOME/.local/bin

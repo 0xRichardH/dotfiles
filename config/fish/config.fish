@@ -1,5 +1,8 @@
 # set environment variables
 source (dirname (status --current-filename))/env.fish
+if test -f (dirname (status --current-filename))/env.local.fish
+    source (dirname (status --current-filename))/env.local.fish
+end
 
 source $(brew --prefix asdf)/libexec/asdf.fish
 source $(brew --prefix asdf)/share/fish/vendor_completions.d/asdf.fish
@@ -15,4 +18,8 @@ source (dirname (status --current-filename))/keybindings.fish
 # To do something only in interactive shells
 if status is-interactive
     atuin init fish | source # https://atuin.sh/
+end
+
+if test -z "$SSH_AGENT_PID"
+    eval "$(ssh-agent -c)" >/dev/null
 end
