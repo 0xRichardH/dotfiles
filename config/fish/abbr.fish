@@ -10,6 +10,11 @@ abbr cx "chmod +x"
 abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 abbr dc "docker compose"
 
+abbr gw "git worktree"
+abbr gwa "git worktree add"
+abbr gwl "git worktree list"
+abbr gwd "git worktree remove"
+
 abbr ls 'eza --git --icons --all'
 abbr ll 'eza --git --icons --all -l'
 
@@ -20,6 +25,8 @@ abbr npm pnpm
 abbr psql pgcli
 
 abbr r "source ~/.config/fish/config.fish"
+
+abbr sl "ssh-add -l"
 
 abbr tr "tldr --list | fzf --header 'tldr (tealdeer)' --reverse --preview 'tldr {1} --color=always' --preview-window=right,80% | xargs tldr"
 
