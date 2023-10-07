@@ -9,6 +9,7 @@ tap 'kdash-rs/kdash'
 tap 'arl/arl'
 tap 'jesseduffield/lazygit'
 
+
 # Binaries
 brew 'fish'
 brew 'tmux'
@@ -20,7 +21,7 @@ brew 'pnpm' # https://pnpm.io/
 brew 'starship'
 brew 'bat'
 brew 'bottom'
-brew 'exa'
+brew 'eza'
 brew 'zoxide'
 brew 'ripgrep' # cmd: rg
 brew 'kdash' # A simple terminal dashboard for Kubernetes built with Rust

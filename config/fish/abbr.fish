@@ -1,13 +1,17 @@
 abbr ba "bw_add_sshkeys -f ssh-agent -p passphrase -d"
 
 abbr cd z
+abbr c clear
 abbr cl clear
+abbr claer clear
+abbr clera clear
 abbr cx "chmod +x"
 
 abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 abbr dc "docker compose"
 
-abbr ls 'exa --git --icons --color=always --group-directories-first'
+abbr ls 'eza --git --icons --all'
+abbr ll 'eza --git --icons --all -l'
 
 abbr mrsk kamal # kamal is former mrsk.
 
