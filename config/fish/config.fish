@@ -10,6 +10,8 @@ source $(brew --prefix asdf)/share/fish/vendor_completions.d/asdf.fish
 starship init fish | source # https://starship.rs/
 zoxide init fish | source # 'ajeetdsouza/zoxide'
 
+# set abbreviations
+source (dirname (status --current-filename))/abbr.fish
 # set aliases
 source (dirname (status --current-filename))/alias.fish
 # set custom keybindings
