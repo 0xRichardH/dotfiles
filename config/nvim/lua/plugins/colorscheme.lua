@@ -11,15 +11,6 @@ return {
     },
   },
   {
-    "xiyaowong/nvim-transparent",
-    lazy = false,
-    opts = {
-      groups = {
-        "NormalFloat",
-      },
-    },
-  },
-  {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
