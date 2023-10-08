@@ -7,6 +7,9 @@ extend-ignore-identifiers-re = [
   "iterm2",
   "noice",
   "currentpos",
+  "ba",
+  "claer",
+  "clera",
 ]
 
 
