@@ -29,19 +29,6 @@ vim.api.nvim_create_autocmd({ "BufRead" }, {
   end,
 })
 
--- mkview and loadview
--- mkview
-vim.api.nvim_create_autocmd("BufWinLeave", {
-  pattern = { "*" },
-  command = "silent! mkview",
-})
-
--- loadview
-vim.api.nvim_create_autocmd("BufWinEnter", {
-  pattern = { "*" },
-  command = "silent! loadview",
-})
-
 -- enable inlay hints globally
 -- ref: https://vinnymeller.com/posts/neovim_nightly_inlay_hints/
 if vim.lsp.inlay_hint then
