@@ -2,6 +2,36 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v3.9.0 - 2023-10-08
+#### Bug Fixes
+- ignore some typos - (0db0915) - Richard Hao
+#### Features
+- **(bin)** Small python script to load bitwarden-store ssh keys into ssh-agent - (395c6ba) - Richard Hao
+- **(bin)** add script git-bare-clone to clone bare git repo for `git - (0c715ea) - Richard Hao
+- **(brew)** add new plugin jq and ffmpeg - (e94b76f) - Richard Hao
+- **(brew)** install bbitwarden-cli - (4e93a09) - Richard Hao
+- **(fish)** add abbreviations for fish - (329bfed) - Richard Hao
+- **(fish)** add custom keybindgs to fish - (7121b9c) - Richard Hao
+- **(fish)** add kamal alias - (0e49b8d) - Richard Hao
+- **(nvim)** add new plugin nvim-ufo - (42d26ae) - Richard Hao
+- **(nvim)** add harpoon - (9dedd28) - Richard Hao
+- **(nvim)** add new plugin neoai.nvim - (e2b5769) - Richard Hao
+#### Miscellaneous Chores
+- **(bin)** rename bw_add_sshkeys.py to bw_add_sshkeys - (78e4d2d) - Richard Hao
+- **(fish)** update abbreviations - (8fe035f) - Richard Hao
+- **(fish)** organize abbr - (39c4e14) - Richard Hao
+- **(fish)** update fish script - (7912d3d) - Richard Hao
+- **(nvim)** remove transparent plugin - (1536fb2) - Richard Hao
+- **(nvim)** update lazyvim - (8d5fe3b) - Richard Hao
+- **(nvim)** update the codeium source - (e040e0f) - Richard Hao
+- **(nvim)** update the plugins - (02e9e0c) - Richard Hao
+- update lazy vim plugins - (edd450a) - Richard Hao
+- use eza to replace exa - (c381ceb) - Richard Hao
+- remove op as ssh agent - (4953f69) - Richard Hao
+- udpate lazyvim plugins - (bd84465) - Richard Hao
+
+- - -
+
 ## v3.8.0 - 2023-09-22
 #### Features
 - update git template - (30431d7) - Richard Hao
