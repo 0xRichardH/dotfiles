@@ -24,6 +24,8 @@ abbr npm pnpm
 
 abbr psql pgcli
 
+abbr qd "nvim --cmd enew --cmd vsplit --cmd enew --cmd \"windo diffthis\" -o 2"
+
 abbr r "source ~/.config/fish/config.fish"
 
 abbr sl "ssh-add -l"
