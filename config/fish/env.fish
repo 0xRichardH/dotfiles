@@ -34,6 +34,7 @@ set -Ux BAT_THEME Catppuccin-mocha
 # ordered by priority - bottom up
 fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path $PNPM_HOME
+fish_add_path /opt/homebrew/sbin
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/opt/grep/libexec/gnubin
 fish_add_path $HOME/.cargo/bin
