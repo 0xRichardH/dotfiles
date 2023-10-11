@@ -14,7 +14,6 @@ tap 'jesseduffield/lazygit'
 brew 'fish'
 brew 'tmux'
 brew 'hub'
-brew 'asdf'
 brew 'nvim', args: ['HEAD']
 brew 'node'
 brew 'pnpm' # https://pnpm.io/
