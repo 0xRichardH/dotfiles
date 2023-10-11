@@ -46,6 +46,7 @@ brew 'atuin'
 brew 'bitwarden-cli'
 brew 'jq' # format json
 brew 'ffmpeg'
+brew 'direnv'
 
 # Fonts
 cask 'font-jetbrains-mono'

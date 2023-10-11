@@ -9,6 +9,7 @@ source $(brew --prefix asdf)/share/fish/vendor_completions.d/asdf.fish
 
 starship init fish | source # https://starship.rs/
 zoxide init fish | source # 'ajeetdsouza/zoxide'
+direnv hook fish | source # direnv allow .
 
 # set abbreviations
 source (dirname (status --current-filename))/abbr.fish
