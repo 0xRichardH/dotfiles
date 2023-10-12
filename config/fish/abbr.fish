@@ -1,4 +1,4 @@
-abbr ba "bw_add_sshkeys -f ssh-agent -p passphrase -d"
+abbr ba "bw_add_sshkeys -f ssh-agent -p passphrase"
 
 abbr cd z
 abbr c clear
