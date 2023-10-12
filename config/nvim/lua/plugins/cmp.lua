@@ -62,9 +62,6 @@ return {
         format = function(entry, item)
           local icons = require("config.icons").kinds
           item = default_format_fn(entry, item)
-          if entry.source.name == "codeium" then
-            item.kind = icons[item.kind] .. " " .. item.kind
-          end
           return item
         end,
       }
