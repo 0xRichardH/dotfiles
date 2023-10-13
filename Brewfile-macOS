@@ -2,7 +2,6 @@
 # brew bundle --file=~/Brewfile-macOS
 
 tap 'koekeishiya/formulae'
-tap '0xRichardH/formulae'
 tap 'teamookla/speedtest'
 
 # Binaries
@@ -13,3 +12,8 @@ brew 'speedtest'
 # Apps
 cask 'stats' # menu stats
 cask 'mos' # smooth 3rd mouse
+cask 'wezterm'
+cask 'alacritty'
+cask 'orbstack'
+cask 'raycast'
+cask 'appcleaner'

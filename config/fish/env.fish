@@ -1,5 +1,4 @@
 set -gx fish_greeting # disable fish greeting
-set -gx PNPM_HOME "$HOME/Library/pnpm"
 set -U fish_key_bindings fish_vi_key_bindings
 
 set -Ux EDITOR nvim
@@ -33,7 +32,6 @@ set -Ux BAT_THEME Catppuccin-mocha
 
 # ordered by priority - bottom up
 fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
-fish_add_path $PNPM_HOME
 fish_add_path /opt/homebrew/sbin
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/opt/grep/libexec/gnubin

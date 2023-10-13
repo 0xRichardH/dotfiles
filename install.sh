@@ -19,6 +19,6 @@ source "${dotfiles_path}/scripts/package-manager.sh"
 source "${dotfiles_path}/scripts/brew.sh"
 
 # Update dotfiles
-rcup
+env RCRC=$HOME/dotfiles/rcrc rcup
 
 echo "Done."
