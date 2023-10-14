@@ -2,7 +2,6 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      { "Exafunction/codeium.nvim" },
       { "hrsh7th/cmp-emoji" },
       { "saecki/crates.nvim" },
     },
@@ -51,10 +50,8 @@ return {
         end, { "i", "s" }),
       })
 
-      -- add codeium to cmp window
       local default_format_fn = opts.formatting.format
       local sources = opts.sources
-      table.insert(sources, 1, { name = "codeium" })
       table.insert(sources, { name = "emoji" })
       table.insert(sources, { name = "crates" })
       opts.sources = cmp.config.sources(sources)
