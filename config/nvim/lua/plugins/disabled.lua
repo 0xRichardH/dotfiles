@@ -4,5 +4,5 @@ return {
   { "goolord/alpha-nvim", enabled = false },
   { "akinsho/bufferline.nvim", enabled = false },
   { "dstein64/vim-startuptime", enabled = false },
-  { "glepnir/dashboard-nvim", enabled = false },
+  { "nvimdev/dashboard-nvim", enabled = false },
 }
