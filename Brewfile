@@ -41,6 +41,7 @@ brew 'jq' # format json
 brew 'ffmpeg'
 brew 'direnv'
 brew 'rcm' # https://github.com/thoughtbot/rcm
+brew 'ansible'
 
 # Fonts
 cask 'font-jetbrains-mono'
