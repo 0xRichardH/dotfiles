@@ -15,6 +15,9 @@ source (dirname (status --current-filename))/alias.fish
 # set custom keybindings
 source (dirname (status --current-filename))/keybindings.fish
 
+# asdf
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
+
 # To do something only in interactive shells
 if status is-interactive
     atuin init fish | source # https://atuin.sh/

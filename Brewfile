@@ -42,6 +42,7 @@ brew 'ffmpeg'
 brew 'direnv'
 brew 'rcm' # https://github.com/thoughtbot/rcm
 brew 'ansible'
+brew 'asdf'
 
 # Fonts
 cask 'font-jetbrains-mono'
