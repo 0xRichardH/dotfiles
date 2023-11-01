@@ -12,7 +12,8 @@ SETUVAR --export LF_ICONS:\x2a\x2e7z\x3d\uf410\x3a\x2a\x2eaac\x3d\uf40f\x3a\x2a\
 SETUVAR --export OPENAI_API_KEY:sk\x2d1JYOKUIIhuJOwu81vLJ0T3BlbkFJAwyZ5q6xEyDeQUydgK19
 SETUVAR --export SSH_ASKPASS_REQUIRE:force
 SETUVAR TERM:xterm\x2d256color
-SETUVAR --export T_SESSION_NAME_INCLUDE_PARENT:false
+SETUVAR --export T_SESSION_NAME_INCLUDE_PARENT:true
+SETUVAR --export T_SESSION_USE_GIT_ROOT:true
 SETUVAR VISUAL:nvim
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_halostatue_2F_fish_2D_go_files:\x7e/\x2econfig/fish/conf\x2ed/halostatue_fish_go\x2efish
