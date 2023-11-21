@@ -1,3 +1,5 @@
+abbr aap "set -Ux SSH_ASKPASS_REQUIRE force" # add SSH_ASKPASS_REQUIRE environment variable
+
 abbr ba "bw_add_sshkeys -f ssh-agent -p passphrase"
 
 abbr cd z
@@ -7,8 +9,12 @@ abbr claer clear
 abbr clera clear
 abbr cx "chmod +x"
 
-abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 abbr dc "docker compose"
+abbr dcp "docker-compose -f ~/docker-compose.yaml" # Shorthand, customise docker-compose.yaml location as needed
+abbr dprune "docker image prune" # Remove unused images (useful after an upgrade)
+abbr dprunesys "docker system prune --all" # Remove unused images, unused networks *and data* (use with care)
+abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
+abbr dtail "docker logs -tf --tail='50' " # Tail last 50 lines of docker logs
 
 abbr gw "git worktree"
 abbr gwa "git worktree add"
@@ -25,6 +31,7 @@ abbr npm pnpm
 abbr psql pgcli
 
 abbr r "source ~/.config/fish/config.fish"
+abbr rmap "set -e SSH_ASKPASS_REQUIRE" # remove SSH_ASKPASS_REQUIRE environment variable
 
 abbr sl "ssh-add -l"
 
