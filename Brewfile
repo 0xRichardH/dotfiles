@@ -43,6 +43,7 @@ brew 'direnv'
 brew 'rcm' # https://github.com/thoughtbot/rcm
 brew 'ansible'
 brew 'asdf'
+brew 'just'
 
 # Fonts
 cask 'font-jetbrains-mono'
