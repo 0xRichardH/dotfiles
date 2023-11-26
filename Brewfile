@@ -44,6 +44,7 @@ brew 'rcm' # https://github.com/thoughtbot/rcm
 brew 'ansible'
 brew 'asdf'
 brew 'just'
+brew 'sshpass'
 
 # Fonts
 cask 'font-jetbrains-mono'
