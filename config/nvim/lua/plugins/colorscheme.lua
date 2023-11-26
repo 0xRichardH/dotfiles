@@ -6,8 +6,13 @@ return {
     opts = {
       flavour = "mocha", -- latte, frappe, macchiato, or mocha
       transparent_background = true,
-      no_italic = true, -- Force no italic
+      no_italic = false, -- Force no italic
       no_bold = false, -- Force no bold
+      custom_highlights = function(colors)
+        return {
+          CurSearch = { bg = "#FFCA27" },
+        }
+      end,
       integrations = {
         cmp = true,
         fidget = true,
