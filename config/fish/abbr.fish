@@ -16,6 +16,8 @@ abbr dprunesys "docker system prune --all" # Remove unused images, unused networ
 abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 abbr dtail "docker logs -tf --tail='50' " # Tail last 50 lines of docker logs
 
+abbr e nvim
+
 abbr gw "git worktree"
 abbr gwa "git worktree add"
 abbr gwl "git worktree list"
