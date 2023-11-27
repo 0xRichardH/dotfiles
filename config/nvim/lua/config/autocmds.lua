@@ -46,7 +46,7 @@ if vim.lsp.inlay_hint then
       end
 
       if client.server_capabilities.inlayHintProvider then
-        vim.lsp.inlay_hint(args.buf, true)
+        vim.lsp.inlay_hint.enable(args.buf, true)
       end
     end,
   })
