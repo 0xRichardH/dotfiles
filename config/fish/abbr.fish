@@ -10,7 +10,7 @@ abbr clera clear
 abbr cx "chmod +x"
 
 abbr dc "docker compose"
-abbr dcp "docker-compose -f ~/docker-compose.yaml" # Shorthand, customise docker-compose.yaml location as needed
+abbr dcp "docker compose -f ~/docker-compose.yaml" # Shorthand, customise docker-compose.yaml location as needed
 abbr dprune "docker image prune" # Remove unused images (useful after an upgrade)
 abbr dprunesys "docker system prune --all" # Remove unused images, unused networks *and data* (use with care)
 abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
