@@ -43,7 +43,7 @@ config.font = wezterm.font_with_fallback({
     harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
   },
 	{ family = "Comic Mono", weight = "Regular", stretch = "Normal", italic = false },
-	{ family = "Symbols Nerd Font Mono", scale = 0.75, italic = false },
+	{ family = "Symbols Nerd Font Mono", scale = 0.85, italic = false },
 })
 config.font_size = 18.0
 -- config.line_height = 1.2
