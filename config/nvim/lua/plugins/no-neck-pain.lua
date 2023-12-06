@@ -4,4 +4,7 @@ return {
   config = function()
     require("no-neck-pain").setup({})
   end,
+  keys = {
+    { "=", "<cmd>NoNeckPain<cr>", desc = "Center the current buffer (NoNeckPain)" }
+  }
 }
