@@ -84,7 +84,7 @@ local custom_configs = {
 		{ family = "Comic Mono", weight = "Regular", stretch = "Normal", italic = false },
 		{ family = "Symbols Nerd Font Mono", scale = 0.85, italic = false },
 	}),
-	font_size = 18.0,
+	font_size = 19.0,
 	use_cap_height_to_scale_fallback_fonts = true,
 	-- line_height = 1.2
 	-- cell_width = 1.1
