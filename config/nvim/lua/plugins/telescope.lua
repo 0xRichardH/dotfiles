@@ -48,6 +48,15 @@ return {
         "--smart-case",
         "--trim", -- add this value
       },
+      mappings = {
+        i = {
+          ["<C-n>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_next,
+          ["<C-p>"] = require("telescope.actions").toggle_selection
+            + require("telescope.actions").move_selection_previous,
+          ["<Tab>"] = require("telescope.actions").move_selection_next,
+          ["<S-Tab>"] = require("telescope.actions").move_selection_previous,
+        },
+      },
     },
     pickers = {
       buffers = {
