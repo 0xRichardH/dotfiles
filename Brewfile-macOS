@@ -1,5 +1,5 @@
 # Brewfile for macOS
-# brew bundle --file=~/Brewfile-macOS
+# brew bundle --file=./Brewfile-macOS
 
 tap 'koekeishiya/formulae'
 tap 'teamookla/speedtest'
