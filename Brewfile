@@ -7,6 +7,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
 tap 'jesseduffield/lazygit'
 tap 'esolitos/ipa'
+tap 'arl/arl'
 
 # Binaries
 brew 'fish'
