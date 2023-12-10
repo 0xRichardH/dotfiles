@@ -25,9 +25,6 @@ end
 -- map enter to ciw
 map("n", "<CR>", "ciw", defaultOptsWithDesc("ciw"))
 
--- add keymaps for
-map("n", "ga", "<cmd>CodeActionMenu<cr>", defaultOptsWithDesc("CodeAction Menu"))
-
 -- move lines with a pair of keymaps
 map("v", "J", ":m '>+1<CR>gv=gv", defaultOptsWithDesc("Move Line Down"))
 map("v", "K", ":m '<-2<CR>gv=gv", defaultOptsWithDesc("Move Line Up"))
