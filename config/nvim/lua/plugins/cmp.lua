@@ -57,12 +57,10 @@ return {
       opts.sources = cmp.config.sources(sources)
       opts.formatting = {
         format = function(entry, item)
-          local icons = require("config.icons").kinds
           item = default_format_fn(entry, item)
           return item
         end,
       }
-      vim.api.nvim_set_hl(0, "CmpItemKindCodeium", { fg = "#6CC644" })
     end,
   },
 }

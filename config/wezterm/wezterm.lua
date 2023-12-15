@@ -3,16 +3,16 @@ local act = wezterm.action
 local config = {}
 
 -- ================== Helper functions <START> ==================
-local helper = {}
-
-helper.get_random_entry = function(tbl)
-	local keys = {}
-	for key, _ in ipairs(tbl) do
-		table.insert(keys, key)
-	end
-	local randomKey = keys[math.random(1, #keys)]
-	return tbl[randomKey]
-end
+-- local helper = {}
+--
+-- helper.get_random_entry = function(tbl)
+-- 	local keys = {}
+-- 	for key, _ in ipairs(tbl) do
+-- 		table.insert(keys, key)
+-- 	end
+-- 	local randomKey = keys[math.random(1, #keys)]
+-- 	return tbl[randomKey]
+-- end
 
 local key_helper = {}
 
@@ -59,7 +59,7 @@ local custom_configs = {
 
 	-- windows
 	color_scheme = "Catppuccin Mocha",
-	window_background_opacity = 0.90,
+	window_background_opacity = 1,
 	window_decorations = "RESIZE",
 	window_close_confirmation = "NeverPrompt",
 	hide_tab_bar_if_only_one_tab = true,
@@ -70,24 +70,24 @@ local custom_configs = {
 
 	-- fonts
 	font = wezterm.font_with_fallback({
-		{
-			family = helper.get_random_entry({
-				"Monaspace Argon",
-				"Monaspace Krypton",
-				"Monaspace Neon",
-				"Monaspace Radon",
-				"Monaspace Xenon",
-			}),
-			weight = "Medium",
-			harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
-		},
+		-- {
+		-- 	family = helper.get_random_entry({
+		-- 		"Monaspace Argon",
+		-- 		"Monaspace Krypton",
+		-- 		"Monaspace Neon",
+		-- 		"Monaspace Radon",
+		-- 		"Monaspace Xenon",
+		-- 	}),
+		-- 	weight = "Medium",
+		-- 	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
+		-- },
 		{ family = "Comic Mono", weight = "Regular", stretch = "Normal", italic = false },
 		{ family = "Symbols Nerd Font Mono", scale = 0.85, italic = false },
 	}),
-	font_size = 19.0,
+	font_size = 18.0,
 	use_cap_height_to_scale_fallback_fonts = true,
-	-- line_height = 1.2
-	-- cell_width = 1.1
+	line_height = 1.2,
+	cell_width = 1.1,
 
 	-- keybindings
 	disable_default_key_bindings = false,

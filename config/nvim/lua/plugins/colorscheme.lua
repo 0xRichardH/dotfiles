@@ -8,7 +8,7 @@ return {
       transparent_background = true,
       no_italic = true, -- Force no italic
       no_bold = true, -- Force no bold
-      custom_highlights = function(colors)
+      custom_highlights = function(_colors)
         return {
           CurSearch = { bg = "#FFCA27" },
         }
