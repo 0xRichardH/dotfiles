@@ -17,7 +17,7 @@ return {
           prev = "<C-k>",
         },
       },
-      -- panel = { enabled = false },
+      panel = { enabled = false },
     })
   end,
   keys = function()
@@ -27,6 +27,8 @@ return {
         function()
           return require("copilot.suggestion").next()
         end,
+        mode = { "i" },
+        expr = true,
       },
       {
         "<C-k>",
