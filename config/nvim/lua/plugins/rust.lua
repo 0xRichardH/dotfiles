@@ -1,127 +1,162 @@
 return {
+
+  -- Extend auto completion
   {
-    "simrat39/rust-tools.nvim",
-    ft = { "rust", "rs" },
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      reload_workspace_from_cargo_toml = true,
-      server = {
-        on_attach = function(_, bufnr)
-          -- Hover actions
-          vim.keymap.set("n", "<Leader>k", require("rust-tools").hover_actions.hover_actions, { buffer = bufnr })
-        end,
-        settings = {
-          ["rust-analyzer"] = {
-            cargo = {
-              autoReload = true,
-              features = "all",
-              expressionFillDefault = "default",
-              checkOnSave = true,
-            },
-            check = {
-              command = "clippy",
-              extraArgs = { "--all", "--", "-W", "clippy::all" },
-              features = "all",
-            },
-            typing = {
-              autoClosingAngleBrackets = {
-                enable = true,
-              },
-            },
-            inlayHints = {
-              bindingModeHints = {
-                enable = true,
-              },
-              chainingHints = {
-                enable = false,
-              },
-              closingBraceHints = {
-                enable = true,
-              },
-              closureReturnTypeHints = {
-                enable = "always",
-              },
-              parameterHints = {
-                enable = true,
-              },
-              reborrowHints = {
-                enable = "always",
-              },
-              typeHints = {
-                enable = true,
-              },
-            },
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      {
+        "Saecki/crates.nvim",
+        event = { "BufRead Cargo.toml" },
+        opts = {
+          src = {
+            cmp = { enabled = true },
           },
-        },
-      },
-      tools = {
-        inlay_hints = {
-          -- automatically set inlay hints (type hints)
-          -- default: true
-          auto = vim.lsp.inlay_hint == nil,
-
-          -- Only show inlay hints for the current line
-          only_current_line = false,
-
-          -- whether to show parameter hints with the inlay hints or not
-          -- default: true
-          show_parameter_hints = true,
-
-          -- prefix for parameter hints
-          -- default: "<-"
-          parameter_hints_prefix = "<- ",
-
-          -- prefix for all the other hints (type, chaining)
-          -- default: "=>"
-          other_hints_prefix = "=> ",
-
-          -- whether to align to the length of the longest line in the file
-          max_len_align = false,
-
-          -- padding from the left if max_len_align is true
-          max_len_align_padding = 1,
-
-          -- whether to align to the extreme right or not
-          right_align = false,
-
-          -- padding from the right if right_align is true
-          right_align_padding = 7,
-
-          -- The color of the hints
-          highlight = "Comment",
-        },
-        hover_actions = {
-          border = {
-            { "╭", "FloatBorder" },
-            { "─", "FloatBorder" },
-            { "╮", "FloatBorder" },
-            { "│", "FloatBorder" },
-            { "╯", "FloatBorder" },
-            { "─", "FloatBorder" },
-            { "╰", "FloatBorder" },
-            { "│", "FloatBorder" },
-          },
-          max_width = nil,
-          max_height = nil,
-          auto_focus = true,
         },
       },
     },
-  },
-  {
-    "saecki/crates.nvim",
-    enabled = true,
-    version = "v0.3.0",
-    lazy = true,
-    ft = { "rust", "toml" },
-    event = { "BufRead", "BufReadPre", "BufNewFile" },
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("crates").setup({
-        popup = {
-          border = "rounded",
-        },
-      })
+    ---@param opts cmp.ConfigSchema
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
+        { name = "crates" },
+      }))
     end,
+  },
+
+  -- Add Rust & related to treesitter
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      if type(opts.ensure_installed) == "table" then
+        vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml" })
+      end
+    end,
+  },
+
+  -- Ensure Rust debugger is installed
+  {
+    "williamboman/mason.nvim",
+    optional = true,
+    opts = function(_, opts)
+      if type(opts.ensure_installed) == "table" then
+        vim.list_extend(opts.ensure_installed, { "codelldb" })
+      end
+    end,
+  },
+
+  {
+    "simrat39/rust-tools.nvim",
+    lazy = true,
+    opts = function()
+      local ok, mason_registry = pcall(require, "mason-registry")
+      local adapter ---@type any
+      if ok then
+        -- rust tools configuration for debugging support
+        local codelldb = mason_registry.get_package("codelldb")
+        local extension_path = codelldb:get_install_path() .. "/extension/"
+        local codelldb_path = extension_path .. "adapter/codelldb"
+        local liblldb_path = ""
+        if vim.loop.os_uname().sysname:find("Windows") then
+          liblldb_path = extension_path .. "lldb\\bin\\liblldb.dll"
+        elseif vim.fn.has("mac") == 1 then
+          liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
+        else
+          liblldb_path = extension_path .. "lldb/lib/liblldb.so"
+        end
+        adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
+      end
+      return {
+        dap = {
+          adapter = adapter,
+        },
+        tools = {
+          on_initialized = function()
+            vim.cmd([[
+                  augroup RustLSP
+                    autocmd CursorHold                      *.rs silent! lua vim.lsp.buf.document_highlight()
+                    autocmd CursorMoved,InsertEnter         *.rs silent! lua vim.lsp.buf.clear_references()
+                    autocmd BufEnter,CursorHold,InsertLeave *.rs silent! lua vim.lsp.codelens.refresh()
+                  augroup END
+                ]])
+          end,
+        },
+      }
+    end,
+    config = function() end,
+  },
+
+  -- Correctly setup lspconfig for Rust 🚀
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        -- Ensure mason installs the server
+        rust_analyzer = {
+          keys = {
+            { "K", "<cmd>RustHoverActions<cr>", desc = "Hover Actions (Rust)" },
+            { "<leader>cR", "<cmd>RustCodeAction<cr>", desc = "Code Action (Rust)" },
+            { "<leader>dr", "<cmd>RustDebuggables<cr>", desc = "Run Debuggables (Rust)" },
+          },
+          settings = {
+            ["rust-analyzer"] = {
+              cargo = {
+                allFeatures = true,
+                loadOutDirsFromCheck = true,
+                runBuildScripts = true,
+              },
+              -- Add clippy lints for Rust.
+              checkOnSave = {
+                allFeatures = true,
+                command = "clippy",
+                extraArgs = { "--no-deps" },
+              },
+              procMacro = {
+                enable = true,
+                ignored = {
+                  ["async-trait"] = { "async_trait" },
+                  ["napi-derive"] = { "napi" },
+                  ["async-recursion"] = { "async_recursion" },
+                },
+              },
+            },
+          },
+        },
+        taplo = {
+          keys = {
+            {
+              "K",
+              function()
+                if vim.fn.expand("%:t") == "Cargo.toml" and require("crates").popup_available() then
+                  require("crates").show_popup()
+                else
+                  vim.lsp.buf.hover()
+                end
+              end,
+              desc = "Show Crate Documentation",
+            },
+          },
+        },
+      },
+      setup = {
+        rust_analyzer = function(_, opts)
+          local rust_tools_opts = require("lazyvim.util").opts("rust-tools.nvim")
+          require("rust-tools").setup(vim.tbl_deep_extend("force", rust_tools_opts or {}, { server = opts }))
+          return true
+        end,
+      },
+    },
+  },
+
+  {
+    "nvim-neotest/neotest",
+    optional = true,
+    dependencies = {
+      "rouge8/neotest-rust",
+    },
+    opts = {
+      adapters = {
+        ["neotest-rust"] = {},
+      },
+    },
   },
 }

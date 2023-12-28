@@ -3,7 +3,6 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       { "hrsh7th/cmp-emoji" },
-      { "saecki/crates.nvim" },
     },
     opts = function(_, opts)
       local has_words_before = function()
@@ -53,7 +52,6 @@ return {
       local default_format_fn = opts.formatting.format
       local sources = opts.sources
       table.insert(sources, { name = "emoji" })
-      table.insert(sources, { name = "crates" })
       opts.sources = cmp.config.sources(sources)
       opts.formatting = {
         format = function(entry, item)

@@ -47,6 +47,10 @@ map("n", "<ESC>", "<CMD>update<CR><ESC>", defaultOptsWithDesc("Save File"))
 -- custom keymaps
 map("n", "gl", vim.diagnostic.open_float, defaultOptsWithDesc("Show Diagnostics"))
 
+-- use tab to navigate buffers
+map("n", "<Tab>", ":bnext<CR>", defaultOptsWithDesc("Next Buffer"))
+map("n", "<S-Tab>", ":bprevious<CR>", defaultOptsWithDesc("Previous Buffer"))
+
 -- tmux navigator
 vim.cmd([[
   noremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
