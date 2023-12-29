@@ -15,11 +15,12 @@ return {
       end,
       integrations = {
         cmp = true,
-        fidget = true,
         gitsigns = true,
         harpoon = true,
+        indent_blankline = { enabled = true },
         lsp_trouble = true,
         mason = true,
+        mini = true,
         neotest = true,
         noice = true,
         notify = true,

@@ -18,7 +18,7 @@ return {
       local cmp_window = cmp.config.window
       opts.window = {
         completion = cmp_window.bordered(),
-        documentation = cmp_window.bordered(),
+        documentation = false,
       }
 
       -- Setup supertab in cmp

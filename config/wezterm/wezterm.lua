@@ -59,7 +59,7 @@ local custom_configs = {
 
 	-- windows
 	color_scheme = "Catppuccin Mocha",
-	window_background_opacity = 1,
+	window_background_opacity = 0.95,
 	window_decorations = "RESIZE",
 	window_close_confirmation = "NeverPrompt",
 	hide_tab_bar_if_only_one_tab = true,
@@ -84,7 +84,7 @@ local custom_configs = {
 		{
 			family = "Monaspace Radon",
 			weight = "Medium",
-			harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
+			harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt" },
 			-- ss01: ligatures related to the equals glyph like != and ===.
 			-- ss02: ligatures related to the greater than or less than operators.
 			-- ss03: ligatures related to arrows like -> and =>.
@@ -108,8 +108,9 @@ local custom_configs = {
 		},
 		{ family = "Comic Mono", weight = "Regular", stretch = "Normal", italic = false },
 		{ family = "Symbols Nerd Font Mono", scale = 0.85, italic = false },
+		{ family = "Noto Color Emoji" },
 	}),
-	font_size = 19.0,
+	font_size = 18.0,
 	use_cap_height_to_scale_fallback_fonts = true,
 	-- line_height = 1.2,
 	-- cell_width = 1.1,
