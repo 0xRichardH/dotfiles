@@ -6,4 +6,5 @@ return {
   { "dstein64/vim-startuptime", enabled = false },
   { "nvimdev/dashboard-nvim", enabled = false },
   { "Exafunction/codeium.vim", enabled = false },
+  { "nvim-lualine/lualine.nvim", enabled = false },
 }

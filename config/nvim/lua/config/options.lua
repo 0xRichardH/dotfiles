@@ -14,6 +14,7 @@ local vimOptions = {
   fileencoding = "utf-8", -- the encoding written to a file
   pumblend = 0,
   colorcolumn = "80",
+  laststatus = 0, -- disable statusline
 
   -- search
   hlsearch = true,
