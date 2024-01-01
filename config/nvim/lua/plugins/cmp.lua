@@ -1,9 +1,6 @@
 return {
   {
     "hrsh7th/nvim-cmp",
-    dependencies = {
-      { "hrsh7th/cmp-emoji" },
-    },
     opts = function(_, opts)
       local has_words_before = function()
         unpack = unpack or table.unpack
@@ -19,6 +16,11 @@ return {
       opts.window = {
         completion = cmp_window.bordered(),
         documentation = false,
+      }
+
+      -- disable ghost text
+      opts.experimental = {
+        ghost_text = false,
       }
 
       -- Setup supertab in cmp
@@ -48,17 +50,6 @@ return {
           end
         end, { "i", "s" }),
       })
-
-      local default_format_fn = opts.formatting.format
-      local sources = opts.sources
-      table.insert(sources, { name = "emoji" })
-      opts.sources = cmp.config.sources(sources)
-      opts.formatting = {
-        format = function(entry, item)
-          item = default_format_fn(entry, item)
-          return item
-        end,
-      }
     end,
   },
 }

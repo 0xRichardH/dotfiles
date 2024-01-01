@@ -7,4 +7,5 @@ return {
   { "nvimdev/dashboard-nvim", enabled = false },
   { "Exafunction/codeium.vim", enabled = false },
   { "nvim-lualine/lualine.nvim", enabled = false },
+  { "folke/persistence.nvim", enabled = false },
 }
