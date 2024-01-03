@@ -8,4 +8,5 @@ return {
   { "Exafunction/codeium.vim", enabled = false },
   { "nvim-lualine/lualine.nvim", enabled = false },
   { "folke/persistence.nvim", enabled = false },
+  { "echasnovski/mini.pairs", enabled = false },
 }
