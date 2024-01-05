@@ -8,6 +8,7 @@ tap 'teamookla/speedtest'
 brew 'koekeishiya/formulae/yabai' # A tiling window manager for macOS
 brew 'koekeishiya/formulae/skhd' # Simple hotkey daemon for macOS
 brew 'speedtest'
+brew 'terminal-notifier' # Send macOS User Notifications from the command-line
 
 # Apps
 cask 'stats' # menu stats
