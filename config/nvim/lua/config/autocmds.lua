@@ -29,6 +29,14 @@ vim.api.nvim_create_autocmd({ "BufRead" }, {
   end,
 })
 
+-- disable copilot for leetcode projects
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*/leetcode/**" },
+  callback = function()
+    vim.cmd([[Copilot disable]])
+  end,
+})
+
 -- enable inlay hints globally
 -- ref: https://vinnymeller.com/posts/neovim_nightly_inlay_hints/
 if vim.lsp.inlay_hint then

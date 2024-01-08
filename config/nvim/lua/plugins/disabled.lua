@@ -9,4 +9,5 @@ return {
   { "nvim-lualine/lualine.nvim", enabled = false },
   { "folke/persistence.nvim", enabled = false },
   { "echasnovski/mini.pairs", enabled = false },
+  { "axkirillov/hbac.nvim", enabled = false },
 }

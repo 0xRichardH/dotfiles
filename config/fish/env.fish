@@ -8,7 +8,7 @@ set -U LC_ALL en_US.UTF-8
 
 set -Ux SSH_ASKPASS_REQUIRE force
 
-set -U TERM xterm-256color
+set -U TERM screen-256color
 
 set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -Ux FZF_DEFAULT_OPTS "\
