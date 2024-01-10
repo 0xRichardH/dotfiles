@@ -7,6 +7,7 @@ abbr c clear
 abbr cl clear
 abbr claer clear
 abbr clera clear
+abbr code nvim
 abbr cx "chmod +x"
 
 abbr dc "docker compose"
@@ -22,6 +23,8 @@ abbr gw "git worktree"
 abbr gwa "git worktree add"
 abbr gwl "git worktree list"
 abbr gwd "git worktree remove"
+
+abbr j just
 
 abbr ls 'eza --git --icons --all'
 abbr ll 'eza --git --icons --all -l'
