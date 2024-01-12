@@ -66,6 +66,10 @@ for k, v in pairs(vimOptions) do
   vim.opt[k] = v
 end
 
+if vim.fn.has("nvim-0.10") == 1 then
+  vim.opt.smoothscroll = true
+end
+
 -- Cursorline highlighting control
 --  Only have it on in the active buffer
 local group = vim.api.nvim_create_augroup("CursorLineControl", { clear = true })
