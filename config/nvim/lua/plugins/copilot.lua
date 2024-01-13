@@ -1,51 +1,47 @@
 return {
-  "zbirenbaum/copilot.lua",
-  cmd = "Copilot",
-  event = "InsertEnter",
-  config = function()
-    require("copilot").setup({
+
+  -- copilot
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
       filetypes = {
         ["*"] = true,
       },
-      suggestion = {
-        enabled = true,
-        auto_trigger = true,
-        keymap = {
-          accept = "<C-a>",
-          dismiss = "<C-x>",
-          next = "<C-j>",
-          prev = "<C-k>",
-        },
-      },
-      panel = { enabled = false },
-    })
-  end,
-  keys = function()
-    return {
+    },
+  },
+
+  -- copilot cmp source
+  {
+    "nvim-cmp",
+    dependencies = {
       {
-        "<C-j>",
-        function()
-          return require("copilot.suggestion").next()
+        "zbirenbaum/copilot-cmp",
+        dependencies = "copilot.lua",
+        opts = {},
+        config = function(_, opts)
+          local copilot_cmp = require("copilot_cmp")
+          copilot_cmp.setup(opts)
+          -- attach cmp source whenever copilot attaches
+          -- fixes lazy-loading issues with the copilot cmp source
+          require("lazyvim.util").lsp.on_attach(function(client)
+            if client.name == "copilot" then
+              copilot_cmp._on_insert_enter({})
+            end
+          end)
         end,
-        mode = { "i" },
-        expr = true,
       },
-      {
-        "<C-k>",
-        function()
-          return require("copilot.suggestion").prev()
-        end,
-        mode = { "i" },
-        expr = true,
-      },
-      {
-        "<C-x>",
-        function()
-          return require("copilot.suggestion").dismiss()
-        end,
-        mode = { "i" },
-        expr = true,
-      },
-    }
-  end,
+    },
+    ---@param opts cmp.ConfigSchema
+    opts = function(_, opts)
+      table.insert(opts.sources, 1, {
+        name = "copilot",
+        group_index = 1,
+        priority = 100,
+      })
+    end,
+  },
 }

@@ -18,9 +18,14 @@ return {
         documentation = false,
       }
 
-      -- disable ghost text
+      -- -- disable ghost text
+      -- opts.experimental = {
+      --   ghost_text = false,
+      -- }
       opts.experimental = {
-        ghost_text = false,
+        ghost_text = {
+          hl_group = "CmpGhostText",
+        },
       }
 
       -- Setup supertab in cmp

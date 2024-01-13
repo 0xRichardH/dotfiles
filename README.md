@@ -29,8 +29,7 @@ rcup
 ## Vim
 
 - Clipboard
-- LunarVim https://www.lunarvim.org/
-- LazyVim (Currently Using) https://www.lazyvim.org/
+- [LazyVim](https://www.lazyvim.org/)
 
 ```
 sudo apt-get install xclip
