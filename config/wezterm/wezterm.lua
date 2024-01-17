@@ -157,8 +157,8 @@ local custom_configs = {
 		key_helper.cmd_to_tmux_prefix("j", "T"),
 		-- switch to the last tmux session
 		key_helper.cmd_to_tmux_prefix("l", "L"),
-		-- open file manager 'gokcehan/lf'
-		key_helper.cmd_key("o", key_helper.multiple_actions("lf")),
+		-- open file manager 'sxyazi/yazi'
+		key_helper.cmd_key("o", key_helper.multiple_actions("yazi")),
 		-- create a new tmux window
 		key_helper.cmd_to_tmux_prefix("t", "c"),
 		-- open URL (cmd+u)

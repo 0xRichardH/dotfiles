@@ -47,6 +47,7 @@ brew 'ansible'
 brew 'asdf'
 brew 'just'
 brew 'sshpass'
+brew 'yazi'
 
 # Fonts
 cask 'font-jetbrains-mono'
@@ -55,3 +56,4 @@ cask 'font-victor-mono'
 cask 'font-victor-mono-nerd-font'
 cask 'font-monaspace'
 cask 'font-commit-mono'
+cask 'font-symbols-only-nerd-font'
