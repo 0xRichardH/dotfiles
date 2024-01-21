@@ -18,15 +18,15 @@ return {
         documentation = false,
       }
 
-      -- -- disable ghost text
-      -- opts.experimental = {
-      --   ghost_text = false,
-      -- }
+      -- disable ghost text
       opts.experimental = {
-        ghost_text = {
-          hl_group = "CmpGhostText",
-        },
+        ghost_text = false,
       }
+      -- opts.experimental = {
+      --   ghost_text = {
+      --     hl_group = "CmpGhostText",
+      --   },
+      -- }
 
       -- Setup supertab in cmp
       -- https://www.lazyvim.org/configuration/recipes#supertab
