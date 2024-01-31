@@ -16,7 +16,8 @@ source (dirname (status --current-filename))/alias.fish
 source (dirname (status --current-filename))/keybindings.fish
 
 # asdf
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+source $(brew --prefix asdf)/libexec/asdf.fish
+source $(brew --prefix asdf)/share/fish/vendor_completions.d/asdf.fish
 
 # To do something only in interactive shells
 if status is-interactive
