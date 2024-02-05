@@ -48,6 +48,7 @@ brew 'asdf'
 brew 'just'
 brew 'sshpass'
 brew 'yazi'
+brew 'libpq' # for ruby pg gem
 
 # Fonts
 cask 'font-jetbrains-mono'

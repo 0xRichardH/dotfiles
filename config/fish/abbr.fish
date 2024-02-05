@@ -36,6 +36,7 @@ abbr npm pnpm
 abbr psql pgcli
 
 abbr r "source ~/.config/fish/config.fish"
+abbr rm "rm -i" # Always ask before removing a file
 abbr rmap "set -e SSH_ASKPASS_REQUIRE" # remove SSH_ASKPASS_REQUIRE environment variable
 
 abbr sl "ssh-add -l"
