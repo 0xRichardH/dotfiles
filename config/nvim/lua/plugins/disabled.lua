@@ -6,7 +6,9 @@ return {
   { "dstein64/vim-startuptime", enabled = false },
   { "nvimdev/dashboard-nvim", enabled = false },
   { "Exafunction/codeium.vim", enabled = false },
-  { "nvim-lualine/lualine.nvim", enabled = false },
+  -- { "nvim-lualine/lualine.nvim", enabled = false },
   { "folke/persistence.nvim", enabled = false },
   { "axkirillov/hbac.nvim", enabled = false },
+  { "lukas-reineke/indent-blankline.nvim", enabled = false },
+  { "echasnovski/mini.indentscope", enabled = false },
 }
