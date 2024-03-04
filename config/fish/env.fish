@@ -31,6 +31,9 @@ set -Ux T_SESSION_NAME_INCLUDE_PARENT true
 # set BAT_THEME
 set -Ux BAT_THEME Catppuccin-mocha
 
+# use UTF-8 encoding for pgcli
+set -Ux PGCLIENTENCODING utf-8
+
 # ordered by priority - bottom up
 fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path /opt/homebrew/sbin
