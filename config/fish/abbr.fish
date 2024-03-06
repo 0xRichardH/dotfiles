@@ -47,3 +47,12 @@ abbr v "nvim +GoToFile"
 abbr vim nvim
 
 abbr x "chmod +x (ls | gum filter --limit 1 --header 'chmod +x')"
+
+
+# Ruby
+# add bundle exec to common commands
+abbr cap "bundle exec cap"
+abbr cucumber "bundle exec cucumber"
+abbr rails "bundle exec rails"
+abbr rake "bundle exec rake"
+abbr rspec "bundle exec rspec"
