@@ -51,6 +51,10 @@ map("n", "gl", vim.diagnostic.open_float, defaultOptsWithDesc("Show Diagnostics"
 map("n", "<Tab>", ":bnext<CR>", defaultOptsWithDesc("Next Buffer"))
 map("n", "<S-Tab>", ":bprevious<CR>", defaultOptsWithDesc("Previous Buffer"))
 
+-- Copy relative path or absolute path of the current file
+map("n", "<leader>fy", ":CopyRelPath<CR>", defaultOptsWithDesc("Copy Relative Path"))
+map("n", "<leader>fY", ":CopyPath<CR>", defaultOptsWithDesc("Copy Full Path"))
+
 -- tmux navigator
 vim.cmd([[
   noremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>

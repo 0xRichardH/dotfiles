@@ -95,3 +95,17 @@ vim.opt.fillchars:append({
 -- Add new commands
 vim.cmd([[command! -nargs=0 GoToFile :Telescope find_files]])
 vim.cmd([[command! -nargs=0 GoToCommand :Telescope commands]])
+
+-- Copy Relative Path
+vim.api.nvim_create_user_command("CopyRelPath", function()
+  local relative_path = vim.fn.expand("%:.")
+  vim.fn.setreg("+", relative_path)
+  vim.notify('Copied "' .. relative_path .. '" to the clipboard!')
+end, {})
+
+-- Copy Absolute Path
+vim.api.nvim_create_user_command("CopyPath", function()
+  local absolute_path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", absolute_path)
+  vim.notify('Copied "' .. absolute_path .. '" to the clipboard!')
+end, {})
