@@ -110,7 +110,7 @@ return {
   -- },
   {
     "neovim/nvim-lspconfig",
-    build = "!gem install ruby-lsp",
+    build = "gem install ruby-lsp",
     ---@class PluginLspOpts
     opts = {
       ---@type lspconfig.options
@@ -127,7 +127,6 @@ return {
   },
   {
     "tpope/vim-rails",
-    event = { "CmdlineEnter" },
-    ft = { "rb", "erb" },
+    ft = { "ruby" },
   },
 }
