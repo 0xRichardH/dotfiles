@@ -14,6 +14,7 @@ abbr dc "docker compose"
 abbr dcp "docker compose -f ~/docker-compose.yaml" # Shorthand, customise docker-compose.yaml location as needed
 abbr dprune "docker image prune" # Remove unused images (useful after an upgrade)
 abbr dprunesys "docker system prune --all" # Remove unused images, unused networks *and data* (use with care)
+abbr dpup docker-compose-up # Update and start a container in background
 abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 abbr dtail "docker logs -tf --tail='50' " # Tail last 50 lines of docker logs
 
