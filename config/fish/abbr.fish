@@ -56,3 +56,8 @@ abbr cucumber "bundle exec cucumber"
 abbr rails "bundle exec rails"
 abbr rake "bundle exec rake"
 abbr rspec "bundle exec rspec"
+# add aliases for common commands
+abbr bi "bundle install"
+abbr rs "bundle exec rails server"
+abbr rr "bundle exec rails routes"
+abbr rc "bundle exec rails console"
