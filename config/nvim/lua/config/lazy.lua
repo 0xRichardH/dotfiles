@@ -33,7 +33,6 @@ require("lazy").setup({
   ui = {
     border = "single",
   },
-  install = { colorscheme = { "catppuccin", "mocha" } },
   checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
