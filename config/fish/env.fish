@@ -29,7 +29,7 @@ set -Ux T_SESSION_USE_GIT_ROOT true
 set -Ux T_SESSION_NAME_INCLUDE_PARENT true
 
 # set BAT_THEME
-set -Ux BAT_THEME Catppuccin-mocha
+set -Ux BAT_THEME gruvbox-light
 
 # use UTF-8 encoding for pgcli
 set -Ux PGCLIENTENCODING utf-8
