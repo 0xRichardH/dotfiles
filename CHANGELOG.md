@@ -2,6 +2,99 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v3.10.0 - 2024-03-11
+#### Bug Fixes
+- **(asdf)** asdf is not loading correctly - (23c9767) - Richard Hao
+- **(brew)** tap `arl/arl` for gitmux - (0f20f2e) - Richard Hao
+- **(brew)** fix hoembrew file - (6bf8569) - Richard Hao
+- **(nvim)** fix the copilot keymaps - (1cb471a) - Richard Hao
+- **(nvim)** fix codeium and update plugins - (743e393) - Richard Hao
+#### Features
+- **(brew)** install sshpass - (61d97ec) - Richard Hao
+- **(brew)** install just - (7b44db9) - Richard Hao
+- **(docker)** add docker-compose-up script - (697fdde) - Richard Hao
+- **(fish)** add abbreviated fish shell prompt for ruby development - (f2b98a2) - Richard Hao
+- **(fish)** add rm abbreviation for remove command - (3a8c8c3) - Richard Hao
+- **(fish)** add done plugin - (0277ffa) - Richard Hao
+- **(fish)** install fish plugin `catppuccin/fish` - (c26ac3a) - Richard Hao
+- **(fish)** add new abbreviation - (ea28580) - Richard Hao
+- **(fish)** add abbr for quick diff - (c9ae646) - Richard Hao
+- **(nvim)** update rust plugins - (0498fb7) - Richard Hao
+- **(nvim)** migrate from symbols-outline.nvim to outline.nvim - (7fc96be) - Richard Hao
+- **(nvim)** copy file path to clipboard - (0a4ea13) - Richard Hao
+- **(nvim)** add better ruby and RoR support - (c19e58c) - Richard Hao
+- **(nvim)** disable virtual-text for lspconfig - (83e213b) - Richard Hao
+- **(nvim)** disable indent related plugins - (7cd0149) - Richard Hao
+- **(nvim)** update copilot config - (67c765f) - Richard Hao
+- **(nvim)** enable smooth scrolling on neovim 0.10 - (8ab324e) - Richard Hao
+- **(nvim)** add gitsigns plugin - (373680f) - Richard Hao
+- **(nvim)** disable copilot for leetcode project - (e301a5f) - Richard Hao
+- **(nvim)** add sql formatter for rust - (42f6547) - Richard Hao
+- **(nvim)** add copilot - (c96ba21) - Richard Hao
+- **(nvim)** reconfigure the plugin codeium - (f14b578) - Richard Hao
+- **(nvim)** move back no-neck-pain keymaps to the plugin config - (5fde35f) - Richard Hao
+- **(nvim)** upgrade to harpoon2 - (330a8a8) - Richard Hao
+- **(nvim)** update plugins - (7e96104) - Richard Hao
+- **(nvim)** add smooth cursor - (1dbaac5) - Richard Hao
+- **(nvim)** upgrade lazyvim to 0.10 - (13cffd7) - Richard Hao
+- **(ruby)** add aliases for common commands - (076e408) - Richard Hao
+- **(ssh)** add ssh config - (770356f) - Richard Hao
+- add yazi - (6da6d01) - Richard Hao
+- update golang plugins - (f27100d) - Richard Hao
+- add new font CommitMono - (f843c51) - Richard Hao
+- support git-worktree on both `tat` and `t-smart-tmux-session-manager` - (0df2169) - Richard Hao
+- use catppuccin in starship - (7af97c4) - Richard Hao
+- to use the font `Monaspace` - (f381692) - Richard Hao
+- add atuin config - (74b261c) - Richard Hao
+- install direnv - (231df55) - Richard Hao
+#### Miscellaneous Chores
+- **(:nvim)** disable statusline - (6dbea6d) - Richard Hao
+- **(atuin)** update configs - (f36c782) - Richard Hao
+- **(brew)** remove unused package - (e26aba9) - Richard Hao
+- **(fish)** using `e` to open nvim editor - (1684b5a) - Richard Hao
+- **(fish)** remove unused abbr - (33b2453) - Richard Hao
+- **(nvim)** revert copilot changes - (8f5beef) - Richard Hao
+- **(nvim)** disable italic in color scheme - (24ffb42) - Richard Hao
+- **(nvim)** update treesitter config - (5c47dff) - Richard Hao
+- **(nvim)** disable mini.pair - (be271e4) - Richard Hao
+- **(nvim)** update some configs - (a32e55d) - Richard Hao
+- **(nvim)** disable cmp documentation window - (c85d247) - Richard Hao
+- **(nvim)** move keymaps of CodeActionMenu to the plugins folder - (4af1253) - Richard Hao
+- **(nvim)** switch the keymaps `<tab>, <s-tab>` and `<c-n>, <c-p>` for telescope - (482a377) - Richard Hao
+- **(nvim)** update plugins - (8f69fa0) - Richard Hao
+- **(nvim)** update plugins - (d36d6f8) - Richard Hao
+- **(nvim)** update colorscheme settings - (873c230) - Richard Hao
+- **(nvim)** update colorscheme config - (5ecb0cf) - Richard Hao
+- **(nvim)** update plugins - (af6d4a7) - Richard Hao
+- **(nvim)** only jump inside the snippet region for Luasnip - (784a5c9) - Richard Hao
+- **(nvim)** update plugins - (4d18aee) - Richard Hao
+- **(nvim)** use the default extra settings for the codeium - (a106cfd) - Richard Hao
+- **(nvim)** track lazyvim.json - (9b7de9d) - Richard Hao
+- **(nvim)** remove neoai plugin - (f1839b9) - Richard Hao
+- **(nvim)** update plugins - (642cf4c) - Richard Hao
+- **(tmux)** update plugin - (7633495) - Richard Hao
+- update - (e10d5e1) - Richard Hao
+- update - (8333181) - Richard Hao
+- update - (6dbbb97) - Richard Hao
+- update - (b8ad40b) - Richard Hao
+- move lunarvim config to https://github.com/0xRichardH/lvim - (e29e2bc) - Richard Hao
+- make some amends - (96c7420) - Richard Hao
+- update - (672edf3) - Richard Hao
+- update wezterm configs - (4135a74) - Richard Hao
+- update the scale of `Symbols Nerd Font Mono` - (40986eb) - Richard Hao
+- use emoji in various places - (c49a1a0) - Richard Hao
+- update t-session-name configs - (533a646) - Richard Hao
+- install asdf - (57d65cf) - Richard Hao
+- brew install ansible - (98529a8) - Richard Hao
+- update install scripts - (61c1c27) - Richard Hao
+- remove debug info for bw_add_sshkeys abrr - (067885e) - Richard Hao
+- add homebrew's sbin to the path - (288c809) - Richard Hao
+- remove the script to install lunarvim - (da7ca8e) - Richard Hao
+- remove docker-compose folder - (6e21ffa) - Richard Hao
+- remove asdf - (81aa258) - Richard Hao
+
+- - -
+
 ## v3.9.0 - 2023-10-08
 #### Bug Fixes
 - ignore some typos - (0db0915) - Richard Hao
