@@ -1,60 +1,18 @@
 return {
   {
-    "catppuccin/nvim",
-    lazy = true,
-    name = "catppuccin",
-    opts = {
-      flavour = "mocha", -- latte, frappe, macchiato, or mocha
-      transparent_background = true,
-      no_italic = true, -- Force no italic
-      -- no_bold = false, -- Force no bold
-      custom_highlights = function(_colors)
-        return {
-          CurSearch = { bg = "#FFCA27" },
-        }
-      end,
-      integrations = {
-        cmp = true,
-        gitsigns = true,
-        harpoon = true,
-        indent_blankline = { enabled = true },
-        lsp_trouble = true,
-        mason = true,
-        mini = true,
-        neotest = true,
-        noice = true,
-        notify = true,
-        telescope = {
-          enabled = true,
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        variant = "dawn", -- auto, main, moon, or dawn
+
+        styles = {
+          bold = true,
+          italic = true,
+          transparency = true,
         },
-        treesitter = true,
-        treesitter_context = false,
-        symbols_outline = true,
-        illuminate = true,
-        which_key = true,
-        barbecue = {
-          dim_dirname = true,
-          bold_basename = true,
-          dim_context = false,
-          alt_background = false,
-        },
-        native_lsp = {
-          enabled = true,
-          virtual_text = {
-            errors = { "italic" },
-            hints = { "italic" },
-            warnings = { "italic" },
-            information = { "italic" },
-          },
-          underlines = {
-            errors = { "underline" },
-            hints = { "underline" },
-            warnings = { "underline" },
-            information = { "underline" },
-          },
-        },
-      },
-    },
+      })
+    end,
   },
   {
     "folke/noice.nvim",
@@ -83,7 +41,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "rose-pine",
     },
   },
 }

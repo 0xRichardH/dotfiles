@@ -14,7 +14,7 @@
 
 # Specify desired highlighting theme (e.g. "TwoDark"). Run `bat --list-themes`
 # for a list of all available themes
---theme="Catppuccin-mocha"
+--theme="gruvbox-light"
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="numbers,changes,header"
