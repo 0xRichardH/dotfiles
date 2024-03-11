@@ -4,7 +4,7 @@ return {
     name = "rose-pine",
     config = function()
       require("rose-pine").setup({
-        variant = "moon", -- auto, main, moon, or dawn
+        variant = "dawn", -- auto, main, moon, or dawn
 
         styles = {
           bold = true,

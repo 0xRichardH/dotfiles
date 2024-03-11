@@ -58,7 +58,7 @@ local custom_configs = {
 	automatically_reload_config = true,
 
 	-- windows
-	color_scheme = "Catppuccin Mocha",
+	color_scheme = "rose-pine-dawn", -- rose-pine-dawn, rose-pine-moon, rose-pine, Catppuccin Mocha
 	window_background_opacity = 1,
 	window_decorations = "RESIZE",
 	window_close_confirmation = "NeverPrompt",
