@@ -10,6 +10,6 @@ return {
   -- { "nvim-lualine/lualine.nvim", enabled = false },
   { "folke/persistence.nvim", enabled = false },
   { "axkirillov/hbac.nvim", enabled = false },
-  { "lukas-reineke/indent-blankline.nvim", enabled = false },
+  -- { "lukas-reineke/indent-blankline.nvim", enabled = false },
   { "echasnovski/mini.indentscope", enabled = false },
 }
