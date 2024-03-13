@@ -1,6 +1,3 @@
-# choose a theme
-fish_config theme choose "Rosé Pine Dawn" # Rosé Pine, Rosé Pine Dawn, Rosé Pine Moon
-
 # set environment variables
 source (dirname (status --current-filename))/env.fish
 if test -f (dirname (status --current-filename))/env.local.fish
