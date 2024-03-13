@@ -1,10 +1,33 @@
+local function get_colorscheme()
+  local home = os.getenv("HOME")
+  if not home then
+    -- FIXME: log error
+    return
+  end
+
+  local file_path = home .. "/.appearance"
+  local file, err = io.open(file_path, "r")
+  if not file then
+    -- FIXME: log error
+    return
+  end
+
+  local appearance = file:read("*a")
+  file:close()
+  if appearance:find("Dark") then
+    return "rose-pine-main"
+  else
+    return "rose-pine-dawn"
+  end
+end
+
 return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
     config = function()
       require("rose-pine").setup({
-        variant = "dawn", -- auto, main, moon, or dawn
+        variant = "auto", -- auto, main, moon, or dawn
 
         styles = {
           bold = true,
@@ -41,7 +64,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = get_colorscheme(),
     },
   },
 }

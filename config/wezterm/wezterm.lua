@@ -3,7 +3,45 @@ local act = wezterm.action
 local config = {}
 
 -- ================== Helper functions <START> ==================
--- local helper = {}
+local helper = {}
+
+local function write_appearance_to_file(appearance)
+	local home = os.getenv("HOME")
+	if not home then
+		wezterm.log_error("HOME environment variable is not set.")
+		return
+	end
+
+	local file_path = home .. "/.appearance"
+	local file, err = io.open(file_path, "w")
+	if not file then
+		wezterm.log_error("Error opening file: " .. err)
+		return
+	end
+
+	file:write(appearance)
+	file:close()
+end
+
+helper.get_appearance = function()
+	local appearance = "Dark"
+	if wezterm.gui then
+		appearance = wezterm.gui.get_appearance() -- Light or Dark
+	end
+
+	write_appearance_to_file(appearance)
+
+	return appearance
+end
+
+helper.scheme_for_appearance = function(appearance)
+	if appearance:find("Dark") then
+		return "rose-pine"
+	else
+		return "rose-pine-dawn"
+	end
+end
+
 --
 -- helper.get_random_entry = function(tbl)
 -- 	local keys = {}
@@ -58,7 +96,7 @@ local custom_configs = {
 	automatically_reload_config = true,
 
 	-- windows
-	color_scheme = "rose-pine-dawn", -- rose-pine-dawn, rose-pine-moon, rose-pine, Catppuccin Mocha
+	color_scheme = helper.scheme_for_appearance(helper.get_appearance()), -- rose-pine-dawn, rose-pine-moon, rose-pine, Catppuccin Mocha
 	window_background_opacity = 0.92,
 	window_decorations = "RESIZE",
 	window_close_confirmation = "NeverPrompt",
