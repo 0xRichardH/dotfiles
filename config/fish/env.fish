@@ -24,10 +24,6 @@ set -Ux FZF_DEFAULT_OPTS "\
 set -Ux FZF_TMUX_OPTS "-p 55%,60%"
 set -Ux FZF_CTRL_R_OPTS "--border-label=' History ' --prompt=' '"
 
-# https://github.com/joshmedeski/t-smart-tmux-session-manager
-set -Ux T_SESSION_USE_GIT_ROOT true
-set -Ux T_SESSION_NAME_INCLUDE_PARENT true
-
 # use UTF-8 encoding for pgcli
 set -Ux PGCLIENTENCODING utf-8
 
@@ -45,7 +41,6 @@ switch $THEME
 end
 
 # ordered by priority - bottom up
-fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/opt/grep/libexec/gnubin

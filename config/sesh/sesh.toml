@@ -1,0 +1,5 @@
+default_startup_script = "~/.config/sesh/open_files"
+
+[[startup_scripts]]
+session_path = "~/gfw-client/sing-box"
+script_path = "~/.config/sesh/play_sing_box"
