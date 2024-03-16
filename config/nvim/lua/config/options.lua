@@ -93,8 +93,9 @@ vim.opt.fillchars:append({
 })
 
 -- Add new commands
-vim.cmd([[command! -nargs=0 GoToFile :Telescope find_files]])
 vim.cmd([[command! -nargs=0 GoToCommand :Telescope commands]])
+vim.cmd([[command! -nargs=0 GoToFile :Telescope smart_open]])
+vim.cmd([[command! -nargs=0 Grep :Telescope live_grep]])
 
 -- Copy Relative Path
 vim.api.nvim_create_user_command("CopyRelPath", function()

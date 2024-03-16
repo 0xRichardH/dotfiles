@@ -7,8 +7,8 @@ return {
     { "prochri/telescope-all-recent.nvim", opts = {} },
     "danielvolchek/tailiscope.nvim",
     "debugloop/telescope-undo.nvim",
-    "natecraddock/telescope-zf-native.nvim",
-    "ThePrimeagen/harpoon",
+    { "danielfalk/smart-open.nvim", branch = "0.2.x" },
+    "nvim-telescope/telescope-fzf-native.nvim",
   },
   -- apply the config and additionally load fzf-native
   config = function(_, opts)
@@ -17,8 +17,7 @@ return {
     telescope.load_extension("notify")
     telescope.load_extension("tailiscope")
     telescope.load_extension("undo")
-    telescope.load_extension("zf-native")
-    telescope.load_extension("harpoon")
+    telescope.load_extension("smart_open")
   end,
 
   opts = {
@@ -59,6 +58,11 @@ return {
       },
     },
     pickers = {
+      ["extension_name#extension_method"] = {
+        disable = false,
+        use_cwd = false,
+        sorting = "recent",
+      },
       buffers = {
         prompt_prefix = "󰸩 ",
       },
@@ -92,17 +96,8 @@ return {
       },
     },
     extensions = {
-      ["zf-native"] = {
-        file = { -- options for sorting file-like items
-          enable = true, -- override default telescope file sorter
-          highlight_results = true, -- highlight matching text in results
-          match_filename = true, -- enable zf filename match priority
-        },
-        generic = { -- options for sorting all other items
-          enable = true, -- override default telescope generic item sorter
-          highlight_results = true, -- highlight matching text in results
-          match_filename = false, -- disable zf filename match priority
-        },
+      smart_open = {
+        match_algorithm = "fzf",
       },
     },
   },

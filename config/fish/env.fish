@@ -28,11 +28,21 @@ set -Ux FZF_CTRL_R_OPTS "--border-label=' History ' --prompt=' '"
 set -Ux T_SESSION_USE_GIT_ROOT true
 set -Ux T_SESSION_NAME_INCLUDE_PARENT true
 
-# set BAT_THEME
-set -Ux BAT_THEME gruvbox-light
-
 # use UTF-8 encoding for pgcli
 set -Ux PGCLIENTENCODING utf-8
+
+# set global theme (Dark/Light)
+set -Ux THEME (cat $HOME/.appearance)
+
+switch $THEME
+    case Dark
+        set -Ux BAT_THEME gruvbox-dark
+    case Light
+        set -Ux BAT_THEME gruvbox-light
+    case '*'
+        # Optionally handle other cases or set a default
+        echo "Appearance not set to 'Dark/Light'. Value is: $THEME"
+end
 
 # ordered by priority - bottom up
 fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin

@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export ASDF_GOLANG_MOD_VERSION_ENABLED:false
-SETUVAR --export BAT_THEME:gruvbox\x2dlight
+SETUVAR --export BAT_THEME:gruvbox\x2ddark
 SETUVAR --export EDITOR:nvim
 SETUVAR --export FZF_CTRL_R_OPTS:\x2d\x2dborder\x2dlabel\x3d\x27\x20History\x20\x27\x20\x2d\x2dprompt\x3d\x27\uea82\x20\x27
 SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2dH\x20\x2dE\x20\x27\x2egit\x27
@@ -14,6 +14,7 @@ SETUVAR --export OPENAI_API_KEY:sk\x2d1JYOKUIIhuJOwu81vLJ0T3BlbkFJAwyZ5q6xEyDeQU
 SETUVAR --export PGCLIENTENCODING:utf\x2d8
 SETUVAR --export SSH_ASKPASS_REQUIRE:force
 SETUVAR --export TERM:screen\x2d256color
+SETUVAR --export THEME:Dark
 SETUVAR --export T_SESSION_NAME_INCLUDE_PARENT:true
 SETUVAR --export T_SESSION_USE_GIT_ROOT:true
 SETUVAR VISUAL:nvim
@@ -25,8 +26,7 @@ SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
 SETUVAR _fisher_joshmedeski_2F_fish_2D_lf_2D_icons_files:\x7e/\x2econfig/fish/conf\x2ed/lf\x2dicons\x2efish
 SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_changed_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_diff_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e\x7e/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejhillyerd/plugin\x2dgit\x1ejoshmedeski/fish\x2dlf\x2dicons\x1epatrickf1/fzf\x2efish\x1ehalostatue/fish\x2dgo\x1efranciscolourenco/done\x1ejorgebucaran/nvm\x2efish\x1erose\x2dpine/fish
-SETUVAR _fisher_rose_2D_pine_2F_fish_files:\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x20Dawn\x2etheme\x1e\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x20Moon\x2etheme\x1e\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x2etheme
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejhillyerd/plugin\x2dgit\x1ejoshmedeski/fish\x2dlf\x2dicons\x1epatrickf1/fzf\x2efish\x1ehalostatue/fish\x2dgo\x1efranciscolourenco/done\x1ejorgebucaran/nvm\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8
