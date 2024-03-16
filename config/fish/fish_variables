@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export ASDF_GOLANG_MOD_VERSION_ENABLED:false
-SETUVAR --export BAT_THEME:gruvbox\x2dlight
+SETUVAR --export BAT_THEME:gruvbox\x2ddark
 SETUVAR --export EDITOR:nvim
 SETUVAR --export FZF_CTRL_R_OPTS:\x2d\x2dborder\x2dlabel\x3d\x27\x20History\x20\x27\x20\x2d\x2dprompt\x3d\x27\uea82\x20\x27
 SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2dH\x20\x2dE\x20\x27\x2egit\x27
@@ -14,7 +14,7 @@ SETUVAR --export OPENAI_API_KEY:sk\x2d1JYOKUIIhuJOwu81vLJ0T3BlbkFJAwyZ5q6xEyDeQU
 SETUVAR --export PGCLIENTENCODING:utf\x2d8
 SETUVAR --export SSH_ASKPASS_REQUIRE:force
 SETUVAR --export TERM:screen\x2d256color
-SETUVAR --export THEME:dark
+SETUVAR --export THEME:Dark
 SETUVAR --export T_SESSION_NAME_INCLUDE_PARENT:true
 SETUVAR --export T_SESSION_USE_GIT_ROOT:true
 SETUVAR VISUAL:nvim

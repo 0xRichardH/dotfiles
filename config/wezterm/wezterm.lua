@@ -2,6 +2,12 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local config = {}
 
+-- In newer versions of wezterm, use the config_builder which will
+-- help provide clearer error messages
+if wezterm.config_builder then
+	config = wezterm.config_builder()
+end
+
 -- ================== Helper functions <START> ==================
 local helper = {}
 
@@ -23,7 +29,7 @@ local function write_appearance_to_file(appearance)
 	file:close()
 end
 
-helper.get_appearance = function()
+local function get_appearance()
 	local appearance = "Dark"
 	if wezterm.gui then
 		appearance = wezterm.gui.get_appearance() -- Light or Dark
@@ -34,8 +40,12 @@ helper.get_appearance = function()
 	return appearance
 end
 
-helper.scheme_for_appearance = function(appearance)
-	if appearance:find("Dark") then
+helper.is_dark = function()
+	return get_appearance():find("Dark")
+end
+
+helper.scheme_for_appearance = function()
+	if helper.is_dark() then
 		return "rose-pine"
 	else
 		return "rose-pine-dawn"
@@ -71,6 +81,10 @@ key_helper.key_table = function(mods, key, action)
 	}
 end
 
+key_helper.ctrl_key = function(key, action)
+	return key_helper.key_table("CTRL", key, action)
+end
+
 key_helper.cmd_key = function(key, action)
 	return key_helper.key_table("CMD", key, action)
 end
@@ -86,18 +100,55 @@ key_helper.cmd_to_tmux_prefix = function(key, tmux_key)
 end
 -- ================== Helper functions <END>  ==================
 
--- In newer versions of wezterm, use the config_builder which will
--- help provide clearer error messages
-if wezterm.config_builder then
-	config = wezterm.config_builder()
-end
+-- ================== Listen on Events <START> ==================
+local io = require("io")
+local os = require("os")
+
+wezterm.on("trigger-vim-with-scrollback", function(window, pane)
+	-- Retrieve the text from the pane
+	local text = pane:get_lines_as_text(pane:get_dimensions().scrollback_rows)
+
+	-- Create a temporary file to pass to vim
+	local name = os.tmpname()
+	local f = io.open(name, "w+")
+	if not f then
+		wezterm.log_error("Error opening file: " .. name)
+		return
+	end
+	f:write(text)
+	f:flush()
+	f:close()
+
+	-- Open a new window running vim and tell it to open the file
+	window:perform_action(
+		act.SpawnCommandInNewWindow({
+			args = { "nvim", name },
+		}),
+		pane
+	)
+
+	-- Wait "enough" time for vim to read the file before we remove it.
+	-- The window creation and process spawn are asynchronous wrt. running
+	-- this script and are not awaitable, so we just pick a number.
+	--
+	-- Note: We don't strictly need to remove this file, but it is nice
+	-- to avoid cluttering up the temporary directory.
+	wezterm.sleep_ms(1000)
+	os.remove(name)
+end)
+-- ================== Listen on Events <END>  ===================
 
 local custom_configs = {
 	automatically_reload_config = true,
 
+	set_environment_variables = {
+		TERM = "xterm-256color",
+		LC_ALL = "en_US.UTF-8",
+	},
+
 	-- windows
-	color_scheme = helper.scheme_for_appearance(helper.get_appearance()), -- rose-pine-dawn, rose-pine-moon, rose-pine, Catppuccin Mocha
-	window_background_opacity = 0.92,
+	color_scheme = helper.scheme_for_appearance(), -- rose-pine-dawn, rose-pine-moon, rose-pine, Catppuccin Mocha
+	window_background_opacity = 1,
 	window_decorations = "RESIZE",
 	window_close_confirmation = "NeverPrompt",
 	hide_tab_bar_if_only_one_tab = true,
@@ -203,6 +254,9 @@ local custom_configs = {
 		key_helper.cmd_to_tmux_prefix("u", "u"),
 		-- kill the current tmux pane
 		key_helper.cmd_to_tmux_prefix("w", "x"),
+
+		-- Control
+		key_helper.ctrl_key("E", act.EmitEvent("trigger-vim-with-scrollback")),
 	},
 }
 
