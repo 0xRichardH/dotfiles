@@ -61,8 +61,12 @@ return {
     vim.o.foldlevelstart = 100
     vim.o.foldenable = true
     require("ufo").setup({
+      enable_get_fold_virt_text = true,
+      open_fold_hl_timeout = 150,
       fold_virt_text_handler = handler,
-      close_fold_kinds = { "imports" },
+      close_fold_kinds_for_ft = {
+        default = { "imports", "comment" },
+      },
     })
   end,
 }
