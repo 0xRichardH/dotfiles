@@ -98,6 +98,7 @@ return {
     extensions = {
       smart_open = {
         match_algorithm = "fzf",
+        open_buffer_indicators = { previous = "👀", others = "🙈" },
       },
     },
   },

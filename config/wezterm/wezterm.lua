@@ -93,7 +93,7 @@ key_helper.cmd_to_tmux_prefix = function(key, tmux_key)
 	return key_helper.cmd_key(
 		key,
 		act.Multiple({
-			act.SendKey({ mods = "CTRL", key = "b" }),
+			act.SendKey({ mods = "CTRL", key = "s" }),
 			act.SendKey({ key = tmux_key }),
 		})
 	)
