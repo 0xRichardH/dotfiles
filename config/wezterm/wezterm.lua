@@ -183,25 +183,25 @@ local custom_configs = {
 		-- 	-- ss07: ligatures related to the asterisk like ***.
 		-- 	-- ss08: ligatures related to combinations like .= or .-.
 		-- },
-		{
-			family = "CommitMono",
-			weight = "Regular",
-			harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "cv01", "cv02" },
-			-- ss01: Ligatures <= != ===
-			-- ss02: Arrows >-> =>
-			-- ss03: Smart case (1:1) 2+3
-			-- ss04: Symbol spacing ... <<
-			-- ss05: Smart kerning (immi)
-			-- cv01: Alt. 'a'
-			-- cv02: Alt. 'g'
-		},
+		-- {
+		-- 	family = "CommitMono",
+		-- 	weight = "Regular",
+		-- 	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "cv01", "cv02" },
+		-- 	-- ss01: Ligatures <= != ===
+		-- 	-- ss02: Arrows >-> =>
+		-- 	-- ss03: Smart case (1:1) 2+3
+		-- 	-- ss04: Symbol spacing ... <<
+		-- 	-- ss05: Smart kerning (immi)
+		-- 	-- cv01: Alt. 'a'
+		-- 	-- cv02: Alt. 'g'
+		-- },
 		{ family = "Comic Mono", weight = "Regular", stretch = "Normal", italic = false },
 		{ family = "Symbols Nerd Font Mono", scale = 0.85, italic = false },
 		{ family = "Noto Color Emoji" },
 	}),
 	font_size = 18.0,
 	use_cap_height_to_scale_fallback_fonts = true,
-	-- line_height = 1.2,
+	line_height = 1.2,
 	-- cell_width = 1.1,
 
 	-- keybindings
