@@ -1,4 +1,7 @@
 abbr aap "set -Ux SSH_ASKPASS_REQUIRE force" # add SSH_ASKPASS_REQUIRE environment variable
+abbr ai "gh copilot" # Open GitHub Copilot CLI
+abbr ais "gh copilot suggest"
+abbr aie "gh copilot explain"
 
 abbr ba "bw_add_sshkeys -f ssh-agent -p passphrase"
 
@@ -24,6 +27,7 @@ abbr gw "git worktree"
 abbr gwa "git worktree add"
 abbr gwl "git worktree list"
 abbr gwd "git worktree remove"
+abbr gu git-up
 
 abbr j just
 

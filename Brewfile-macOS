@@ -14,7 +14,6 @@ brew 'terminal-notifier' # Send macOS User Notifications from the command-line
 cask 'stats' # menu stats
 cask 'mos' # smooth 3rd mouse
 cask 'wezterm'
-cask 'alacritty'
 cask 'orbstack'
 cask 'raycast'
 cask 'appcleaner'
