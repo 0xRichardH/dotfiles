@@ -18,6 +18,11 @@ source (dirname (status --current-filename))/keybindings.fish
 # asdf
 source $(brew --prefix asdf)/libexec/asdf.fish
 source $(brew --prefix asdf)/share/fish/vendor_completions.d/asdf.fish
+## asdf-golang
+source $HOME/.asdf/plugins/golang/set-env.fish
+go env -w GOPATH=(asdf where golang)/packages
+set -gx GOROOT (go env GOROOT)
+set -gx GOPATH (go env GOPATH)
 
 # To do something only in interactive shells
 if status is-interactive

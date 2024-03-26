@@ -67,7 +67,7 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/Users/haoxilu/\x2econfig/tmux/plugins/t\x2dsmart\x2dtmux\x2dsession\x2dmanager/bin\x1e/Users/haoxilu/Library/pnpm\x1e/Users/haoxilu/\x2ebin\x1e/Users/haoxilu/\x2elocal/bin\x1e/Users/haoxilu/\x2ecargo/bin\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/Users/0xdev/\x2econfig/tmux/plugins/t\x2dsmart\x2dtmux\x2dsession\x2dmanager/bin\x1e/Users/0xdev/Library/pnpm\x1e/Users/0xdev/\x2ebin\x1e/Users/0xdev/\x2elocal/bin\x1e/Users/0xdev/\x2ecargo/bin\x1e/opt/homebrew/bin
 SETUVAR sponge_allow_previously_successful:true
 SETUVAR sponge_delay:2
 SETUVAR sponge_filters:sponge_filter_failed\x1esponge_filter_matched
