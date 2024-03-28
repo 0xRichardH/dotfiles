@@ -1,4 +1,3 @@
 default_startup_script = "~/.config/sesh/open_files"
 
-[[extended_configs]]
-path = "~/.config/sesh/sesh_local.toml"
+import = ["~/.config/sesh/sesh_local.toml"]
