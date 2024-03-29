@@ -1,3 +1,9 @@
-default_startup_script = "~/.config/sesh/open_files"
-
 import = ["~/.config/sesh/sesh_local.toml"]
+
+[default_session]
+startup_command = "nvim +GoToFile"
+
+[[session]]
+name = "Downloads 📥"
+path = "~/Downloads"
+startup_command = "yazi"
