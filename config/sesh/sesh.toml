@@ -4,6 +4,11 @@ import = ["~/.config/sesh/sesh_local.toml"]
 startup_command = "nvim +GoToFile"
 
 [[session]]
+name = "Home 🏡"
+path = "~/"
+startup_command = "pwd"
+
+[[session]]
 name = "Downloads 📥"
 path = "~/Downloads"
 startup_command = "yazi"

@@ -22,13 +22,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "!skhd --restart-service",
 })
 
-vim.api.nvim_create_autocmd({ "BufRead" }, {
-  pattern = { "gitmux.conf" },
-  callback = function()
-    vim.cmd([[set filetype=sh]])
-  end,
-})
-
 -- disable copilot for leetcode projects
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "*/leetcode/**" },
@@ -66,3 +59,17 @@ if vim.lsp.inlay_hint then
     end,
   })
 end
+
+-- set filetype for .conf files to sh
+vim.api.nvim_create_autocmd({ "BufRead" }, {
+  pattern = { "*.conf" },
+  callback = function()
+    vim.cmd([[set filetype=sh]])
+  end,
+})
+
+-- clear yazi cache on save
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "yazi.toml" },
+  command = "execute 'silent !yazi --clear-cache'",
+})
