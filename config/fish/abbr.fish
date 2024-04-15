@@ -29,6 +29,9 @@ abbr gwl "git worktree list"
 abbr gwd "git worktree remove"
 abbr gu git-up
 
+# port scanner
+abbr havn "docker run --rm -it --network=host mrjackwills/havn:latest"
+
 abbr j just
 
 abbr ls 'eza --git --icons --all'
