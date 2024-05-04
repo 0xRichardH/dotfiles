@@ -4,18 +4,14 @@ return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     "kkharji/sqlite.lua",
-    { "prochri/telescope-all-recent.nvim", opts = {} },
-    "danielvolchek/tailiscope.nvim",
     "debugloop/telescope-undo.nvim",
     { "danielfalk/smart-open.nvim", branch = "0.2.x" },
-    "nvim-telescope/telescope-fzf-native.nvim",
+    { "nvim-telescope/telescope-fzy-native.nvim" },
   },
-  -- apply the config and additionally load fzf-native
   config = function(_, opts)
     local telescope = require("telescope")
     telescope.setup(opts)
     telescope.load_extension("notify")
-    telescope.load_extension("tailiscope")
     telescope.load_extension("undo")
     telescope.load_extension("smart_open")
   end,
@@ -97,8 +93,10 @@ return {
     },
     extensions = {
       smart_open = {
-        match_algorithm = "fzf",
+        show_scores = true,
+        match_algorithm = "fzy",
         open_buffer_indicators = { previous = "👀", others = "🙈" },
+        filename_first = false,
       },
     },
   },
@@ -140,6 +138,7 @@ return {
       { "<leader>sw", Util.telescope("grep_string"), mode = "v", desc = "Selection (root dir)" },
       { "<leader>sW", Util.telescope("grep_string", { cwd = false }), mode = "v", desc = "Selection (cwd)" },
       { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+      { "<leader>uu", "<cmd>Telescope undo<cr>", desc = "Uno Tree" },
       {
         "<leader>ss",
         Util.telescope("lsp_document_symbols", {
