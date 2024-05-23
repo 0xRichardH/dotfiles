@@ -39,27 +39,27 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- enable inlay hints globally
 -- ref: https://vinnymeller.com/posts/neovim_nightly_inlay_hints/
-if vim.lsp.inlay_hint then
-  vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
-  vim.api.nvim_create_autocmd("LspAttach", {
-    group = "LspAttach_inlayhints",
-    callback = function(args)
-      if not (args.data and args.data.client_id) then
-        return
-      end
-
-      local client = vim.lsp.get_client_by_id(args.data.client_id)
-      if client == nil then
-        return
-      end
-
-      if client.server_capabilities.inlayHintProvider then
-        vim.lsp.inlay_hint.enable(args.buf, true)
-      end
-    end,
-  })
-end
-
+-- if vim.lsp.inlay_hint then
+--   vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
+--   vim.api.nvim_create_autocmd("LspAttach", {
+--     group = "LspAttach_inlayhints",
+--     callback = function(args)
+--       if not (args.data and args.data.client_id) then
+--         return
+--       end
+--
+--       local client = vim.lsp.get_client_by_id(args.data.client_id)
+--       if client == nil then
+--         return
+--       end
+--
+--       if client.server_capabilities.inlayHintProvider then
+--         vim.lsp.inlay_hint.enable(args.buf, true)
+--       end
+--     end,
+--   })
+-- end
+--
 -- set filetype for .conf files to sh
 vim.api.nvim_create_autocmd({ "BufRead" }, {
   pattern = { "*.conf" },
