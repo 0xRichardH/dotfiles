@@ -1,5 +1,3 @@
-local Util = require("lazyvim.util")
-
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -25,7 +23,7 @@ return {
         preview_cutoff = 0,
         horizontal = { preview_width = 0.60 },
         vertical = { width = 0.55, height = 0.9, preview_cutoff = 0 },
-        prompt_position = "top",
+        prompt_position = "bottom",
       },
       path_display = { "smart" },
       prompt_position = "top",
@@ -103,16 +101,16 @@ return {
   keys = function()
     return {
       { "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "Switch Buffer" },
-      { "<leader>/", Util.telescope("live_grep"), desc = "Grep (root dir)" },
+      { "<leader>/", LazyVim.pick("live_grep"), desc = "Grep (root dir)" },
       { "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
-      { "<leader><space>", Util.telescope("files"), desc = "Find Files (root dir)" },
+      { "<leader><space>", LazyVim.pick("files"), desc = "Find Files (root dir)" },
       { "<leader>*", "<cmd>Telescope grep_string<cr>", { silent = true, desc = "Grep Word Under Cursor" } },
       -- find
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-      { "<leader>ff", Util.telescope("files"), desc = "Find Files (root dir)" },
-      { "<leader>fF", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+      { "<leader>ff", LazyVim.pick("files"), desc = "Find Files (root dir)" },
+      { "<leader>fF", LazyVim.pick("files", { cwd = false }), desc = "Find Files (cwd)" },
       { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
-      { "<leader>fR", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
+      { "<leader>fR", LazyVim.pick("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
       -- git
       { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
       { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
@@ -124,8 +122,8 @@ return {
       { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
       { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
       { "<leader>sD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
-      { "<leader>sg", Util.telescope("live_grep"), desc = "Grep (root dir)" },
-      { "<leader>sG", Util.telescope("live_grep", { cwd = false }), desc = "Grep (cwd)" },
+      { "<leader>sg", LazyVim.pick("live_grep"), desc = "Grep (root dir)" },
+      { "<leader>sG", LazyVim.pick("live_grep", { cwd = false }), desc = "Grep (cwd)" },
       { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Help Pages" },
       { "<leader>sH", "<cmd>Telescope highlights<cr>", desc = "Search Highlight Groups" },
       { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
@@ -133,15 +131,15 @@ return {
       { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Jump to Mark" },
       { "<leader>so", "<cmd>Telescope vim_options<cr>", desc = "Options" },
       { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
-      { "<leader>sw", Util.telescope("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
-      { "<leader>sW", Util.telescope("grep_string", { cwd = false, word_match = "-w" }), desc = "Word (cwd)" },
-      { "<leader>sw", Util.telescope("grep_string"), mode = "v", desc = "Selection (root dir)" },
-      { "<leader>sW", Util.telescope("grep_string", { cwd = false }), mode = "v", desc = "Selection (cwd)" },
-      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+      { "<leader>sw", LazyVim.pick("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
+      { "<leader>sW", LazyVim.pick("grep_string", { cwd = false, word_match = "-w" }), desc = "Word (cwd)" },
+      { "<leader>sw", LazyVim.pick("grep_string"), mode = "v", desc = "Selection (root dir)" },
+      { "<leader>sW", LazyVim.pick("grep_string", { cwd = false }), mode = "v", desc = "Selection (cwd)" },
+      { "<leader>uC", LazyVim.pick("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
       { "<leader>uu", "<cmd>Telescope undo<cr>", desc = "Uno Tree" },
       {
         "<leader>ss",
-        Util.telescope("lsp_document_symbols", {
+        LazyVim.pick("lsp_document_symbols", {
           symbols = {
             "Class",
             "Function",
@@ -159,7 +157,7 @@ return {
       },
       {
         "<leader>sS",
-        Util.telescope("lsp_dynamic_workspace_symbols", {
+        LazyVim.pick("lsp_dynamic_workspace_symbols", {
           symbols = {
             "Class",
             "Function",
