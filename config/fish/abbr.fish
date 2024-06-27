@@ -69,3 +69,7 @@ abbr bi "bundle install"
 abbr rs "bundle exec rails server"
 abbr rr "bundle exec rails routes"
 abbr rc "bundle exec rails console"
+
+# Add aliases for Zellij
+abbr ze zellij
+abbr zl zellij

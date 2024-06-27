@@ -9,7 +9,6 @@ success_symbol = "🐶"
 vicmd_symbol = "🐰"
 error_symbol = "🐞"
 
-
 [directory]
 truncation_length = 4
 
@@ -23,19 +22,19 @@ disabled = true
 disabled = true
 
 [git_branch]
-disabled = true
+disabled = false
 
 [git_commit]
-disabled = true
+disabled = false
 
 [git_state]
-disabled = true
+disabled = false
 
 [git_metrics]
-disabled = true
+disabled = false
 
 [git_status]
-disabled = true
+disabled = false
 
 [aws]
 disabled = true

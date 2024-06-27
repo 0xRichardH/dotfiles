@@ -1,4 +1,4 @@
 theme "catppuccin-mocha"
 default_layout "compact"
-on_force_close "quit"
+on_force_close "detach"
 pane_frames false
