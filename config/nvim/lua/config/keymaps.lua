@@ -55,11 +55,14 @@ map("n", "<S-Tab>", ":bprevious<CR>", defaultOptsWithDesc("Previous Buffer"))
 map("n", "<leader>fy", ":CopyRelPath<CR>", defaultOptsWithDesc("Copy Relative Path"))
 map("n", "<leader>fY", ":CopyPath<CR>", defaultOptsWithDesc("Copy Full Path"))
 
--- tmux navigator
-vim.cmd([[
+-- Inside the tmux
+if os.getenv("TMUX") then
+  -- tmux navigator
+  vim.cmd([[
   noremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
   noremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
   noremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
   noremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
   noremap <silent> <c-\> :<C-U>TmuxNavigatePrevious<cr>
 ]])
+end
