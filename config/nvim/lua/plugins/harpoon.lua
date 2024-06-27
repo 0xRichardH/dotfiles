@@ -1,51 +1,42 @@
 return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",
-  dependencies = "nvim-lua/plenary.nvim",
   opts = {
-    global_settings = { mark_branch = true },
-    width = vim.api.nvim_win_get_width(0) - 4,
+    menu = {
+      width = vim.api.nvim_win_get_width(0) - 4,
+    },
+    settings = {
+      save_on_toggle = true,
+    },
   },
-  config = function()
-    local harpoon = require("harpoon")
+  keys = function()
+    local keys = {
+      {
+        "<leader>H",
+        function()
+          require("harpoon"):list():add()
+        end,
+        desc = "Harpoon File",
+      },
+      {
+        "<leader>h",
+        function()
+          local harpoon = require("harpoon")
+          harpoon.ui:toggle_quick_menu(harpoon:list())
+        end,
+        desc = "Harpoon Quick Menu",
+      },
+    }
 
-    -- REQUIRED
-    harpoon:setup()
-    -- REQUIRED
-
-    vim.keymap.set("n", "<leader>aa", function()
-      harpoon:list():add()
-    end, { desc = "Add to Harpoon" })
-    vim.keymap.set("n", "<C-e>", function()
-      harpoon.ui:toggle_quick_menu(harpoon:list())
-    end, { desc = "Show Harpoon" })
-
-    vim.keymap.set("n", "<leader>1", function()
-      harpoon:list():select(1)
-    end)
-    vim.keymap.set("n", "<leader>2", function()
-      harpoon:list():select(2)
-    end)
-    vim.keymap.set("n", "<leader>3", function()
-      harpoon:list():select(3)
-    end)
-    vim.keymap.set("n", "<leader>4", function()
-      harpoon:list():select(4)
-    end)
-    vim.keymap.set("n", "<leader>5", function()
-      harpoon:list():select(5)
-    end)
-    vim.keymap.set("n", "<leader>6", function()
-      harpoon:list():select(6)
-    end)
-    vim.keymap.set("n", "<leader>7", function()
-      harpoon:list():select(7)
-    end)
-    vim.keymap.set("n", "<leader>8", function()
-      harpoon:list():select(8)
-    end)
-    vim.keymap.set("n", "<leader>9", function()
-      harpoon:list():select(9)
-    end)
+    for i = 1, 5 do
+      table.insert(keys, {
+        "<leader>" .. i,
+        function()
+          require("harpoon"):list():select(i)
+        end,
+        desc = "Harpoon to File " .. i,
+      })
+    end
+    return keys
   end,
 }

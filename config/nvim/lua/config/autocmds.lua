@@ -31,12 +31,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- disable virtual-text for lspconfig
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function()
-    vim.diagnostic.config({ virtual_text = false })
-  end,
-})
-
+-- vim.api.nvim_create_autocmd("LspAttach", {
+--   callback = function()
+--     vim.diagnostic.config({ virtual_text = false })
+--   end,
+-- })
+--
 -- enable inlay hints globally
 -- ref: https://vinnymeller.com/posts/neovim_nightly_inlay_hints/
 -- if vim.lsp.inlay_hint then
