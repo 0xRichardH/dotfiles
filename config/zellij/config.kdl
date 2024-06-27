@@ -1,0 +1,4 @@
+theme "catppuccin-mocha"
+default_layout "compact"
+on_force_close "quit"
+pane_frames false
