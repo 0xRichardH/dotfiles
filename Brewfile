@@ -50,6 +50,7 @@ brew 'sshpass'
 brew 'yazi'
 brew 'libpq' # for ruby pg gem
 brew 'joshmedeski/sesh/sesh' # the smart terminal session manager
+brew 'zellij'
 
 # Fonts
 cask 'font-jetbrains-mono'

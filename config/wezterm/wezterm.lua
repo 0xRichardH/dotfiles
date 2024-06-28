@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
+local keys = require("keys")
+local helper = require("helpers.helper")
 local config = {}
 
 -- In newer versions of wezterm, use the config_builder which will
@@ -7,98 +9,6 @@ local config = {}
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
-
--- ================== Helper functions <START> ==================
-local helper = {}
-
-local function write_appearance_to_file(appearance)
-	local home = os.getenv("HOME")
-	if not home then
-		wezterm.log_error("HOME environment variable is not set.")
-		return
-	end
-
-	local file_path = home .. "/.appearance"
-	local file, err = io.open(file_path, "w")
-	if not file then
-		wezterm.log_error("Error opening file: " .. err)
-		return
-	end
-
-	file:write(appearance)
-	file:close()
-end
-
-local function get_appearance()
-	local appearance = "Dark"
-	if wezterm.gui then
-		appearance = wezterm.gui.get_appearance() -- Light or Dark
-	end
-
-	write_appearance_to_file(appearance)
-
-	return appearance
-end
-
-helper.is_dark = function()
-	return get_appearance():find("Dark")
-end
-
-helper.scheme_for_appearance = function()
-	if helper.is_dark() then
-		return "rose-pine"
-	else
-		return "rose-pine-dawn"
-	end
-end
-
---
--- helper.get_random_entry = function(tbl)
--- 	local keys = {}
--- 	for key, _ in ipairs(tbl) do
--- 		table.insert(keys, key)
--- 	end
--- 	local randomKey = keys[math.random(1, #keys)]
--- 	return tbl[randomKey]
--- end
-
-local key_helper = {}
-
-key_helper.multiple_actions = function(keys)
-	local actions = {}
-	for key in keys:gmatch(".") do
-		table.insert(actions, act.SendKey({ key = key }))
-	end
-	table.insert(actions, act.SendKey({ key = "\n" }))
-	return act.Multiple(actions)
-end
-
-key_helper.key_table = function(mods, key, action)
-	return {
-		mods = mods,
-		key = key,
-		action = action,
-	}
-end
-
-key_helper.ctrl_key = function(key, action)
-	return key_helper.key_table("CTRL", key, action)
-end
-
-key_helper.cmd_key = function(key, action)
-	return key_helper.key_table("CMD", key, action)
-end
-
-key_helper.cmd_to_tmux_prefix = function(key, tmux_key)
-	return key_helper.cmd_key(
-		key,
-		act.Multiple({
-			act.SendKey({ mods = "CTRL", key = "b" }),
-			act.SendKey({ key = tmux_key }),
-		})
-	)
-end
--- ================== Helper functions <END>  ==================
 
 -- ================== Listen on Events <START> ==================
 local io = require("io")
@@ -137,124 +47,6 @@ wezterm.on("trigger-vim-with-scrollback", function(window, pane)
 	os.remove(name)
 end)
 -- ================== Listen on Events <END>  ===================
-local keys = function()
-	local keys = {
-		--
-		-- vim
-		key_helper.cmd_key("[", act.SendKey({ mods = "CTRL", key = "o" })),
-		key_helper.cmd_key("]", act.SendKey({ mods = "CTRL", key = "i" })),
-		-- go to files
-		key_helper.cmd_key("p", key_helper.multiple_actions(":GoToFile")),
-		-- go to commands
-		key_helper.cmd_key("P", key_helper.multiple_actions(":GoToCommand")),
-		-- quit vim
-		key_helper.cmd_key("q", key_helper.multiple_actions(":qa!")),
-
-		--
-		-- tmux
-
-		-- split tmux window vertically
-		key_helper.cmd_to_tmux_prefix("e", "%"),
-		-- split tmux window horizontally
-		key_helper.cmd_to_tmux_prefix("E", '"'),
-
-		-- Rename the current tmux window
-		key_helper.cmd_to_tmux_prefix(",", ","),
-		-- create a new tmux window
-		key_helper.cmd_to_tmux_prefix("t", "c"),
-		-- kill the current tmux panel
-		key_helper.cmd_to_tmux_prefix("w", "x"),
-
-		-- Control
-		key_helper.ctrl_key("E", act.EmitEvent("trigger-vim-with-scrollback")),
-
-		-- open file manager 'sxyazi/yazi'
-		key_helper.cmd_key("o", key_helper.multiple_actions("yazi")),
-	}
-
-	local tmux_specific_keys = {
-		-- tmux window selection
-		key_helper.cmd_to_tmux_prefix("1", "1"),
-		key_helper.cmd_to_tmux_prefix("2", "2"),
-		key_helper.cmd_to_tmux_prefix("3", "3"),
-		key_helper.cmd_to_tmux_prefix("4", "4"),
-		key_helper.cmd_to_tmux_prefix("5", "5"),
-		key_helper.cmd_to_tmux_prefix("6", "6"),
-		key_helper.cmd_to_tmux_prefix("7", "7"),
-		key_helper.cmd_to_tmux_prefix("8", "8"),
-		key_helper.cmd_to_tmux_prefix("9", "9"),
-
-		-- clear tmux screen
-		key_helper.cmd_to_tmux_prefix("d", "C"),
-		-- open git manager 'jesseduffield/lazygit'
-		key_helper.cmd_to_tmux_prefix("g", "g"),
-		-- use (cmd+j) to open the session manager popup (t)
-		key_helper.cmd_to_tmux_prefix("j", "T"),
-		-- switch to the last tmux session
-		key_helper.cmd_to_tmux_prefix("l", "L"),
-
-		-- open URL (cmd+u)
-		key_helper.cmd_to_tmux_prefix("u", "u"),
-	}
-
-	if os.getenv("TMUX") then
-		for _, key in ipairs(tmux_specific_keys) do
-			table.insert(keys, key)
-		end
-	end
-
-	local zellij_keys = {
-		-- session manager
-		key_helper.cmd_key(
-			"j",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "o" }), act.SendKey({ key = "w" }) })
-		),
-		key_helper.cmd_key(
-			"1",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "1" }) })
-		),
-		key_helper.cmd_key(
-			"2",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "2" }) })
-		),
-		key_helper.cmd_key(
-			"3",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "3" }) })
-		),
-		key_helper.cmd_key(
-			"4",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "4" }) })
-		),
-		key_helper.cmd_key(
-			"5",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "5" }) })
-		),
-		key_helper.cmd_key(
-			"6",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "6" }) })
-		),
-		key_helper.cmd_key(
-			"7",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "7" }) })
-		),
-		key_helper.cmd_key(
-			"8",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "8" }) })
-		),
-		key_helper.cmd_key(
-			"9",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "8" }) })
-		),
-	}
-
-	-- if os.getenv("ZELLIJ") then
-	for _, key in ipairs(zellij_keys) do
-		table.insert(keys, key)
-	end
-	-- end
-
-	return keys
-end
 
 local custom_configs = {
 	automatically_reload_config = true,
@@ -325,7 +117,7 @@ local custom_configs = {
 	-- keybindings
 	disable_default_key_bindings = false,
 	leader = { key = "m", mods = "CMD" },
-	keys = keys(),
+	keys = keys.setup(),
 }
 
 for k, v in pairs(custom_configs) do
