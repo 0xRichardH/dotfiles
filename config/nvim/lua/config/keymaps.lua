@@ -34,8 +34,14 @@ map({ "n", "x", "o" }, "H", "^", defaultOptsWithDesc("Move to Start of Line"))
 map({ "n", "x", "o" }, "L", "$", defaultOptsWithDesc("Move to End of Line"))
 
 -- navigate buffers
-map("n", "<Right>", ":bnext<CR>", defaultOptsWithDesc("Next Buffer"))
-map("n", "<Left>", ":bprevious<CR>", defaultOptsWithDesc("Previous Buffer"))
+-- map("n", "<Right>", ":bnext<CR>", defaultOptsWithDesc("Next Buffer"))
+-- map("n", "<Left>", ":bprevious<CR>", defaultOptsWithDesc("Previous Buffer"))
+
+-- Move between windows using arrow keys
+map("n", "<Up>", "<C-w>k", defaultOptsWithDesc("Move to Window Above"))
+map("n", "<Down>", "<C-w>j", defaultOptsWithDesc("Move to Window Below"))
+map("n", "<Left>", "<C-w>h", defaultOptsWithDesc("Move to Window Left"))
+map("n", "<Right>", "<C-w>l", defaultOptsWithDesc("Move to Window Right"))
 
 -- exit insert mode on jj and jk
 map("i", "jj", "<ESC>", defaultOptsWithDesc("Exit Insert Mode"))
@@ -65,4 +71,8 @@ if os.getenv("TMUX") then
   noremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
   noremap <silent> <c-\> :<C-U>TmuxNavigatePrevious<cr>
 ]])
+  map("n", "<Left>", ":TmuxNavigateLeft<CR>", defaultOptsWithDesc("Tmux Navigate Left"))
+  map("n", "<Down>", ":TmuxNavigateDown<CR>", defaultOptsWithDesc("Tmux Navigate Down"))
+  map("n", "<Up>", ":TmuxNavigateUp<CR>", defaultOptsWithDesc("Tmux Navigate Up"))
+  map("n", "<Right>", ":TmuxNavigateRight<CR>", defaultOptsWithDesc("Tmux Navigate Right"))
 end
