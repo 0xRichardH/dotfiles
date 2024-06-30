@@ -3,3 +3,7 @@ default_layout "compact"
 on_force_close "detach"
 pane_frames false
 layout_dir "~/.config/zellij/layouts"
+
+keybinds {
+  unbind "Ctrl h" // unbind this keybind to avoid conflict with neovim
+}
