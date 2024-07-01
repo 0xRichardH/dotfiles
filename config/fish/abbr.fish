@@ -71,5 +71,7 @@ abbr rr "bundle exec rails routes"
 abbr rc "bundle exec rails console"
 
 # Add aliases for Zellij
-abbr ze zellij
 abbr zl zellij
+abbr ze "zellij edit"
+abbr zr "zellij run -- "
+abbr zsb "zellij -s SingBox --layout ~/.config/zellij/layouts/sing-box.kdl"
