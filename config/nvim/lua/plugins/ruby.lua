@@ -11,17 +11,23 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        "rubocop",
         "rubyfmt",
-        "solargraph",
+        "ruby-lsp",
       })
     end,
   },
   {
     "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
     opts = {
+      ---@type lspconfig.options
       servers = {
-        solargraph = {},
+        -- disable solargraph from auto running when you open ruby files
+        solargraph = {
+          autostart = false,
+        },
+        -- ruby_lsp will be automatically installed with mason and loaded with lspconfig
+        ruby_lsp = {},
       },
     },
   },
