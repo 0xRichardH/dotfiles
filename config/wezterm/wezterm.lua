@@ -58,7 +58,7 @@ local custom_configs = {
 
 	-- windows
 	color_scheme = helper.scheme_for_appearance(), -- rose-pine-dawn, rose-pine-moon, rose-pine, Catppuccin Mocha
-	window_background_opacity = 1,
+	window_background_opacity = 0.85,
 	window_decorations = "RESIZE",
 	window_close_confirmation = "NeverPrompt",
 	hide_tab_bar_if_only_one_tab = true,
