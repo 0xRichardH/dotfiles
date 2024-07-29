@@ -3,7 +3,6 @@
 
 # Taps
 tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
 tap 'jesseduffield/lazygit'
 tap 'esolitos/ipa'
