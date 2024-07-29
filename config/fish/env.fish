@@ -47,6 +47,5 @@ fish_add_path /opt/homebrew/opt/grep/libexec/gnubin
 fish_add_path /opt/homebrew/opt/libpq/bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.nix-profile/bin
-fish_add_path $HOME/.local/share/bob/nvim-bin
 fish_add_path $HOME/.bin
 fish_add_path $HOME/.local/bin

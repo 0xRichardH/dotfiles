@@ -7,16 +7,8 @@ layout {
             plugin location="zellij:tab-bar"
         }
         pane split_direction="Horizontal" {
-            pane focus=true name="sing-box" {
-              command "just"
-              args "play"
-              cwd "$SING_BOX"
-            }
+            pane focus=true name="sing-box"
             pane command="ipinfo-rs" name="ipinfo"
-        }
-        pane size=5
-        pane size=2 borderless=true {
-            plugin location="zellij:status-bar"
         }
     }
 }
