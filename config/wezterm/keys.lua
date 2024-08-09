@@ -21,9 +21,9 @@ M.setup = function()
 		-- tmux
 
 		-- split tmux window vertically
-		key_helper.cmd_to_tmux_prefix("e", "%"),
+		key_helper.cmd_to_tmux_prefix("e", "-"),
 		-- split tmux window horizontally
-		key_helper.cmd_to_tmux_prefix("E", '"'),
+		key_helper.cmd_to_tmux_prefix("E", "|"),
 
 		-- Rename the current tmux window
 		key_helper.cmd_to_tmux_prefix(",", ","),
@@ -64,59 +64,57 @@ M.setup = function()
 		key_helper.cmd_to_tmux_prefix("u", "u"),
 	}
 
-	if os.getenv("TMUX") then
-		for _, key in ipairs(tmux_specific_keys) do
-			table.insert(keys, key)
-		end
-	end
-
-	local zellij_keys = {
-		-- session manager
-		key_helper.cmd_key(
-			"j",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "o" }), act.SendKey({ key = "w" }) })
-		),
-		key_helper.cmd_key(
-			"1",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "1" }) })
-		),
-		key_helper.cmd_key(
-			"2",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "2" }) })
-		),
-		key_helper.cmd_key(
-			"3",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "3" }) })
-		),
-		key_helper.cmd_key(
-			"4",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "4" }) })
-		),
-		key_helper.cmd_key(
-			"5",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "5" }) })
-		),
-		key_helper.cmd_key(
-			"6",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "6" }) })
-		),
-		key_helper.cmd_key(
-			"7",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "7" }) })
-		),
-		key_helper.cmd_key(
-			"8",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "8" }) })
-		),
-		key_helper.cmd_key(
-			"9",
-			act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "8" }) })
-		),
-	}
-
-	for _, key in ipairs(zellij_keys) do
+	for _, key in ipairs(tmux_specific_keys) do
 		table.insert(keys, key)
 	end
+
+	-- local zellij_keys = {
+	-- 	-- session manager
+	-- 	key_helper.cmd_key(
+	-- 		"j",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "o" }), act.SendKey({ key = "w" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"1",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "1" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"2",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "2" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"3",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "3" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"4",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "4" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"5",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "5" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"6",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "6" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"7",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "7" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"8",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "8" }) })
+	-- 	),
+	-- 	key_helper.cmd_key(
+	-- 		"9",
+	-- 		act.Multiple({ act.SendKey({ mods = "CTRL", key = "t" }), act.SendKey({ key = "8" }) })
+	-- 	),
+	-- }
+	--
+	-- for _, key in ipairs(zellij_keys) do
+	-- 	table.insert(keys, key)
+	-- end
 
 	return keys
 end
