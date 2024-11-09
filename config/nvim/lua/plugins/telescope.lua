@@ -9,7 +9,6 @@ return {
   config = function(_, opts)
     local telescope = require("telescope")
     telescope.setup(opts)
-    telescope.load_extension("notify")
     telescope.load_extension("undo")
     telescope.load_extension("smart_open")
   end,

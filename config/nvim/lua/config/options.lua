@@ -70,6 +70,10 @@ if vim.fn.has("nvim-0.10") == 1 then
   vim.opt.smoothscroll = true
 end
 
+-- Disable auto-formatting
+vim.g.autoformat = false -- globally
+vim.b.autoformat = false -- buffer-local
+
 -- Cursorline highlighting control
 --  Only have it on in the active buffer
 local group = vim.api.nvim_create_augroup("CursorLineControl", { clear = true })
