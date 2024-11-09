@@ -7,6 +7,7 @@ end
 starship init fish | source # https://starship.rs/
 zoxide init fish | source # 'ajeetdsouza/zoxide'
 direnv hook fish | source # direnv allow .
+pyenv init - | source
 
 # set abbreviations
 source (dirname (status --current-filename))/abbr.fish
@@ -14,6 +15,7 @@ source (dirname (status --current-filename))/abbr.fish
 source (dirname (status --current-filename))/alias.fish
 # set custom keybindings
 source (dirname (status --current-filename))/keybindings.fish
+
 
 # asdf
 source $(brew --prefix asdf)/libexec/asdf.fish

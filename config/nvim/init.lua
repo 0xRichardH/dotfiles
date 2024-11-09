@@ -1,6 +1,3 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
-
 if vim.g.vscode then
   -- VSCode extension
   vim.api.nvim_set_keymap("x", "gc", "<Plug>VSCodeCommentary", { noremap = false, silent = true })
@@ -18,4 +15,7 @@ if vim.g.vscode then
       vim.opt.clipboard = { "unnamed" }
     end
   end
+else
+  -- bootstrap lazy.nvim, LazyVim and your plugins
+  require("config.lazy")
 end

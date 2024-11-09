@@ -4,6 +4,8 @@ local keys = require("keys")
 local helper = require("helpers.helper")
 local config = {}
 
+WEZTERM_WINDOW_BACKGROUND_OPACITY = 1
+
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
@@ -58,7 +60,7 @@ local custom_configs = {
 
 	-- windows
 	color_scheme = helper.scheme_for_appearance(), -- rose-pine-dawn, rose-pine-moon, rose-pine, Catppuccin Mocha
-	window_background_opacity = 0.85,
+	window_background_opacity = WEZTERM_WINDOW_BACKGROUND_OPACITY,
 	window_decorations = "RESIZE",
 	window_close_confirmation = "NeverPrompt",
 	hide_tab_bar_if_only_one_tab = true,

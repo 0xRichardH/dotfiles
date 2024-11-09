@@ -27,7 +27,16 @@ return {
           autostart = false,
         },
         -- ruby_lsp will be automatically installed with mason and loaded with lspconfig
-        ruby_lsp = {},
+        ruby_lsp = {
+          -- Add an on_attach function that disables formatting for ruby files
+          on_attach = function(client, bufnr)
+            if client.name == "ruby_lsp" then
+              -- Disable formatting capability for ruby-lsp
+              client.server_capabilities.documentFormattingProvider = false
+              client.server_capabilities.documentRangeFormattingProvider = false
+            end
+          end,
+        },
       },
     },
   },
