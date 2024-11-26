@@ -20,8 +20,8 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
     { import = "lazyvim.plugins.extras.coding.blink" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
-    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
+    { import = "lazyvim.plugins.extras.ai.copilot" },
+    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
     -- { import = "lazyvim.plugins.extras.editor.telescope" },
     -- import/override with your plugins
     { import = "plugins" },
