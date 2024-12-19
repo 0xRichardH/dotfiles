@@ -100,9 +100,9 @@ vim.opt.fillchars:append({
 })
 
 -- Add new commands
-vim.cmd([[command! -nargs=0 GoToCommand :Telescope commands]])
-vim.cmd([[command! -nargs=0 GoToFile :Telescope smart_open]])
-vim.cmd([[command! -nargs=0 Grep :Telescope live_grep]])
+vim.cmd([[command! -nargs=0 GoToCommand :FzfLua commands]])
+vim.cmd([[command! -nargs=0 GoToFile :FzfLua files]])
+vim.cmd([[command! -nargs=0 Grep :FzfLua grep]])
 
 -- Copy Relative Path
 vim.api.nvim_create_user_command("CopyRelPath", function()
