@@ -1,0 +1,134 @@
+#################
+## UI / window ##
+#################
+bold-is-bright = true
+macos-titlebar-style = hidden
+macos-window-shadow = false
+mouse-hide-while-typing = true
+window-decoration = false
+window-padding-balance = true
+window-padding-x = 16
+window-padding-y = 10
+window-save-state = always
+window-theme = auto
+# maximise by default
+window-width = 9999
+window-height = 9999
+
+# visuals
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+font-family = Comic Mono
+font-size = 18
+adjust-cell-height = 20%
+mouse-hide-while-typing = true
+
+###############
+## clipboard ##
+###############
+clipboard-read = "allow"
+clipboard-trim-trailing-spaces = true
+clipboard-write = "allow"
+
+#################
+## keybindings ##
+#################
+# Some useful encoded characters:
+# \x0a = Enter/Return
+# \x1b = Esc
+# \x13 = <C-s> (tmux prefix)
+macos-option-as-alt = true
+
+# switch to window by index (1-based)
+keybind = super+physical:one=text:\x131
+keybind = super+physical:two=text:\x132
+keybind = super+physical:three=text:\x133
+keybind = super+physical:four=text:\x134
+keybind = super+physical:five=text:\x135
+keybind = super+physical:six=text:\x136
+keybind = super+physical:seven=text:\x137
+keybind = super+physical:eight=text:\x138
+keybind = super+physical:nine=text:\x139
+
+# a-z
+# Change to tmux copy mode
+keybind = super+c=text:\x13[
+# :Grep (find)
+keybind = super+f=text:\x3a\x47\x72\x65\x70\x0a
+# <perfix>+g (open lazygit window)
+keybind = super+g=text:\x13\x67
+# hide?
+# keybind = super+h= 
+# keybind = super+i=
+# keybind = super+j=
+# <perfix>+k (open sesh picker)
+keybind = super+k=text:\x13\x4b
+# <perfix>+l (switch to last session)
+keybind = super+l=text:\x13\x4c
+# minimize?
+# keybind = super+m= 
+# new?
+# keybind = super+n= 
+# <perfix>+u (open url)
+keybind = super+o=text:\x13\x75
+# :GotoFile
+keybind = super+p=text:\x3a\x47\x6f\x54\x6f\x46\x69\x6c\x65\x0a
+# :qa!
+keybind = super+q=text:\x3a\x1b\x1b\x3a\x71\x61\x21\x0a
+# :w (write buffer)
+keybind = super+r=reload_config
+keybind = super+s=text:\x3a\x77\x0a
+# <perfix>+c (new window)
+keybind = super+t=text:\x13\x63
+# keybind = super+u=
+# paste
+# keybind = super+v= 
+# <perfix>+x (close window)
+keybind = super+w=text:\x13\x78
+# cut
+# keybind = super+x= 
+# keybind = super+y=
+# undo?
+# keybind = super+z= 
+
+# A-Z
+# keybind = super+shift+a=
+# keybind = super+shift+b=
+# keybind = super+shift+c=
+# keybind = super+shift+d=
+# keybind = super+shift+e=
+# keybind = super+shift+f=
+# keybind = super+shift+g=
+# keybind = super+shift+h=
+# keybind = super+shift+i=
+# secondary sesh
+# keybind = super+shift+j=
+# keybind = super+shift+k=
+# keybind = super+shift+l=
+# keybind = super+shift+m=
+# keybind = super+shift+n=
+# :GotoSymbol
+keybind = super+shift+o=text:\x3a\x47\x6f\x54\x6f\x53\x79\x6d\x62\x6f\x6c\x0a
+# :GotoCommand
+keybind = super+shift+p=text:\x3a\x47\x6f\x54\x6f\x43\x6f\x6d\x6d\x61\x6e\x64\x0a
+# keybind = super+shift+q=
+# keybind = super+shift+r=
+# keybind = super+shift+s=
+# keybind = super+shift+t=
+# keybind = super+shift+u=
+# keybind = super+shift+v=
+# keybind = super+shift+w= (undo close?)
+# keybind = super+shift+x=
+# keybind = super+shift+y=
+# keybind = super+shift+z= (redo?)
+
+# special characters
+# jump back
+keybind = super+left_bracket=text:<C-o>
+# jump forward
+keybind = super+right_bracket=text:<C-i>
+
+# special characters (shift)
+# <perfix>+n (next window)
+keybind = super+shift+left_bracket=text:\x13\x6e
+# <perfix>+p (previous window)
+keybind = super+shift+right_bracket=text:\x13\x70

@@ -1,0 +1,80 @@
+###########
+## shell ##
+###########
+command = "/opt/homebrew/bin/fish --login"
+shell-integration = fish
+shell-integration-features = "no-cursor,sudo,title"
+
+#################
+## UI / window ##
+#################
+bold-is-bright = true
+macos-titlebar-style = hidden
+macos-window-shadow = false
+mouse-hide-while-typing = true
+window-decoration = false
+window-padding-balance = true
+window-padding-x = 16
+window-padding-y = 10
+window-save-state = always
+window-theme = auto
+# maximise by default
+window-width = 9999
+window-height = 9999
+
+# visuals
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+font-family = Comic Mono
+font-size = 18
+adjust-cell-height = 20%
+mouse-hide-while-typing = true
+
+###############
+## clipboard ##
+###############
+clipboard-read = "allow"
+clipboard-trim-trailing-spaces = true
+clipboard-write = "allow"
+
+#################
+## keybindings ##
+#################
+# Some useful encoded characters:
+# \x0a = Enter/Return
+# \x1b = Esc
+# \x13 = <C-s> (tmux prefix)
+macos-option-as-alt = true
+
+# switch to window by index (1-based)
+keybind = super+physical:one=text:\x131
+keybind = super+physical:two=text:\x132
+keybind = super+physical:three=text:\x133
+keybind = super+physical:four=text:\x134
+keybind = super+physical:five=text:\x135
+keybind = super+physical:six=text:\x136
+keybind = super+physical:seven=text:\x137
+keybind = super+physical:eight=text:\x138
+keybind = super+physical:nine=text:\x139
+
+# a-z
+# Change to tmux copy mode
+keybind = super+c=text:\x13[
+# <perfix>+g (open lazygit window)
+keybind = super+g=text:\x13\x67
+# <perfix>+j (open the session manager popup)
+keybind = super+j=text:\x13\x54
+# <perfix>+l (switch to last session)
+keybind = super+l=text:\x13\x4c
+# <perfix>+u (open url)
+keybind = super+u=text:\x13\x75
+# :GotoFile
+keybind = super+p=text:\x3a\x47\x6f\x54\x6f\x46\x69\x6c\x65\x0a
+# :Grep (find)
+keybind = super+f=text:\x3a\x47\x72\x65\x70\x0a
+# :qa!
+keybind = super+q=text:\x3a\x1b\x1b\x3a\x71\x61\x21\x0a
+# <perfix>+c (new window)
+keybind = super+t=text:\x13\x63
+# keybind = super+u=
+# <perfix>+x (close window)
+keybind = super+w=text:\x13\x78
