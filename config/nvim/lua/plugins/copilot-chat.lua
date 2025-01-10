@@ -48,7 +48,7 @@ return {
         mode = { "n", "v" },
       },
       -- Show prompts actions with telescope
-      { "<leader>ap", M.pick("prompt"), desc = "Prompt Actions (CopilotChat)", mode = { "n", "v" } },
+      -- { "<leader>ap", M.pick("prompt"), desc = "Prompt Actions (CopilotChat)", mode = { "n", "v" } },
     },
     config = function(_, opts)
       local chat = require("CopilotChat")

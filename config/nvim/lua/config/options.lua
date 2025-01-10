@@ -77,6 +77,9 @@ vim.b.autoformat = false -- buffer-local
 -- Disable AI cmp
 vim.g.ai_cmp = false
 
+-- Disable all animations
+vim.g.snacks_animate = false
+
 -- Cursorline highlighting control
 --  Only have it on in the active buffer
 local group = vim.api.nvim_create_augroup("CursorLineControl", { clear = true })
