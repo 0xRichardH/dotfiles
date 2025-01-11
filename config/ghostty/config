@@ -23,7 +23,7 @@ window-width = 9999
 window-height = 9999
 
 # visuals
-theme = dark:catppuccin-mocha,light:catppuccin-latte
+theme = dark:rose-pine,light:rose-pine-dawn
 font-family = Comic Mono
 font-size = 18
 adjust-cell-height = 20%
