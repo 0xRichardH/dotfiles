@@ -7,7 +7,7 @@ return {
       local user = vim.env.USER or "User"
       user = user:sub(1, 1):upper() .. user:sub(2)
       return {
-        model = "claude-3.5-sonnet", -- Default model to use, see ':CopilotChatModels' for available models (can be specified manually in prompt via $).
+        model = "gemini-2.0-flash-001", -- Default model to use, see ':CopilotChatModels' for available models (can be specified manually in prompt via $).
         agent = "copilot", -- Default agent to use, see ':CopilotChatAgents' for available agents (can be specified manually in prompt via @).
         auto_insert_mode = true,
         question_header = "  " .. user .. " ",

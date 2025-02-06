@@ -51,6 +51,8 @@ brew 'libpq' # for ruby pg gem
 brew 'joshmedeski/sesh/sesh' # the smart terminal session manager
 brew 'zellij'
 brew 'git-secrets' # Prevents you from committing passwords and other sensitive information to a git repository
+brew 'cocogitto' # Conventional Commits toolbox
+brew 'tailscale'
 
 # Fonts
 cask 'font-jetbrains-mono'
