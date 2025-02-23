@@ -1,7 +1,7 @@
 import = ["~/.config/sesh/sesh_local.toml"]
 
 [default_session]
-startup_command = "nvim +GoToFile"
+startup_command = "pwd"
 
 [[session]]
 name = "Home 🏡"
