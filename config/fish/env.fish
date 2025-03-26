@@ -1,8 +1,8 @@
 set -gx fish_greeting # disable fish greeting
 set -U fish_key_bindings fish_vi_key_bindings
 
-set -Ux EDITOR nvim
-set -U VISUAL nvim
+set -Ux EDITOR "zed --wait"
+set -U VISUAL $EDITOR
 set -U LANG en_US.UTF-8
 set -U LC_ALL en_US.UTF-8
 
