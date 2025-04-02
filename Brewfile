@@ -2,8 +2,6 @@
 # brew bundle --file=./Brewfile
 
 # Taps
-tap 'homebrew/cask'
-tap 'homebrew/bundle'
 tap 'jesseduffield/lazygit'
 tap 'esolitos/ipa'
 tap 'arl/arl'
