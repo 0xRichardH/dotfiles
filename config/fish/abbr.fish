@@ -61,6 +61,7 @@ abbr x "chmod +x (ls | gum filter --limit 1 --header 'chmod +x')"
 # add bundle exec to common commands
 abbr cap "bundle exec cap"
 abbr cucumber "bundle exec cucumber"
+abbr rrails rails
 abbr rails "bundle exec rails"
 abbr rake "bundle exec rake"
 abbr rspec "bundle exec rspec"
