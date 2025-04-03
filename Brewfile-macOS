@@ -1,6 +1,8 @@
 # Brewfile for macOS
 # brew bundle --file=./Brewfile-macOS
 
+cask_args appdir: "~/Applications", require_sha: true
+
 tap 'koekeishiya/formulae'
 tap 'teamookla/speedtest'
 
@@ -16,3 +18,4 @@ cask 'wezterm'
 cask 'orbstack'
 cask 'raycast'
 cask 'appcleaner'
+cask 'karabiner-elements'
