@@ -40,7 +40,7 @@ switch $THEME
         set -Ux BAT_THEME gruvbox-light
     case '*'
         # Optionally handle other cases or set a default
-        echo "Appearance not set to 'Dark/Light'. Value is: $THEME"
+        # echo "Appearance not set to 'Dark/Light'. Value is: $THEME"
 end
 
 # ordered by priority - bottom up

@@ -14,8 +14,11 @@ brew 'terminal-notifier' # Send macOS User Notifications from the command-line
 
 # Apps
 cask 'stats' # menu stats
-cask 'wezterm'
+# cask 'wezterm'
+cask 'ghostty
 cask 'orbstack'
 cask 'raycast'
 cask 'appcleaner'
 cask 'karabiner-elements'
+cask 'zed@preview'
+cask 'arc'

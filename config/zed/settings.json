@@ -135,14 +135,14 @@
     "env": {
       "EDITOR": "zed --wait",
       "VISUAL": "zed --wait"
-    },
-    "shell": {
-      "with_arguments": {
-        // "program": "tat",
-        "program": "fish",
-        "args": []
-      }
     }
+    // "shell": {
+    //   "with_arguments": {
+    //     // "program": "tat",
+    //     "program": "fish",
+    //     "args": []
+    //   }
+    // }
   },
   "theme": {
     "dark": "Rosé Pine",
