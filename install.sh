@@ -18,6 +18,9 @@ source "${dotfiles_path}/scripts/package-manager.sh"
 # shellcheck source=./scripts/brew.sh
 source "${dotfiles_path}/scripts/brew.sh"
 
+# Set Default Shell to Fish
+source "${dotfiles_path}/scripts/set-default-shell.sh"
+
 # Update dotfiles
 env RCRC=$HOME/dotfiles/rcrc rcup
 

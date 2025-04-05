@@ -7,7 +7,7 @@ end
 starship init fish | source # https://starship.rs/
 zoxide init fish | source # 'ajeetdsouza/zoxide'
 direnv hook fish | source # direnv allow .
-pyenv init - | source
+# pyenv init - | source
 
 # set abbreviations
 source (dirname (status --current-filename))/abbr.fish
@@ -16,6 +16,14 @@ source (dirname (status --current-filename))/alias.fish
 # set custom keybindings
 source (dirname (status --current-filename))/keybindings.fish
 
+
+# NVM
+function nvm
+  bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
+
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
 
 # asdf
 # ASDF configuration code

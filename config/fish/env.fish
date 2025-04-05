@@ -9,6 +9,7 @@ set -U LC_ALL en_US.UTF-8
 set -Ux SSH_ASKPASS_REQUIRE force
 
 set -U TERM screen-256color
+set -x SHELL /opt/homebrew/bin/fish
 
 set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
 set -Ux FZF_DEFAULT_OPTS "\
@@ -28,7 +29,9 @@ set -Ux FZF_CTRL_R_OPTS "--border-label=' History ' --prompt=' '"
 set -Ux PGCLIENTENCODING utf-8
 
 # set global theme (Dark/Light)
-set -Ux THEME (cat $HOME/.appearance)
+if test -e $HOME/.appearance
+    set -Ux THEME (cat $HOME/.appearance)
+end
 
 switch $THEME
     case Dark
@@ -37,7 +40,7 @@ switch $THEME
         set -Ux BAT_THEME gruvbox-light
     case '*'
         # Optionally handle other cases or set a default
-        echo "Appearance not set to 'Dark/Light'. Value is: $THEME"
+        # echo "Appearance not set to 'Dark/Light'. Value is: $THEME"
 end
 
 # ordered by priority - bottom up
