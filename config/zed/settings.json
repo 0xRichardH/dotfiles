@@ -59,6 +59,19 @@
     "edit_prediction_provider": "copilot" // "zed", "copilot", "supermaven"
   },
   "assistant": {
+    "profiles": {
+      "chat": {
+        "name": "Chat",
+        "tools": {
+                    "thinking": true,
+                    "now": true,
+                    "fetch": true
+                },
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      }
+    },
+    "default_profile": "chat",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-thinking-latest"
