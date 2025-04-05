@@ -21,6 +21,9 @@ source "${dotfiles_path}/scripts/brew.sh"
 # Set Default Shell to Fish
 source "${dotfiles_path}/scripts/set-default-shell.sh"
 
+# Install Rust
+source "${dotfiles_path}/scripts/install-rust.sh"
+
 # Update dotfiles
 env RCRC=$HOME/dotfiles/rcrc rcup
 
