@@ -51,6 +51,7 @@ brew 'zellij'
 brew 'git-secrets' # Prevents you from committing passwords and other sensitive information to a git repository
 brew 'cocogitto' # Conventional Commits toolbox
 brew 'tailscale'
+brew 'wget'
 
 # Fonts
 cask 'font-jetbrains-mono'
@@ -60,3 +61,4 @@ cask 'font-victor-mono-nerd-font'
 cask 'font-monaspace'
 cask 'font-commit-mono'
 cask 'font-symbols-only-nerd-font'
+cask 'font-maple-mono-nf-cn'

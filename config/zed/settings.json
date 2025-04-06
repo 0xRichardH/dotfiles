@@ -7,14 +7,30 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "ssh_connections": [],
+  "ssh_connections": [
+    {
+      "host": "richard.tail53973.ts.net",
+      "username": "0xdev",
+      "projects": [
+        {
+          "paths": ["~/Applications"]
+        },
+        {
+          "paths": ["~/code"]
+        },
+        {
+          "paths": ["~/code/work/mcp-internal-apis-v2"]
+        }
+      ]
+    }
+  ],
   "use_system_prompts": false,
   "icon_theme": "Catppuccin Latte",
   "autosave": "on_focus_change",
   "use_autoclose": true,
   "always_treat_brackets_as_autoclosed": true,
   "restore_on_startup": "last_workspace",
-  "hide_mouse_while_typing": true,
+  "hide_mouse": "on_typing",
   "centered_layout": {
     "left_padding": 0.2,
     "right_padding": 0.2
@@ -43,9 +59,22 @@
     "edit_prediction_provider": "copilot" // "zed", "copilot", "supermaven"
   },
   "assistant": {
+    "profiles": {
+      "chat": {
+        "name": "Chat",
+        "tools": {
+          "thinking": true,
+          "now": true,
+          "fetch": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      }
+    },
+    "default_profile": "chat",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-thinking-latest"
+      "provider": "amazon-bedrock",
+      "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
     },
     "version": "2",
     "enable_experimental_live_diffs": true
@@ -119,14 +148,14 @@
     "env": {
       "EDITOR": "zed --wait",
       "VISUAL": "zed --wait"
-    },
-    "shell": {
-      "with_arguments": {
-        // "program": "tat",
-        "program": "fish",
-        "args": []
-      }
     }
+    // "shell": {
+    //   "with_arguments": {
+    //     // "program": "tat",
+    //     "program": "fish",
+    //     "args": []
+    //   }
+    // }
   },
   "theme": {
     "dark": "Rosé Pine",
@@ -193,7 +222,7 @@
       ]
     },
     "Ruby": {
-      "language_servers": ["ruby-lsp", "!solargraph", "!rubocop", "..."]
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph", "..."]
     }
   },
   "lsp": {
@@ -208,6 +237,11 @@
       "initialization_options": {
         "formatter": "standard",
         "linters": ["standard"]
+      }
+    },
+    "rubocop": {
+      "initialization_options": {
+        "safeAutocorrect": true
       }
     }
   }
