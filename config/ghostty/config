@@ -59,13 +59,13 @@ keybind = super+physical:nine=text:\x139
 # a-z
 # Change to tmux copy mode
 keybind = super+c=text:\x13[
-# <perfix>+g (open lazygit window)
+# <prefix>+g (open lazygit window)
 keybind = super+g=text:\x13\x67
-# <perfix>+j (open the session manager popup)
+# <prefix>+j (open the session manager popup)
 keybind = super+j=text:\x13\x54
-# <perfix>+l (switch to last session)
+# <prefix>+l (switch to last session)
 keybind = super+l=text:\x13\x4c
-# <perfix>+u (open url)
+# <prefix>+u (open url)
 keybind = super+u=text:\x13\x75
 # :GotoFile
 keybind = super+p=text:\x3a\x47\x6f\x54\x6f\x46\x69\x6c\x65\x0a
@@ -73,8 +73,8 @@ keybind = super+p=text:\x3a\x47\x6f\x54\x6f\x46\x69\x6c\x65\x0a
 keybind = super+f=text:\x3a\x47\x72\x65\x70\x0a
 # :qa!
 keybind = super+q=text:\x3a\x1b\x1b\x3a\x71\x61\x21\x0a
-# <perfix>+c (new window)
+# <prefix>+c (new window)
 keybind = super+t=text:\x13\x63
 # keybind = super+u=
-# <perfix>+x (close window)
+# <prefix>+x (close window)
 keybind = super+w=text:\x13\x78
