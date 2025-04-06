@@ -11,15 +11,14 @@
     {
       "host": "richard.tail53973.ts.net",
       "username": "0xdev",
+      "projects": []
+    },
+    {
+      "host": "0xdevtekimini.tail53973.ts.net",
+      "username": "0xdev",
       "projects": [
         {
-          "paths": ["~/Applications"]
-        },
-        {
-          "paths": ["~/code"]
-        },
-        {
-          "paths": ["~/code/work/mcp-internal-apis-v2"]
+          "paths": ["~/dotfiles"]
         }
       ]
     }
@@ -30,7 +29,7 @@
   "use_autoclose": true,
   "always_treat_brackets_as_autoclosed": true,
   "restore_on_startup": "last_workspace",
-  "hide_mouse": "on_typing",
+  "hide_mouse": "on_typing_and_movement",
   "centered_layout": {
     "left_padding": 0.2,
     "right_padding": 0.2
@@ -73,8 +72,8 @@
     },
     "default_profile": "chat",
     "default_model": {
-      "provider": "amazon-bedrock",
-      "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+      "provider": "google",
+      "model": "gemini-2.0-pro-exp"
     },
     "version": "2",
     "enable_experimental_live_diffs": true
@@ -148,14 +147,14 @@
     "env": {
       "EDITOR": "zed --wait",
       "VISUAL": "zed --wait"
+    },
+    "shell": {
+      "with_arguments": {
+        // "program": "tat",
+        "program": "fish",
+        "args": []
+      }
     }
-    // "shell": {
-    //   "with_arguments": {
-    //     // "program": "tat",
-    //     "program": "fish",
-    //     "args": []
-    //   }
-    // }
   },
   "theme": {
     "dark": "Rosé Pine",
