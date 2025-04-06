@@ -3,8 +3,43 @@
 // Example:
 [
   {
+    "label": "just",
+    "command": "just"
+  },
+  {
     "label": "Add SSH Keys",
     "command": "bw_add_sshkeys -f ssh-agent -p passphrase"
+  },
+  // Ruby Formatting
+  {
+    "label": "rubyfmt",
+    "command": "rubyfmt",
+    "args": ["-i", "\"$ZED_RELATIVE_FILE\""],
+    "tags": ["ruby-format"],
+    "shell": "system",
+    "reveal": "never",
+    "hide": "on_success"
+  },
+  // Minitest with Rails
+  {
+    "label": "(minitest) test $ZED_RELATIVE_FILE:$ZED_ROW",
+    "command": "bundle exec rails",
+    "args": ["test", "\"$ZED_RELATIVE_FILE:$ZED_ROW\""],
+    "tags": ["ruby-test"]
+  },
+  // Minitest
+  {
+    "label": "(minitest) -Itest $ZED_RELATIVE_FILE -n /$ZED_SYMBOL/",
+    "command": "bundle exec ruby",
+    "args": ["-Itest", "$ZED_RELATIVE_FILE", "-n /$ZED_SYMBOL/"],
+    "tags": ["ruby-test"]
+  },
+  // RSpec
+  {
+    "label": "(rspec) test $ZED_RELATIVE_FILE:$ZED_ROW",
+    "command": "bundle exec qt",
+    "args": ["\"$ZED_RELATIVE_FILE:$ZED_ROW\""],
+    "tags": ["ruby-test"]
   },
   {
     "label": "Example task",

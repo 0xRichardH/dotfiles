@@ -23,6 +23,9 @@
       ]
     }
   ],
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.7
+  },
   "use_system_prompts": false,
   "icon_theme": "Catppuccin Latte",
   "autosave": "on_focus_change",
@@ -120,7 +123,7 @@
   },
   "show_whitespaces": "selection",
   "show_completions_on_input": true,
-  "show_signature_help_after_edits": false,
+  "show_signature_help_after_edits": true,
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false,
@@ -221,7 +224,9 @@
       ]
     },
     "Ruby": {
-      "language_servers": ["ruby-lsp", "rubocop", "!solargraph", "..."]
+      "language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
+      "formatter": "language_server",
+      "format_on_save": "on"
     }
   },
   "lsp": {
@@ -234,13 +239,15 @@
     },
     "ruby-lsp": {
       "initialization_options": {
-        "formatter": "standard",
+        "enabledFeatures": {
+          "diagnostics": false,
+          "formatting": true
+        },
+        "formatter": "rubyfmt",
         "linters": ["standard"]
-      }
-    },
-    "rubocop": {
-      "initialization_options": {
-        "safeAutocorrect": true
+      },
+      "settings": {
+        "use_bundler": false
       }
     }
   }
