@@ -3,31 +3,26 @@
 -- Add any additional autocmds here
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "*tmux.conf" },
-  command = "execute 'silent !tmux source <afile> --silent'",
+    pattern = { "*tmux.conf" },
+    command = "execute 'silent !tmux source <afile> --silent'",
 })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "config.fish" },
-  command = "execute 'silent !source <afile> --silent'",
+    pattern = { "config.fish" },
+    command = "execute 'silent !source <afile> --silent'",
 })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { ".yabairc" },
-  command = "!yabai --restart-service",
-})
-
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { ".skhdrc" },
-  command = "!skhd --restart-service",
+    pattern = { ".yabairc" },
+    command = "!yabai --restart-service",
 })
 
 -- disable copilot for leetcode projects
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*/leetcode/**" },
-  callback = function()
-    vim.cmd([[Copilot disable]])
-  end,
+    pattern = { "*/leetcode/**" },
+    callback = function()
+        vim.cmd([[Copilot disable]])
+    end,
 })
 
 -- disable virtual-text for lspconfig
@@ -62,14 +57,14 @@ vim.api.nvim_create_autocmd("BufEnter", {
 --
 -- set filetype for .conf files to sh
 vim.api.nvim_create_autocmd({ "BufRead" }, {
-  pattern = { "*.conf" },
-  callback = function()
-    vim.cmd([[set filetype=sh]])
-  end,
+    pattern = { "*.conf" },
+    callback = function()
+        vim.cmd([[set filetype=sh]])
+    end,
 })
 
 -- clear yazi cache on save
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "yazi.toml" },
-  command = "execute 'silent !yazi --clear-cache'",
+    pattern = { "yazi.toml" },
+    command = "execute 'silent !yazi --clear-cache'",
 })
