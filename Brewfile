@@ -52,8 +52,18 @@ brew 'git-secrets' # Prevents you from committing passwords and other sensitive 
 brew 'cocogitto' # Conventional Commits toolbox
 brew 'tailscale'
 brew 'wget'
+
+# For Ruby Development
 brew "ruby-build"
 brew 'rubyfmt'
+
+# For python development
+brew 'ruff'
+brew 'uv'
+
+# For javascript development
+brew 'oven-sh/bun/bun'
+brew 'pnpm'
 
 # Fonts
 cask 'font-jetbrains-mono'
