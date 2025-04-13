@@ -75,8 +75,8 @@
     },
     "default_profile": "chat",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.0-pro-exp"
+      "provider": "amazon-bedrock",
+      "model": "anthropic.claude-3-7-sonnet-20250219-v1:0"
     },
     "version": "2",
     "enable_experimental_live_diffs": true
@@ -160,8 +160,8 @@
     }
   },
   "theme": {
-    "dark": "Rosé Pine",
-    "light": "Rosé Pine Dawn",
+    "dark": "One Dark",
+    "light": "One Light",
     "mode": "system"
   },
   "toolbar": {
