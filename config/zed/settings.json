@@ -7,6 +7,33 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "context_servers": {
+    "context7": {
+      "command": {
+        "path": "npx",
+        "args": ["-y", "@upstash/context7-mcp@latest"],
+        "env": null
+      },
+      "settings": {}
+    },
+    "langgraph-docs-mcp": {
+      "command": {
+        "path": "uvx",
+        "args": [
+          "--from",
+          "mcpdoc",
+          "mcpdoc",
+          "--urls",
+          "LangGraph:https://langchain-ai.github.io/langgraph/llms.txt",
+          "LangChain:https://python.langchain.com/llms.txt",
+          "--transport",
+          "stdio"
+        ],
+        "env": null
+      },
+      "settings": {}
+    }
+  },
   "ssh_connections": [
     {
       "host": "richard.tail53973.ts.net",
@@ -23,11 +50,8 @@
       ]
     }
   ],
-  "active_pane_modifiers": {
-    "inactive_opacity": 0.7
-  },
   "use_system_prompts": false,
-  "icon_theme": "Catppuccin Latte",
+  "icon_theme": "Zed (Default)",
   "autosave": "on_focus_change",
   "use_autoclose": true,
   "always_treat_brackets_as_autoclosed": true,
@@ -60,23 +84,101 @@
     "copilot": true,
     "edit_prediction_provider": "copilot" // "zed", "copilot", "supermaven"
   },
-  "assistant": {
+  "agent": {
+    "stream_edits": true,
+    "always_allow_tool_actions": true,
     "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "grep": true,
+          "thinking": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-sequential-thinking": {
+            "tools": {
+              "sequentialthinking": true
+            }
+          },
+          "langgraph-docs-mcp": {
+            "tools": {
+              "list_doc_sources": true,
+              "fetch_docs": true
+            }
+          }
+        }
+      },
+      "write": {
+        "name": "Write",
+        "tools": {
+          "open": true,
+          "terminal": true,
+          "batch_tool": true,
+          "code_actions": true,
+          "code_symbols": true,
+          "copy_path": true,
+          "create_file": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "grep": true,
+          "rename": true,
+          "symbol_info": true,
+          "thinking": true,
+          "create_directory": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {}
+      },
       "chat": {
         "name": "Chat",
         "tools": {
+          "contents": true,
+          "grep": true,
+          "find_path": true,
+          "open": true,
+          "list_directory": true,
+          "diagnostics": true,
+          "terminal": false,
+          "symbol_info": true,
+          "read_file": true,
           "thinking": true,
           "now": true,
           "fetch": true
         },
         "enable_all_context_servers": false,
-        "context_servers": {}
+        "context_servers": {
+          "mcp-server-sequential-thinking": {
+            "tools": {
+              "sequentialthinking": true
+            }
+          },
+          "langgraph-docs-mcp": {
+            "tools": {
+              "list_doc_sources": true,
+              "fetch_docs": true
+            }
+          }
+        }
       }
     },
-    "default_profile": "chat",
+    "default_profile": "write",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.0-pro-exp"
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
     },
     "version": "2",
     "enable_experimental_live_diffs": true
@@ -146,7 +248,7 @@
     "font_family": "Maple Mono NF CN",
     "font_fallbacks": ["Symbols Nerd Font"],
     "copy_on_select": true,
-    "font_size": 16,
+    "font_size": 14,
     "env": {
       "EDITOR": "zed --wait",
       "VISUAL": "zed --wait"
@@ -160,18 +262,18 @@
     }
   },
   "theme": {
-    "dark": "Rosé Pine",
-    "light": "Rosé Pine Dawn",
+    "dark": "One Dark",
+    "light": "One Dark",
     "mode": "system"
   },
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": true
   },
-  "ui_font_size": 18,
+  "ui_font_size": 16,
   "ui_font_family": "Maple Mono NF CN",
   "ui_font_fallbacks": ["Symbols Nerd Font Mono"],
-  "buffer_font_size": 16,
+  "buffer_font_size": 14,
   // "buffer_line_height": {
   //   "custom": 1.2
   // },

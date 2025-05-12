@@ -6,20 +6,20 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-  // {
-  //   "context": "Editor && edit_prediction",
-  //   "bindings": {
-  //     "ctrl-a": "editor::AcceptEditPrediction", // the default one is alt-tab
-  //     "tab": "editor::AcceptEditPrediction"
-  //   }
-  // },
-  // {
-  //   "context": "Editor && edit_prediction_conflict",
-  //   "use_key_equivalents": true,
-  //   "bindings": {
-  //     "ctrl-a": "editor::AcceptEditPrediction" // the default one is alt-tab
-  //   }
-  // },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "ctrl-a": "editor::AcceptEditPrediction", // the default one is alt-tab
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-a": "editor::AcceptEditPrediction" // the default one is alt-tab
+    }
+  },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
