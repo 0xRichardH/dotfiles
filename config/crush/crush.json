@@ -1,0 +1,47 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "lsp": {
+    "go": {
+      "command": "gopls"
+    },
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"]
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": ["--stdio"]
+    }
+  },
+  "mcp": {
+    "claude-code": {
+      "type": "stdio",
+      "command": "claude",
+      "args": ["mcp", "serve"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "CLAUDE_CODE_USE_BEDROCK": "1"
+      }
+    },
+    "claude-code-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@steipete/claude-code-mcp@latest"]
+    },
+    "sequential-thinking": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "puppeteer-browser": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    }
+  }
+}
