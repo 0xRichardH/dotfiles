@@ -7,6 +7,50 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "context_servers": {
+    "claude-code": {
+      "enabled": false,
+      "source": "custom",
+      "command": "claude",
+      "args": ["mcp", "serve"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "CLAUDE_CODE_USE_BEDROCK": "1"
+      }
+    },
+    "claude-code-mcp": {
+      "enabled": false,
+      "source": "custom",
+      "command": "npx",
+      "args": ["-y", "@steipete/claude-code-mcp@latest"]
+    },
+    "mcp-feedback-enhanced": {
+      "enabled": false,
+      "source": "custom",
+      "command": "uvx",
+      "args": ["mcp-feedback-enhanced@latest"],
+      "env": {
+        "FORCE_WEB": "true",
+        "MCP_DEBUG": "false",
+        "INCLUDE_BASE64_DETAIL": "true"
+      }
+    },
+    "sequential-thinking": {
+      "source": "custom",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "context7": {
+      "source": "custom",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "puppeteer-browser": {
+      "source": "custom",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    }
+  },
   "ssh_connections": [
     {
       "host": "richard.tail53973.ts.net",
@@ -21,18 +65,73 @@
           "paths": ["~/dotfiles"]
         }
       ]
+    },
+    {
+      "host": "ad-genius",
+      "username": "deploy",
+      "projects": [
+        {
+          "paths": ["/home/deploy/ad-genius"]
+        }
+      ]
+    },
+    {
+      "host": "fm",
+      "projects": [
+        {
+          "paths": ["/home/richard/code/bedrock-ai-chatbot"]
+        },
+        {
+          "paths": ["/home/richard/code/feedmob_worker"]
+        },
+        {
+          "paths": ["/home/richard/code/feedmob_worker/app"]
+        }
+      ]
+    },
+    {
+      "host": "feedai-planner",
+      "username": "ubuntu",
+      "projects": [
+        {
+          "paths": ["/home/ubuntu/feedai-planner"]
+        }
+      ]
+    },
+    {
+      "host": "de",
+      "projects": []
+    },
+    {
+      "host": "de",
+      "projects": []
     }
   ],
   "active_pane_modifiers": {
     "inactive_opacity": 0.7
   },
   "use_system_prompts": false,
-  "icon_theme": "Catppuccin Latte",
+  "icon_theme": "Zed (Default)",
   "autosave": "on_focus_change",
   "use_autoclose": true,
   "always_treat_brackets_as_autoclosed": true,
   "restore_on_startup": "last_workspace",
   "hide_mouse": "on_typing_and_movement",
+  "search": {
+    "button": false
+  },
+
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
   "centered_layout": {
     "left_padding": 0.2,
     "right_padding": 0.2
@@ -57,11 +156,95 @@
     "mode": "eager"
   },
   "features": {
-    "copilot": true,
     "edit_prediction_provider": "copilot" // "zed", "copilot", "supermaven"
   },
-  "assistant": {
+  "agent": {
+    "play_sound_when_agent_done": true,
+    "always_allow_tool_actions": true,
     "profiles": {
+      "write": {
+        "name": "Write",
+        "tools": {
+          "project_notifications": true,
+          "create_directory": true,
+          "open": true,
+          "batch_tool": false,
+          "code_actions": false,
+          "code_symbols": false,
+          "contents": true,
+          "copy_path": true,
+          "create_file": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "grep": true,
+          "rename": true,
+          "symbol_info": true,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {}
+      },
+      "feedmob": {
+        "name": "feedmob",
+        "tools": {
+          "fetch": true,
+          "thinking": true,
+          "now": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-sequential-thinking": {
+            "tools": {
+              "sequentialthinking": true
+            }
+          },
+          "feedmob-billings-data-mongodb-readonly": {
+            "tools": {
+              "update": true,
+              "serverInfo": true,
+              "query": true,
+              "listCollections": true,
+              "insert": true,
+              "createIndex": true,
+              "count": true,
+              "aggregate": true
+            }
+          },
+          "slack-data-mongodb-readonly": {
+            "tools": {
+              "update": true,
+              "serverInfo": true,
+              "query": true,
+              "listCollections": true,
+              "insert": true,
+              "createIndex": true,
+              "count": true,
+              "aggregate": true
+            }
+          },
+          "mongodb-readonly": {
+            "tools": {
+              "update": true,
+              "serverInfo": true,
+              "query": true,
+              "listCollections": true,
+              "insert": true,
+              "createIndex": true,
+              "count": true,
+              "aggregate": true
+            }
+          }
+        }
+      },
       "chat": {
         "name": "Chat",
         "tools": {
@@ -73,17 +256,14 @@
         "context_servers": {}
       }
     },
-    "default_profile": "chat",
+    "default_profile": "write",
     "default_model": {
-      "provider": "amazon-bedrock",
-      "model": "anthropic.claude-3-7-sonnet-20250219-v1:0"
-    },
-    "version": "2",
-    "enable_experimental_live_diffs": true
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    }
   },
   "language_models": {
     "openai": {
-      "version": "1",
       "api_url": "https://openrouter.ai/api/v1",
       "available_models": [
         {
@@ -115,11 +295,15 @@
   "base_keymap": "Emacs",
   "vim_mode": true,
   "vim": {
-    "enable_vim_sneak": true
+    "use_system_clipboard": "always"
   },
   "relative_line_numbers": true,
   "scrollbar": {
     "show": "never"
+  },
+  "minimap": {
+    "show": "always",
+    "current_line_highlight": "all"
   },
   "show_whitespaces": "selection",
   "show_completions_on_input": true,
@@ -146,7 +330,7 @@
     "font_family": "Maple Mono NF CN",
     "font_fallbacks": ["Symbols Nerd Font"],
     "copy_on_select": true,
-    "font_size": 16,
+    "font_size": 14,
     "env": {
       "EDITOR": "zed --wait",
       "VISUAL": "zed --wait"
@@ -160,18 +344,18 @@
     }
   },
   "theme": {
-    "dark": "One Dark",
-    "light": "One Light",
+    "dark": "Flexoki Dark",
+    "light": "Flexoki Light",
     "mode": "system"
   },
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": true
   },
-  "ui_font_size": 18,
+  "ui_font_size": 16,
   "ui_font_family": "Maple Mono NF CN",
   "ui_font_fallbacks": ["Symbols Nerd Font Mono"],
-  "buffer_font_size": 16,
+  "buffer_font_size": 14,
   // "buffer_line_height": {
   //   "custom": 1.2
   // },

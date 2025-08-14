@@ -23,9 +23,9 @@ window-width = 9999
 window-height = 9999
 
 # visuals
-theme = dark:rose-pine,light:rose-pine-dawn
+theme = dark:flexoki-dark,light:flexoki-light
 font-family =Maple Mono NF CN
-font-size = 18
+font-size = 16
 adjust-cell-height = 20%
 mouse-hide-while-typing = true
 

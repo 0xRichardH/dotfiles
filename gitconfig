@@ -18,7 +18,7 @@
   excludesfile = ~/.gitignore
   autocrlf = input
   pager = delta
-  editor = zed --wait
+  editor = nvim
 [interactive]
   diffFilter = delta --color-only
 [delta]

@@ -1,3 +1,5 @@
+local vim = vim
+
 local function get_colorscheme()
   local home = os.getenv("HOME")
   if not home then
@@ -15,9 +17,11 @@ local function get_colorscheme()
   local appearance = file:read("*a")
   file:close()
   if appearance:find("Dark") then
-    return "rose-pine-main"
+    vim.o.background = 'dark'
+    return "flexoki"
   else
-    return "rose-pine-dawn"
+    vim.o.background = 'light'
+    return "flexoki"
   end
 end
 
@@ -36,6 +40,12 @@ return {
         },
       })
     end,
+  },
+  {
+    "cpplain/flexoki.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   },
   {
     "folke/noice.nvim",
