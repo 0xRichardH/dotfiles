@@ -120,3 +120,9 @@ vim.api.nvim_create_user_command("CopyPath", function()
   vim.fn.setreg("+", absolute_path)
   vim.notify('Copied "' .. absolute_path .. '" to the clipboard!')
 end, {})
+
+-- https://www.lazyvim.org/extras/lang/python
+-- Python LSP Configuration
+-- LSP Server to use for Python.
+vim.g.lazyvim_python_lsp = "pyright"
+vim.g.lazyvim_python_ruff = "ruff"
