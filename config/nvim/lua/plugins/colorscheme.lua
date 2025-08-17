@@ -1,5 +1,4 @@
 local vim = vim
-
 local function get_colorscheme()
   local home = os.getenv("HOME")
   if not home then
@@ -26,21 +25,6 @@ local function get_colorscheme()
 end
 
 return {
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function()
-      require("rose-pine").setup({
-        variant = "auto", -- auto, main, moon, or dawn
-
-        styles = {
-          bold = true,
-          italic = false,
-          transparency = true,
-        },
-      })
-    end,
-  },
   {
     "cpplain/flexoki.nvim",
     lazy = false,

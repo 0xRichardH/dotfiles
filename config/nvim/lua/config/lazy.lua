@@ -40,7 +40,6 @@ require("lazy").setup({
   ui = {
     border = "single",
   },
-  install = { colorscheme = { "flexoki" } },
   checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {

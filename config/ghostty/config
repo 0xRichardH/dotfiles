@@ -8,6 +8,7 @@ shell-integration-features = "no-cursor,sudo,title"
 #################
 ## UI / window ##
 #################
+background-opacity = 0.8
 bold-is-bright = true
 macos-titlebar-style = hidden
 macos-window-shadow = false
