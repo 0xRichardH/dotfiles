@@ -5,7 +5,7 @@ config:
 
 icons:
   fish: "🐠"
-  nvim: "🛠️"
+  nvim: "🧑‍💻"
   btm: "📈"
   cargo: "🦀"
   docker: "🐳"
